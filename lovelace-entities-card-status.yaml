@@ -1,0 +1,61 @@
+title: Status
+type: entities
+entities:
+  - entity: sensor.jn_mppt_mini_status_battery_capacity
+    name: Battery Capacity
+  - entity: sensor.jn_mppt_mini_status_battery_strings
+    name: Battery Strings
+  - entity: sensor.jn_mppt_mini_status_battery_temperature
+    name: Battery Temperature
+  - entity: sensor.jn_mppt_mini_status_battery_temperature_compensation_voltage_point
+    name: Battery Temperature Compensation Voltage Point
+  - entity: sensor.jn_mppt_mini_status_battery_type
+    name: Battery Type
+  - entity: sensor.jn_mppt_mini_status_battery_voltage
+    name: Battery Voltage
+  - entity: sensor.jn_mppt_mini_status_channel_a_current
+    name: Channel A
+  - entity: sensor.jn_mppt_mini_status_channel_b_current
+    name: Channel B
+  - entity: sensor.jn_mppt_mini_status_charger_temperature
+    name: Charger Temperature
+  - entity: binary_sensor.jn_mppt_mini_status_charging
+    name: Charging
+  - entity: sensor.jn_mppt_mini_status_charging_current
+    name: Charging Current
+  - entity: sensor.jn_mppt_mini_status_charging_power
+    name: Charging Power
+  - entity: sensor.jn_mppt_mini_status_controller_current_level
+    name: Controller Current Level
+  - entity: sensor.jn_mppt_mini_status_controller_voltage_level
+    name: Controller Voltage Level
+  - entity: sensor.jn_mppt_mini_status_discharge_current
+    name: Discharge Current
+  - entity: sensor.jn_mppt_mini_status_discharge_power
+    name: Discharge Power
+  - entity: sensor.jn_mppt_mini_status_discharge_times
+    name: Discharge Times
+  - entity: sensor.jn_mppt_mini_status_error_bitmask
+    name: Error Bitmask
+  - entity: sensor.jn_mppt_mini_status_errors
+    name: Errors
+  - entity: binary_sensor.jn_mppt_mini_status_fan_running
+    name: Fan Running
+  - entity: sensor.jn_mppt_mini_status_firmware_version
+    name: Firmware Version
+  - entity: binary_sensor.jn_mppt_mini_status_load
+    name: Load
+  - entity: binary_sensor.jn_mppt_mini_status_load_detected
+    name: Load Detected
+  - entity: sensor.jn_mppt_mini_status_operation_mode
+    name: Operation Mode
+  - entity: sensor.jn_mppt_mini_status_operation_mode_id
+    name: Operation Mode ID
+  - entity: sensor.jn_mppt_mini_status_pv_standby_voltage
+    name: PV Standby Voltage
+  - entity: sensor.jn_mppt_mini_status_pv_voltage
+    name: PV Voltage
+  - entity: sensor.jn_mppt_mini_status_total_charging_energy
+    name: Total Charging Energy
+  - entity: sensor.jn_mppt_mini_status_total_discharge_energy
+    name: Total Discharge Energy

@@ -1,0 +1,51 @@
+title: Configuration
+show_header_toggle: false
+state_color: false
+type: entities
+entities:
+  - entity: sensor.jn_mppt_mini_config_battery_undervoltage
+    name: Battery Undervoltage
+  - entity: sensor.jn_mppt_mini_config_boost_charging_return_voltage
+    name: Charging Return Voltage
+  - entity: sensor.jn_mppt_mini_config_boost_charging_voltage
+    name: Boost Charging Voltage
+  - entity: switch.jn_mppt_mini_config_buzzer
+    name: Buzzer
+  - entity: switch.jn_mppt_mini_config_charging
+    name: Charging
+  - entity: sensor.jn_mppt_mini_config_charging_limit_voltage
+    name: Charging Limit Voltage
+  - entity: sensor.jn_mppt_mini_config_device_address
+    name: Device Address
+  - entity: sensor.jn_mppt_mini_config_equalization_charging_time
+    name: Equalization Charging Time
+  - entity: sensor.jn_mppt_mini_config_equalizing_charging_voltage
+    name: Equalizing Charging Voltage
+  - entity: sensor.jn_mppt_mini_config_floating_charge_voltage
+    name: Floating Charge Voltage
+  - entity: sensor.jn_mppt_mini_config_improve_charging_time
+    name: Improve Charging Time
+  - entity: sensor.jn_mppt_mini_config_light_control_on_voltage
+    name: Light Control On Voltage
+  - entity: sensor.jn_mppt_mini_config_light_control_off_voltage
+    name: Light Control Off Voltage
+  - entity: sensor.jn_mppt_mini_config_light_control_on_period_1
+    name: Light Control Period 1
+  - entity: sensor.jn_mppt_mini_config_light_control_on_period_2
+    name: Light Control Period 2
+  - entity: switch.jn_mppt_mini_config_load
+    name: Load
+  - entity: sensor.jn_mppt_mini_config_load_turn_off_time
+    name: Load Turn Off Time
+  - entity: sensor.jn_mppt_mini_config_over_discharge_recovery_voltage
+    name: Over Discharge Recovery Voltage
+  - entity: sensor.jn_mppt_mini_config_over_discharge_voltage
+    name: Over Discharge Voltage
+  - entity: sensor.jn_mppt_mini_config_overvoltage
+    name: Overvoltage
+  - entity: sensor.jn_mppt_mini_config_overvoltage_recovery
+    name: Overvoltage Recovery
+  - entity: switch.jn_mppt_mini_config_street_light_mode
+    name: Street Light Mode
+  - entity: sensor.jn_mppt_mini_config_temperature_compensation_coefficient
+    name: Temperature Compensation Coefficient

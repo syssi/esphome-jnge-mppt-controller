@@ -1,0 +1,27 @@
+import esphome.codegen as cg
+import esphome.config_validation as cv
+from esphome.components import jnge_modbus
+from esphome.const import CONF_ID
+
+AUTO_LOAD = ["jnge_modbus", "sensor", "text_sensor"]
+CODEOWNERS = ["@syssi"]
+MULTI_CONF = True
+
+CONF_JNGE_MPPT_CONTROLLER_ID = "jnge_mppt_controller_id"
+
+jnge_mppt_controller_ns = cg.esphome_ns.namespace("jnge_mppt_controller")
+JngeMpptController = jnge_mppt_controller_ns.class_(
+    "JngeMpptController", cg.PollingComponent, jnge_modbus.JngeModbusDevice
+)
+
+CONFIG_SCHEMA = (
+    cv.Schema({cv.GenerateID(): cv.declare_id(JngeMpptController)})
+    .extend(cv.polling_component_schema("5s"))
+    .extend(jnge_modbus.jnge_modbus_device_schema(0x06))
+)
+
+
+def to_code(config):
+    var = cg.new_Pvariable(config[CONF_ID])
+    yield cg.register_component(var, config)
+    yield jnge_modbus.register_jnge_modbus_device(var, config)
