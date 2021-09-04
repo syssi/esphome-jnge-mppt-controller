@@ -100,8 +100,8 @@ pip3 install esphome
 git clone https://github.com/syssi/esphome-jnge-mppt-controller.git
 cd esphome-jnge-mppt-controller
 
-# Create a secret.yaml containing some setup specific secrets
-cat > secret.yaml <<EOF
+# Create a secrets.yaml containing some setup specific secrets
+cat > secrets.yaml <<EOF
 wifi_ssid: MY_WIFI_SSID
 wifi_password: MY_WIFI_PASSWORD
 
