@@ -3,12 +3,12 @@ import esphome.config_validation as cv
 from esphome.components import sensor
 from esphome.const import (
     CONF_BATTERY_VOLTAGE,
+    DEVICE_CLASS_CURRENT,
     DEVICE_CLASS_EMPTY,
     DEVICE_CLASS_ENERGY,
-    DEVICE_CLASS_VOLTAGE,
-    DEVICE_CLASS_CURRENT,
     DEVICE_CLASS_POWER,
     DEVICE_CLASS_TEMPERATURE,
+    DEVICE_CLASS_VOLTAGE,
     ICON_COUNTER,
     ICON_EMPTY,
     ICON_PERCENT,
@@ -16,13 +16,14 @@ from esphome.const import (
     ICON_TIMER,
     STATE_CLASS_MEASUREMENT,
     UNIT_AMPERE,
+    UNIT_CELSIUS,
     UNIT_EMPTY,
     UNIT_PERCENT,
     UNIT_VOLT,
     UNIT_WATT,
-    UNIT_CELSIUS,
 )
-from . import JngeMpptController, CONF_JNGE_MPPT_CONTROLLER_ID
+
+from . import CONF_JNGE_MPPT_CONTROLLER_ID, JngeMpptController
 
 DEPENDENCIES = ["jnge_mppt_controller"]
 
