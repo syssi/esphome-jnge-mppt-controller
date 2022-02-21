@@ -2,10 +2,14 @@ import esphome.codegen as cg
 import esphome.config_validation as cv
 from esphome.components import switch
 from esphome.const import CONF_ID, CONF_ICON
-from .. import JngeMpptController, CONF_JNGE_MPPT_CONTROLLER_ID, jnge_mppt_controller_ns
-from ..const import CONF_CHARGING, CONF_LOAD
+from .. import (
+    JngeWindSolarController,
+    CONF_JNGE_WIND_SOLAR_CONTROLLER_ID,
+    jnge_wind_solar_controller_ns,
+)
+from ..const import CONF_LOAD, CONF_CHARGING
 
-DEPENDENCIES = ["jnge_mppt_controller"]
+DEPENDENCIES = ["jnge_wind_solar_controller"]
 
 CODEOWNERS = ["@syssi"]
 
@@ -24,11 +28,15 @@ SWITCHES = {
     CONF_LOAD: 0x103C,
 }
 
-JngeSwitch = jnge_mppt_controller_ns.class_("JngeSwitch", switch.Switch, cg.Component)
+JngeSwitch = jnge_wind_solar_controller_ns.class_(
+    "JngeSwitch", switch.Switch, cg.Component
+)
 
 CONFIG_SCHEMA = cv.Schema(
     {
-        cv.GenerateID(CONF_JNGE_MPPT_CONTROLLER_ID): cv.use_id(JngeMpptController),
+        cv.GenerateID(CONF_JNGE_WIND_SOLAR_CONTROLLER_ID): cv.use_id(
+            JngeWindSolarController
+        ),
         cv.Optional(CONF_BUZZER): switch.SWITCH_SCHEMA.extend(
             {
                 cv.GenerateID(): cv.declare_id(JngeSwitch),
@@ -58,7 +66,7 @@ CONFIG_SCHEMA = cv.Schema(
 
 
 def to_code(config):
-    hub = yield cg.get_variable(config[CONF_JNGE_MPPT_CONTROLLER_ID])
+    hub = yield cg.get_variable(config[CONF_JNGE_WIND_SOLAR_CONTROLLER_ID])
     for key, address in SWITCHES.items():
         if key in config:
             conf = config[key]
