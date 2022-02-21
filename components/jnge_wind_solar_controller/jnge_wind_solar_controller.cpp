@@ -125,8 +125,8 @@ void JngeWindSolarController::on_status_data_(const std::vector<uint8_t> &data) 
   this->publish_state_(this->load_detected_binary_sensor_, (bool) (jnge_get_16bit(20) == 0x01));
   // 0x100B: Version number             2 bytes
   this->publish_state_(this->firmware_version_sensor_, (float) jnge_get_16bit(22));
-  // 0x100C: PV charging rating         2 bytes  100      W (Ppv)
-  // 0x100D: Fan charging rating        2 bytes  100      W (Pfan)
+  // 0x100C: PV charging rating         2 bytes  100      W (Ppv) -> can be changed via 0x1054. Software limit?
+  // 0x100D: Fan charging rating        2 bytes  100      W (Pfan) -> can be changed via 0x1055. Software limit?
   // 0x100E: Number of battery strings  2 bytes    1      N
   this->publish_state_(this->battery_strings_sensor_, (float) jnge_get_16bit(28));
   // 0x100F: Battery type               2 bytes
