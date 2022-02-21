@@ -1,0 +1,94 @@
+substitutions:
+  name: jnge-wind-solar-hybrid
+  status: "${name} status"
+  config: "${name} config"
+
+esphome:
+  name: ${name}
+  platform: ESP32
+  board: esp-wrover-kit
+
+external_components:
+  - source: github://syssi/esphome-jnge-mppt-controller@main
+    refresh: 0s
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+ota:
+logger:
+  level: VERY_VERBOSE
+  logs:
+    api.service: WARN
+    ota: WARN
+    wif: WARN
+    sensor: DEBUG
+
+mqtt:
+  broker: !secret mqtt_host
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  id: mqtt_client
+
+uart:
+  baud_rate: 9600
+  tx_pin: GPIO14
+  rx_pin: GPIO4
+  # debug:
+  #   direction: BOTH
+
+jnge_wind_solar_controller:
+  update_interval: 2s
+
+binary_sensor:
+  - platform: jnge_wind_solar_controller
+    load_detected:
+      name: "${status} load detected"
+    load:
+      name: "${status} load"
+    charging:
+      name: "${status} charging"
+
+sensor:
+  - platform: jnge_wind_solar_controller
+    # status
+    firmware_version:
+      name: "${status} firmware version"
+    pv_voltage:
+      name: "${status} pv voltage"
+    fan_voltage:
+      name: "${status} fan voltage"
+    battery_voltage:
+      name: "${status} battery voltage"
+    pv_charging_current:
+      name: "${status} pv charging current"
+    fan_charging_current:
+      name: "${status} fan charging current"
+    pv_charging_power:
+      name: "${status} pv charging power"
+    fan_charging_power:
+      name: "${status} fan charging power"
+    pv_total_energy:
+      name: "${status} pv total energy"
+    fan_total_energy:
+      name: "${status} fan total energy"
+    operation_mode_id:
+      name: "${status} operation mode id"
+    battery_strings:
+      name: "${status} battery strings"
+    battery_voltage_level:
+      name: "${status} battery voltage level"
+    error_bitmask:
+      name: "${status} error bitmask"
+
+text_sensor:
+  - platform: jnge_wind_solar_controller
+    battery_type:
+      name: "${status} battery type"
+    errors:
+      name: "${status} errors"
+    operation_mode:
+      name: "${status} operation mode"
+
+# The "switch:" platform isn't implemented yet
