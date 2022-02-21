@@ -13,21 +13,14 @@ ESPHome component to interface a JN-MPPT-Mini via RS485
 
 ## Supported devices
 
-* JN-MPPT-MINI Buck Solar Charge Controller
-* JN-MPPT-AL Buck Solar Charge Controller
-* JN-MPPT-BL Buck Solar Charge Controller
-* JN-MPPT-CL Buck Solar Charge Controller
-
-|                                       | JN-MPPT-MINI 2021      | JN-MPPT-MINI <2021/01 | JN-MPPT-AL           | JN-MPPT-BL                       | JN-MPPT-CL                          |
-| ------------------------------------- | ---------------------- | --------------------- | -------------------- | -------------------------------- | ----------------------------------- |
-| **Battery system voltage**            | 12V / 24V              | 12V / 24V / 48V       | 12V / 24V / 48V      | 12V / 24V / 48V                  | 12V / 24V / 48V / 96                |
-| **PV max. input current**             | 10A<br>20A<br>30A      | 10A<br>20A<br>30A     | 30A<br>40A<br>50A    | 30A<br>40A<br>50A<br>60A<br>70A  | 50A<br>60A<br>80A<br>100A<br>120A   |
-| **Maximum charging current**          | 10A<br>20A<br>30A      | 10A<br>20A<br>30A     | 30A<br>40A<br>50A    | 30A<br>40A<br>50A<br>60A<br>70A  | 50A<br>60A<br>80A<br>100A<br>120A   |
-| **Output max. current**               |  7A<br>14A<br>21A      | 10A<br>15A<br>15A     | 21A<br>28A<br>35A    | 21A<br>28A<br>35A<br>42A<br>49A  | --                                  |
-| **PV voltage range (VOC), 12V mode**  | 20-100V                | 20-100V               | 20-100V              | 20-100V                          | 20-100V                             |
-| **PV voltage range (VOC), 24V mode**  | 40-100V                | 40-145V (150V peak)   | 40-145V (150V peak)  | 40-145V (150V peak)              | 40-145V                             |
-| **PV voltage range (VOC), 48V mode**  | --                     | 80-145V (150V peak)   | 80-145V (150V peak)  | 80-145V (150V peak)              | 160-240V                            |
-| **PV voltage range (VOC), 96V mode**  | --                     | --                    | --                   | --                               | 160-240V                            |
+* JN-MPPT-MINI Buck Solar Charge Controller `<2021/01` (12V / 24V / 48V)
+* JN-MPPT-MINI Buck Solar Charge Controller `2021` (12V / 24V)
+* JN-MPPT-AL Buck Solar Charge Controller (12V / 24V / 48V)
+* JN-MPPT-BL Buck Solar Charge Controller (12V / 24V / 48V)
+* JN-MPPT-CL Buck Solar Charge Controller (12V / 24V / 48V)
+* JN-12-W300/S300, JN-12-W500/S500 Wind and Solar Hybrid Controller
+* JN-24-W600/S600, JN-24-W800/S800 Wind and Solar Hybrid Controller
+* JN-48-W800/S800, JN-48-W1000/S1000 Wind and Solar Hybrid Controller
 
 The manufacturer dropped the 48V support of the JN-MPPT-MINI in 2021. The new and downgraded model can be identified by a white sticker:
 
