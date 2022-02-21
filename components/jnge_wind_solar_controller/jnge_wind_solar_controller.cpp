@@ -7,8 +7,7 @@ namespace jnge_wind_solar_controller {
 
 static const char *const TAG = "jnge_wind_solar_controller";
 
-static const uint8_t READ_HOLDING_REGISTERS = 0x03;
-static const uint8_t READ_INPUT_REGISTERS = 0x04;
+static const uint8_t READ_REGISTERS = 0x03;
 static const uint8_t WRITE_SINGLE_REGISTER = 0x06;
 
 static const uint8_t ERRORS_SIZE = 16;
@@ -51,19 +50,19 @@ static const char *const BATTERY_TYPES[BATTERY_TYPES_SIZE] = {
 };
 
 void JngeWindSolarController::on_jnge_modbus_data(const uint8_t &function, const std::vector<uint8_t> &data) {
-  if (function == READ_INPUT_REGISTERS && data.size() == 38) {
+  if (function == READ_REGISTERS && data.size() == 38) {
     this->on_status_data_(data);
 
     // The controller cannot handle two commands in series. The configuration
     // request is send here to decouple the requests.
     //
     // Request device configuration -> 0x06 0x03 0x10 0x24 0x00 0x19 0xC1 0x7C
-    this->send(READ_HOLDING_REGISTERS, 0x1024, 25);
+    this->send(READ_REGISTERS, 0x1024, 25);
 
     return;
   }
 
-  if (function == READ_HOLDING_REGISTERS && data.size() == 50) {
+  if (function == READ_REGISTERS && data.size() == 50) {
     this->on_configuration_data_(data);
 
     return;
@@ -169,8 +168,8 @@ void JngeWindSolarController::write_register(uint16_t address, uint16_t value) {
 }
 
 void JngeWindSolarController::update() {
-  // Request device status -> 0x06 0x04 0x10 0x00 0x00 0x13 0xB4 0xB0
-  this->send(READ_INPUT_REGISTERS, 0x1000, 19);
+  // Request device status -> 0x06 0x03 0x10 0x00 0x00 0x13 0x01 0x70
+  this->send(READ_REGISTERS, 0x1000, 19);
 }
 
 void JngeWindSolarController::publish_state_(binary_sensor::BinarySensor *binary_sensor, const bool &state) {
