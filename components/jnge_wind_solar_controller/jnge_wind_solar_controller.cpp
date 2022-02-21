@@ -80,7 +80,7 @@ void JngeWindSolarController::on_jnge_modbus_data(const uint8_t &function, const
     return;
   }
 
-  ESP_LOGW(TAG, "Invalid size (%zu) for JNGE MPPT Controller frame!", data.size());
+  ESP_LOGW(TAG, "Invalid size (%zu) for JNGE Solar and Wind Hybrid Controller frame!", data.size());
 }
 
 void JngeWindSolarController::on_status_data_(const std::vector<uint8_t> &data) {
@@ -137,7 +137,7 @@ void JngeWindSolarController::on_status_data_(const std::vector<uint8_t> &data) 
     this->publish_state_(this->battery_type_text_sensor_, "Unknown");
   }
   // 0x1010: Battery voltage level      2 bytes                  12V, 24V, 48V
-  this->publish_state_(this->battery_voltage_level_sensor_, (float) jnge_get_16bit(32));
+  this->publish_state_(this->battery_voltage_level_sensor_, (float) jnge_get_16bit(32) * 0.1f);
   // 0x1011: Error code bitmask         2 bytes
   uint16_t raw_error_bitmask = jnge_get_16bit(34);
   this->publish_state_(this->error_bitmask_sensor_, (float) raw_error_bitmask);
@@ -170,6 +170,29 @@ void JngeWindSolarController::write_register(uint16_t address, uint16_t value) {
 void JngeWindSolarController::update() {
   // Request device status -> 0x06 0x03 0x10 0x00 0x00 0x13 0x01 0x70
   this->send(READ_REGISTERS, 0x1000, 19);
+
+  // Example status response
+  //
+  // Header: 0x06, 0x03, 0x26,
+  /*
+  this->on_jnge_modbus_data(READ_REGISTERS,
+                            {0x00, 0x93, 0x00, 0x00, 0x00, 0x95, 0x00, 0x00, 0x00, 0x09, 0x00, 0x00,
+                             0x00, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x04, 0x00,
+                             0x04, 0x00, 0x01, 0x00, 0x04, 0x00, 0x78, 0x40, 0x00, 0x00, 0x01});
+                             */
+  // CRC: 0x29, 0x1B
+
+  // Example configuration responses
+  //
+  // Header: 0x06, 0x03, 0x32,
+  /*
+  this->on_jnge_modbus_data(
+      READ_REGISTERS,
+      {0x00, 0x96, 0x00, 0x8C, 0x00, 0x92, 0x00, 0x8D, 0x00, 0x90, 0x00, 0x8B, 0x00, 0x6E, 0x00, 0x78,
+       0x00, 0x01, 0x00, 0x78, 0x00, 0x04, 0x00, 0x01, 0x00, 0x06, 0x00, 0x3C, 0x00, 0x32, 0x00, 0x00, 0x00, 0x06, 0x00,
+       0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x01, 0x00, 0x00});
+       */
+  // CRC: 0x93, 0x77
 }
 
 void JngeWindSolarController::publish_state_(binary_sensor::BinarySensor *binary_sensor, const bool &state) {
