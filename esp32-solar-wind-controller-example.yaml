@@ -9,9 +9,7 @@ esphome:
   board: esp-wrover-kit
 
 external_components:
-#  - source: github://syssi/esphome-jnge-mppt-controller@main
-#    refresh: 0s
-  - source: components
+  - source: github://syssi/esphome-jnge-mppt-controller@main
     refresh: 0s
 
 wifi:
@@ -27,18 +25,18 @@ logger:
     wif: WARN
     sensor: DEBUG
 
-# mqtt:
-#   broker: !secret mqtt_host
-#   username: !secret mqtt_username
-#   password: !secret mqtt_password
-#   id: mqtt_client
+mqtt:
+  broker: !secret mqtt_host
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  id: mqtt_client
 
 uart:
   baud_rate: 9600
   tx_pin: GPIO14
   rx_pin: GPIO4
-  debug:
-    direction: BOTH
+  # debug:
+  #   direction: BOTH
 
 jnge_wind_solar_controller:
   update_interval: 2s
