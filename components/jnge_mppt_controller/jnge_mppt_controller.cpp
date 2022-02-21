@@ -413,7 +413,7 @@ void JngeMpptController::on_configuration_data_(const std::vector<uint8_t> &data
 }
 
 void JngeMpptController::on_write_data_(const std::vector<uint8_t> &data) {
-  ESP_LOGI(TAG, "Write register response received: %s", hexencode(&data.front(), data.size()).c_str());
+  ESP_LOGI(TAG, "Write register response received: %s", format_hex_pretty(&data.front(), data.size()).c_str());
 }
 
 void JngeMpptController::write_register(uint16_t address, uint16_t value) {
