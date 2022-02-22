@@ -344,4 +344,4 @@ If you use Home Assistant you should replace the `mqtt:` component with the nati
 ## References
 
 * JNGE MPPT Controller Internal Communication Proto.pdf
-* [JN.Series.Privilege.Version.Wind.and.Solar.Hybrid.Controller.Product.Manual.pdf](https://github.com/syssi/esphome-jnge-mppt-controller/files/8109449/JN.Series.Privilege.Version.Wind.and.Solar.Hybrid.Controller.Product.Manual.pdf)
+* [JNGE Wind and Solar Hybrid Controller Internal Communication Proto.pdf](https://github.com/syssi/esphome-jnge-mppt-controller/files/8106839/JNGE.Wind.and.Solar.Hybrid.Controller.Internal.Co.pdf)
