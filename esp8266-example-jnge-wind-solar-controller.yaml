@@ -5,8 +5,8 @@ substitutions:
 
 esphome:
   name: ${name}
-  platform: ESP32
-  board: esp-wrover-kit
+  platform: ESP8266
+  board: d1_mini
 
 external_components:
   - source: github://syssi/esphome-jnge-mppt-controller@main
@@ -18,12 +18,8 @@ wifi:
 
 ota:
 logger:
-  level: VERY_VERBOSE
-  logs:
-    api.service: WARN
-    ota: WARN
-    wif: WARN
-    sensor: DEBUG
+  level: INFO
+  baud_rate: 0
 
 mqtt:
   broker: !secret mqtt_host
@@ -33,8 +29,8 @@ mqtt:
 
 uart:
   baud_rate: 9600
-  tx_pin: GPIO14
-  rx_pin: GPIO4
+  tx_pin: GPIO1
+  rx_pin: GPIO3
   # debug:
   #   direction: BOTH
 
