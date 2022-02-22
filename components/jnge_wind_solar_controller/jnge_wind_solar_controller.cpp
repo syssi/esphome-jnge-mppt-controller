@@ -146,15 +146,15 @@ void JngeWindSolarController::on_read_registers_data_(const std::vector<uint8_t>
   // 0x1029: Floating charge return voltage     2 bytes        0.1      V
   // 0x102A: Battery undervoltage               2 bytes        0.1      V
   // 0x102B: Battery undervoltage recovery      2 bytes        0.1      V
-  // 0x102C: Improve charging time              2 bytes          1      h  (1...3 h)
+  // 0x102C: Improve charging time              2 bytes          1      h    1~3 h
   // 0x102D: Battery voltage level              2 bytes        0.1      V
-  // 0x102E: Battery type                       2 bytes                 1: Lead-Acid, 2: LiFePo4,
-  //                                                                     3: Ternary Lithium, 4: Custom
+  // 0x102E: Battery type                       2 bytes                 1 (Lead-Acid), 2 (LiFePo4),
+  //                                                                    3 (Ternary Lithium), 4 (Custom)
   // 0x102F: Battery strings                    2 bytes          1      N
-  // 0x1030: Device modbus address              2 bytes          1      N  (1...255)
+  // 0x1030: Device modbus address              2 bytes          1      N    1~255
   // 0x1031: Light control turn on voltage      2 bytes        0.1      V
   // 0x1032: Light control turn off voltage     2 bytes        0.1      V
-  // 0x1033: Household and street light mode    2 bytes                 0: Household mode, 1: Street lamp mode
+  // 0x1033: Household or street light mode     2 bytes                 0 (Household), 1 (Street light)
   // 0x1034: Light control time period 1        2 bytes          1      h
   // 0x1035: Light control time period 1 light intensity    2 bytes      10     % (0, 10, 20, ..., 100)
   // 0x1036: Light control time period 2        2 bytes          1      h
@@ -162,9 +162,10 @@ void JngeWindSolarController::on_read_registers_data_(const std::vector<uint8_t>
   // 0x1038: Light control time period 3        2 bytes          1      h
   // 0x1039: Light control time period 3 light intensity    2 bytes      10     % (0, 10, 20, ..., 100)
   // 0x103A: Fan unloading voltage point        2 bytes        0.1      V
-  // 0x103B: Charging switch                    2 bytes                 0: Off, 1: On (PV pwm control 0)
-  // 0x103C: Load switch                        2 bytes                 0: Off, 1: On (Controls Out1 and Out2
-  // simultaneously)
+  // 0x103B: Charging switch                    2 bytes                 0 (Charger off), 1 (Charger on)
+  //                                                                    (PV pwm control 0)
+  // 0x103C: Load switch                        2 bytes                 0 (Load off), 1 (Load on)
+  //                                                                    (Controls Out1 and Out2 simultaneously)
 
   //
   // ----> 60 register * 2 bytes = 120 bytes data
@@ -190,6 +191,7 @@ void JngeWindSolarController::update() {
   // Example read registers response
   //
   // Header: 0x06, 0x03, 0x26,
+  /*
   this->on_jnge_modbus_data(
       READ_REGISTERS,
       {// 0x1000...0x1013
@@ -203,6 +205,7 @@ void JngeWindSolarController::update() {
        0x78, 0x00, 0x04, 0x00, 0x01, 0x00, 0x06, 0x00, 0x3C, 0x00, 0x32, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x00,
        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x01, 0x00, 0x00});
   // + 2 bytes CRC
+   */
 }
 
 void JngeWindSolarController::publish_state_(binary_sensor::BinarySensor *binary_sensor, const bool &state) {
