@@ -1,13 +1,14 @@
 import esphome.codegen as cg
 import esphome.config_validation as cv
 from esphome.components import switch
-from esphome.const import CONF_ID, CONF_ICON
+from esphome.const import CONF_ICON, CONF_ID
+
 from .. import (
-    JngeWindSolarController,
     CONF_JNGE_WIND_SOLAR_CONTROLLER_ID,
+    JngeWindSolarController,
     jnge_wind_solar_controller_ns,
 )
-from ..const import CONF_LOAD, CONF_CHARGING
+from ..const import CONF_CHARGING, CONF_LOAD
 
 DEPENDENCIES = ["jnge_wind_solar_controller"]
 
