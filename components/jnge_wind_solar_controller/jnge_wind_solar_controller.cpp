@@ -126,7 +126,9 @@ void JngeWindSolarController::on_status_data_(const std::vector<uint8_t> &data) 
   // 0x100B: Version number             2 bytes
   this->publish_state_(this->firmware_version_sensor_, (float) jnge_get_16bit(22));
   // 0x100C: PV charging rating         2 bytes  100      W (Ppv) -> can be changed via 0x1054. Software limit?
+  this->publish_state_(this->peak_pv_charging_rating_sensor_, (float) data[24]);
   // 0x100D: Fan charging rating        2 bytes  100      W (Pfan) -> can be changed via 0x1055. Software limit?
+  this->publish_state_(this->peak_fan_charging_rating_sensor_, (float) data[26]);
   // 0x100E: Number of battery strings  2 bytes    1      N
   this->publish_state_(this->battery_strings_sensor_, (float) jnge_get_16bit(28));
   // 0x100F: Battery type               2 bytes
@@ -259,6 +261,8 @@ void JngeWindSolarController::dump_config() {  // NOLINT(google-readability-func
   LOG_TEXT_SENSOR("", "Operation Mode", this->operation_mode_text_sensor_);
   LOG_BINARY_SENSOR("", "Load detected", this->load_detected_binary_sensor_);
   LOG_SENSOR("", "Firmware Version", this->firmware_version_sensor_);
+  LOG_SENSOR("", "Peak PV Charging Rating", this->peak_pv_charging_rating_sensor_);
+  LOG_SENSOR("", "Peak Fan Charging Rating", this->peak_fan_charging_rating_sensor_);
   LOG_SENSOR("", "Battery Strings", this->battery_strings_sensor_);
   LOG_TEXT_SENSOR("", "Battery Type", this->battery_type_text_sensor_);
   LOG_SENSOR("", "Battery Voltage Level", this->battery_voltage_level_sensor_);

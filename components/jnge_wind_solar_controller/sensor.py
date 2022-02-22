@@ -37,9 +37,13 @@ CONF_OPERATION_MODE_ID = "operation_mode_id"
 CONF_BATTERY_STRINGS = "battery_strings"
 CONF_BATTERY_VOLTAGE_LEVEL = "battery_voltage_level"
 CONF_ERROR_BITMASK = "error_bitmask"
+CONF_PEAK_PV_CHARGING_RATING = "peak_pv_charging_rating"
+CONF_PEAK_FAN_CHARGING_RATING = "peak_fan_charging_rating"
 
 SENSORS = [
     CONF_FIRMWARE_VERSION,
+    CONF_PEAK_PV_CHARGING_RATING,
+    CONF_PEAK_FAN_CHARGING_RATING,
     CONF_PV_VOLTAGE,
     CONF_FAN_VOLTAGE,
     CONF_BATTERY_VOLTAGE,
@@ -76,6 +80,12 @@ CONFIG_SCHEMA = cv.Schema(
         # status
         cv.Optional(CONF_FIRMWARE_VERSION): sensor.sensor_schema(
             UNIT_EMPTY, ICON_EMPTY, 0, DEVICE_CLASS_EMPTY, STATE_CLASS_MEASUREMENT
+        ),
+        cv.Optional(CONF_PEAK_PV_CHARGING_RATING): sensor.sensor_schema(
+            UNIT_WATT, ICON_EMPTY, 0, DEVICE_CLASS_POWER, STATE_CLASS_MEASUREMENT
+        ),
+        cv.Optional(CONF_PEAK_FAN_CHARGING_RATING): sensor.sensor_schema(
+            UNIT_WATT, ICON_EMPTY, 0, DEVICE_CLASS_POWER, STATE_CLASS_MEASUREMENT
         ),
         cv.Optional(CONF_PV_VOLTAGE): sensor.sensor_schema(
             UNIT_VOLT, ICON_EMPTY, 1, DEVICE_CLASS_VOLTAGE, STATE_CLASS_MEASUREMENT
