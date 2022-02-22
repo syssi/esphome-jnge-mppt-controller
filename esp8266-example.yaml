@@ -1,5 +1,5 @@
 substitutions:
-  name: jn_mppt_mini
+  name: jn-mppt
   status: "${name} status"
   config: "${name} config"
 

@@ -6,7 +6,7 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/syssi/esphome-jnge-mppt-controller)
 [!["Buy Me A Coffee"](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://www.buymeacoffee.com/syssi)
 
-ESPHome component to interface a JN-MPPT-Mini via RS485
+ESPHome component to monitor and control a JN-MPPT or JN-W/S Controller via RS485
 
 ![Lovelace entities card](lovelace-entities-card.png "Lovelace entities card")
 
@@ -46,14 +46,14 @@ P:360/720W
 </a>
 
 ```
-               RS485                      UART
-┌─────────┐              ┌──────────┐                ┌─────────┐
-│         │              │          │<----- RX ----->│         │
-│ JN-MPPT │<-----B- ---->│  RS485   │<----- TX ----->│ ESP32/  │
-│  Solar  │<---- A+ ---->│  to TTL  │<----- GND ---->│ ESP8266 │
-│ Charger │<--- GND ---->│  module  │<--- 5V VCC --->│         │<-- 5V VCC
-│         │              │          │                │         │<-- GND
-└─────────┘              └──────────┘                └─────────┘
+                  RS485                      UART
+┌────────────┐              ┌──────────┐                ┌─────────┐
+│            │              │          │<----- RX ----->│         │
+│    JNGE    │<-----B- ---->│  RS485   │<----- TX ----->│ ESP32/  │
+│ Controller │<---- A+ ---->│  to TTL  │<----- GND ---->│ ESP8266 │
+│            │<--- GND ---->│  module  │<--- 5V VCC --->│         │<-- 5V VCC
+│            │              │          │                │         │<-- GND
+└────────────┘              └──────────┘                └─────────┘
 
 ```
 
@@ -115,7 +115,7 @@ esphome run esp32-example.yaml
 
 ```yaml
 substitutions:
-  name: jn_mppt_mini
+  name: jn-mppt
   status: "${name} status"
   config: "${name} config"
 
