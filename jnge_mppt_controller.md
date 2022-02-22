@@ -13,11 +13,11 @@ ESPHome component to monitor and control a JN-MPPT or JN-W/S Controller via RS48
 
 ## Supported devices
 
-* JN-MPPT-MINI Buck Solar Charge Controller `<2021/01` (12V / 24V / 48V)
-* JN-MPPT-MINI Buck Solar Charge Controller `2021` (12V / 24V)
-* JN-MPPT-AL Buck Solar Charge Controller (12V / 24V / 48V)
-* JN-MPPT-BL Buck Solar Charge Controller (12V / 24V / 48V)
-* JN-MPPT-CL Buck Solar Charge Controller (12V / 24V / 48V)
+* JN-MPPT-MINI Buck Solar Charge Controller `<2021/01: 12V / 24V / 48V`
+* JN-MPPT-MINI Buck Solar Charge Controller `>=2021/01: 12V / 24V`
+* JN-MPPT-AL Buck Solar Charge Controller
+* JN-MPPT-BL Buck Solar Charge Controller
+* JN-MPPT-CL Buck Solar Charge Controller
 
 The manufacturer dropped the 48V support of the JN-MPPT-MINI in 2021. The new and downgraded model can be identified by a white sticker:
 
