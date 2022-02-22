@@ -8,8 +8,6 @@
 
 ESPHome component to monitor and control a JN-MPPT or JN-W/S Controller via RS485
 
-![Lovelace entities card](lovelace-entities-card.png "Lovelace entities card")
-
 
 ## Supported devices
 
