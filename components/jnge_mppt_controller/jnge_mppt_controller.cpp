@@ -389,7 +389,7 @@ void JngeMpptController::on_configuration_data_(const std::vector<uint8_t> &data
   this->publish_state_(this->load_turn_off_time_sensor_, (float) jnge_get_16bit(38));
 
   // 0x1038: Charging on/off                  2 bytes                     0 (Charger off), 1 (Charger on)
-  this->publish_state_(this->charging_switch_, (float) jnge_get_16bit(40));
+  this->publish_state_(this->charging_switch_, (bool) (jnge_get_16bit(40) == 0x01));
 
   // 0x1039: Buzzer on/off                    2 bytes                     0 (Buzzer off), 1 (Buzzer on)
   this->publish_state_(this->buzzer_switch_, (bool) (jnge_get_16bit(42) == 0x01));
