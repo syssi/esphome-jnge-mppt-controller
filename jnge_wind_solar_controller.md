@@ -73,12 +73,6 @@ wifi:
 
 ota:
 logger:
-  level: VERY_VERBOSE
-  logs:
-    api.service: WARN
-    ota: WARN
-    wif: WARN
-    sensor: DEBUG
 
 mqtt:
   broker: !secret mqtt_host
@@ -166,6 +160,31 @@ If you use Home Assistant you should replace the `mqtt:` component with the nati
 ## Example response all sensors enabled
 
 ```
+[sensor:125]: 'jnge-wind-solar-hybrid status battery voltage': Sending state 14.70000 V with 1 decimals of accuracy
+[sensor:125]: 'jnge-wind-solar-hybrid status pv voltage': Sending state 0.00000 V with 1 decimals of accuracy
+[sensor:125]: 'jnge-wind-solar-hybrid status fan voltage': Sending state 14.90000 V with 1 decimals of accuracy
+[sensor:125]: 'jnge-wind-solar-hybrid status pv charging current': Sending state 0.00000 A with 1 decimals of accuracy
+[sensor:125]: 'jnge-wind-solar-hybrid status fan charging current': Sending state 0.90000 A with 1 decimals of accuracy
+[sensor:125]: 'jnge-wind-solar-hybrid status pv charging power': Sending state 0.00000 W with 1 decimals of accuracy
+[sensor:125]: 'jnge-wind-solar-hybrid status fan charging power': Sending state 13.00000 W with 1 decimals of accuracy
+[sensor:125]: 'jnge-wind-solar-hybrid status pv total energy': Sending state 0.00000 kWh with 1 decimals of accuracy
+[sensor:125]: 'jnge-wind-solar-hybrid status fan total energy': Sending state 0.00000 kWh with 1 decimals of accuracy
+[sensor:125]: 'jnge-wind-solar-hybrid status operation mode id': Sending state 0.00000  with 0 decimals of accuracy
+[text_sensor:067]: 'jnge-wind-solar-hybrid status operation mode': Sending state 'Not charging'
+[binary_sensor:036]: 'jnge-wind-solar-hybrid status load detected': Sending state OFF
+[sensor:125]: 'jnge-wind-solar-hybrid status firmware version': Sending state 2.00000  with 0 decimals of accuracy
+[sensor:125]: 'jnge-wind-solar-hybrid status peak pv charging rating': Sending state 0.00000 W with 0 decimals of accuracy
+[sensor:125]: 'jnge-wind-solar-hybrid status peak fan charging rating': Sending state 0.00000 W with 0 decimals of accuracy
+[sensor:125]: 'jnge-wind-solar-hybrid status battery strings': Sending state 1.00000  with 0 decimals of accuracy
+[text_sensor:067]: 'jnge-wind-solar-hybrid status battery type': Sending state 'Custom'
+[sensor:125]: 'jnge-wind-solar-hybrid status battery voltage level': Sending state 12.00000 V with 0 decimals of accuracy
+[sensor:125]: 'jnge-wind-solar-hybrid status error bitmask': Sending state 16384.00000  with 0 decimals of accuracy
+[text_sensor:067]: 'jnge-wind-solar-hybrid status errors': Sending state 'PV array undervoltage'
+[binary_sensor:036]: 'jnge-wind-solar-hybrid status charging': Sending state ON
+[binary_sensor:036]: 'jnge-wind-solar-hybrid status load': Sending state OFF
+[switch:037]: 'jnge-wind-solar-hybrid config street light mode': Sending state OFF
+[switch:037]: 'jnge-wind-solar-hybrid config charging': Sending state OFF
+[switch:037]: 'jnge-wind-solar-hybrid config load': Sending state OFF
 ```
 
 ## Known issues

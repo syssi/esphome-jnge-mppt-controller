@@ -18,12 +18,6 @@ wifi:
 
 ota:
 logger:
-  level: VERY_VERBOSE
-  logs:
-    api.service: WARN
-    ota: WARN
-    wif: WARN
-    sensor: DEBUG
 
 mqtt:
   broker: !secret mqtt_host
