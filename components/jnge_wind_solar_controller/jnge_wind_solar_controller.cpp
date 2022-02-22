@@ -50,21 +50,8 @@ static const char *const BATTERY_TYPES[BATTERY_TYPES_SIZE] = {
 };
 
 void JngeWindSolarController::on_jnge_modbus_data(const uint8_t &function, const std::vector<uint8_t> &data) {
-  if (function == READ_REGISTERS && data.size() == 38) {
-    this->on_status_data_(data);
-
-    // The controller cannot handle two commands in series. The configuration
-    // request is send here to decouple the requests.
-    //
-    // Request device configuration -> 0x06 0x03 0x10 0x24 0x00 0x19 0xC1 0x7C
-    this->send(READ_REGISTERS, 0x1024, 25);
-
-    return;
-  }
-
-  if (function == READ_REGISTERS && data.size() == 50) {
-    this->on_configuration_data_(data);
-
+  if (function == READ_REGISTERS && data.size() == 120) {
+    this->on_read_registers_data_(data);
     return;
   }
 
@@ -75,7 +62,7 @@ void JngeWindSolarController::on_jnge_modbus_data(const uint8_t &function, const
   //
   // Success if the response is equal to the request
   if (function == WRITE_SINGLE_REGISTER && data.size() == 4) {
-    this->on_write_data_(data);
+    this->on_write_single_register_data_(data);
 
     return;
   }
@@ -83,7 +70,7 @@ void JngeWindSolarController::on_jnge_modbus_data(const uint8_t &function, const
   ESP_LOGW(TAG, "Invalid size (%zu) for JNGE Solar and Wind Hybrid Controller frame!", data.size());
 }
 
-void JngeWindSolarController::on_status_data_(const std::vector<uint8_t> &data) {
+void JngeWindSolarController::on_read_registers_data_(const std::vector<uint8_t> &data) {
   auto jnge_get_16bit = [&](size_t i) -> uint16_t {
     return (uint16_t(data[i + 0]) << 8) | (uint16_t(data[i + 1]) << 0);
   };
@@ -148,15 +135,42 @@ void JngeWindSolarController::on_status_data_(const std::vector<uint8_t> &data) 
   this->publish_state_(this->charging_binary_sensor_, (bool) (jnge_get_16bit(36) == 0x01));
   // 0x1013: Load switch machine        2 bytes                  0 (Off), 1 (On)
   this->publish_state_(this->load_binary_sensor_, (bool) (jnge_get_16bit(38) == 0x01));
+
+  // *read/write registers*
   //
-  // ----> 19 register * 2 bytes = 38 bytes data
+  // 0x1024: Overvoltage                        2 bytes        0.1      V
+  // 0x1025: Overvoltage recovery               2 bytes        0.1      V
+  // 0x1026: Boost charging voltage             2 bytes        0.1      V
+  // 0x1027: Boost charging return voltage      2 bytes        0.1      V
+  // 0x1028: Floating charge voltage            2 bytes        0.1      V
+  // 0x1029: Floating charge return voltage     2 bytes        0.1      V
+  // 0x102A: Battery undervoltage               2 bytes        0.1      V
+  // 0x102B: Battery undervoltage recovery      2 bytes        0.1      V
+  // 0x102C: Improve charging time              2 bytes          1      h  (1...3 h)
+  // 0x102D: Battery voltage level              2 bytes        0.1      V
+  // 0x102E: Battery type                       2 bytes                 1: Lead-Acid, 2: LiFePo4,
+  //                                                                     3: Ternary Lithium, 4: Custom
+  // 0x102F: Battery strings                    2 bytes          1      N
+  // 0x1030: Device modbus address              2 bytes          1      N  (1...255)
+  // 0x1031: Light control turn on voltage      2 bytes        0.1      V
+  // 0x1032: Light control turn off voltage     2 bytes        0.1      V
+  // 0x1033: Household and street light mode    2 bytes                 0: Household mode, 1: Street lamp mode
+  // 0x1034: Light control time period 1        2 bytes          1      h
+  // 0x1035: Light control time period 1 light intensity    2 bytes      10     % (0, 10, 20, ..., 100)
+  // 0x1036: Light control time period 2        2 bytes          1      h
+  // 0x1037: Light control time period 2 light intensity    2 bytes      10     % (0, 10, 20, ..., 100)
+  // 0x1038: Light control time period 3        2 bytes          1      h
+  // 0x1039: Light control time period 3 light intensity    2 bytes      10     % (0, 10, 20, ..., 100)
+  // 0x103A: Fan unloading voltage point        2 bytes        0.1      V
+  // 0x103B: Charging switch                    2 bytes                 0: Off, 1: On (PV pwm control 0)
+  // 0x103C: Load switch                        2 bytes                 0: Off, 1: On (Controls Out1 and Out2
+  // simultaneously)
+
+  //
+  // ----> 60 register * 2 bytes = 120 bytes data
 }
 
-void JngeWindSolarController::on_configuration_data_(const std::vector<uint8_t> &data) {
-  // Not implemented yet
-}
-
-void JngeWindSolarController::on_write_data_(const std::vector<uint8_t> &data) {
+void JngeWindSolarController::on_write_single_register_data_(const std::vector<uint8_t> &data) {
   ESP_LOGI(TAG, "Write register response received: %s", format_hex_pretty(&data.front(), data.size()).c_str());
 }
 
@@ -170,31 +184,25 @@ void JngeWindSolarController::write_register(uint16_t address, uint16_t value) {
 }
 
 void JngeWindSolarController::update() {
-  // Request device status -> 0x06 0x03 0x10 0x00 0x00 0x13 0x01 0x70
-  this->send(READ_REGISTERS, 0x1000, 19);
+  // Request device status -> 0x06 0x03 0x10 0x00 0x00 0x3C 0x40 0xAC
+  this->send(READ_REGISTERS, 0x1000, 60);
 
-  // Example status response
+  // Example read registers response
   //
   // Header: 0x06, 0x03, 0x26,
-  /*
-  this->on_jnge_modbus_data(READ_REGISTERS,
-                            {0x00, 0x93, 0x00, 0x00, 0x00, 0x95, 0x00, 0x00, 0x00, 0x09, 0x00, 0x00,
-                             0x00, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x04, 0x00,
-                             0x04, 0x00, 0x01, 0x00, 0x04, 0x00, 0x78, 0x40, 0x00, 0x00, 0x01});
-                             */
-  // CRC: 0x29, 0x1B
-
-  // Example configuration responses
-  //
-  // Header: 0x06, 0x03, 0x32,
-  /*
   this->on_jnge_modbus_data(
       READ_REGISTERS,
-      {0x00, 0x96, 0x00, 0x8C, 0x00, 0x92, 0x00, 0x8D, 0x00, 0x90, 0x00, 0x8B, 0x00, 0x6E, 0x00, 0x78,
-       0x00, 0x01, 0x00, 0x78, 0x00, 0x04, 0x00, 0x01, 0x00, 0x06, 0x00, 0x3C, 0x00, 0x32, 0x00, 0x00, 0x00, 0x06, 0x00,
-       0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x01, 0x00, 0x00});
-       */
-  // CRC: 0x93, 0x77
+      {// 0x1000...0x1013
+       0x00, 0x93, 0x00, 0x00, 0x00, 0x95, 0x00, 0x00, 0x00, 0x09, 0x00, 0x00, 0x00, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x00,
+       0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x04, 0x00, 0x04, 0x00, 0x01, 0x00, 0x04, 0x00, 0x78, 0x40, 0x00, 0x00, 0x01,
+       // 0x1014...0x1023
+       0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+       0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF,
+       // 0x1024...0x103C
+       0x00, 0x96, 0x00, 0x8C, 0x00, 0x92, 0x00, 0x8D, 0x00, 0x90, 0x00, 0x8B, 0x00, 0x6E, 0x00, 0x78, 0x00, 0x01, 0x00,
+       0x78, 0x00, 0x04, 0x00, 0x01, 0x00, 0x06, 0x00, 0x3C, 0x00, 0x32, 0x00, 0x00, 0x00, 0x06, 0x00, 0x00, 0x00, 0x00,
+       0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x01, 0x00, 0x00});
+  // + 2 bytes CRC
 }
 
 void JngeWindSolarController::publish_state_(binary_sensor::BinarySensor *binary_sensor, const bool &state) {

@@ -108,8 +108,8 @@ class JngeWindSolarController : public PollingComponent, public jnge_modbus::Jng
   text_sensor::TextSensor *errors_text_sensor_;
   text_sensor::TextSensor *battery_type_text_sensor_;
 
-  void on_status_data_(const std::vector<uint8_t> &data);
-  void on_configuration_data_(const std::vector<uint8_t> &data);
+  void on_read_registers_data_(const std::vector<uint8_t> &data);
+  void on_write_single_register_data_(const std::vector<uint8_t> &data);
   void on_write_data_(const std::vector<uint8_t> &data);
   void publish_state_(sensor::Sensor *sensor, float value);
   void publish_state_(text_sensor::TextSensor *text_sensor, const std::string &state);
