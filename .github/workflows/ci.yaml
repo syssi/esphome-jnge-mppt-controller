@@ -169,6 +169,9 @@ jobs:
       - run: |
           sed -i 's#source: github://syssi/esphome-jnge-mppt-controller@main#source: components#' esp32-example-jnge-wind-solar-controller.yaml
           esphome config esp32-example-jnge-wind-solar-controller.yaml
+      - run: |
+          sed -i 's#source: github://syssi/esphome-jnge-mppt-controller@main#source: components#' esp8266-example-jnge-wind-solar-controller.yaml
+          esphome config esp8266-example-jnge-wind-solar-controller.yaml
 
   esphome-compile:
     runs-on: ubuntu-latest
@@ -214,3 +217,6 @@ jobs:
       - run: |
           sed -i 's#source: github://syssi/esphome-jnge-mppt-controller@main#source: components#' esp32-example-jnge-wind-solar-controller.yaml
           esphome compile esp32-example-jnge-wind-solar-controller.yaml
+      - run: |
+          sed -i 's#source: github://syssi/esphome-jnge-mppt-controller@main#source: components#' esp8266-example-jnge-wind-solar-controller.yaml
+          esphome compile esp8266-example-jnge-wind-solar-controller.yaml

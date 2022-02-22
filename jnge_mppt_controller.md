@@ -40,23 +40,38 @@ P:360/720W
 2021/04/29
 ```
 
-### JN-MPPT RJ45 jack
+## Installation
 
-| Pin     | Purpose      | RS485-to-TTL pin  | Color T-568B |
-| :-----: | :----------- | :---------------- | ------------ |
-|  **1**  | **B-**       | **B-**            | Orange-White |
-|    2    | B-           |                   |              |
-|  **3**  | **A+**       | **A+**            | Green-White  |
-|    4    | A+           |                   |              |
-|  **5**  | **GND**      | **GND**           | Blue-White   |
-|    6    | GND          |                   |              |
-|    7    | +12V         |                   | Brown-White  |
-|    8    | +12V         |                   |              |
+You can install this component with [ESPHome external components feature](https://esphome.io/components/external_components.html) like this:
+```yaml
+external_components:
+  - source: github://syssi/esphome-jnge-mppt-controller@main
+```
 
-Please be aware of the different RJ45 pinout colors ([T-568A vs. T-568B](images/rj45-colors-t568a-vs-t568.png)).
+or just use the `esp32-example-jnge-mppt-controller.yaml` / `esp8266-example-jnge-mppt-controller.yaml` as proof of concept:
 
-If the device supports some load (untested!) at pin 7/8 it could be used to power the ESP. A buck converter from 12V to 5V is required in this case.
+```bash
+# Install esphome
+pip3 install esphome
 
+# Clone this external component
+git clone https://github.com/syssi/esphome-jnge-mppt-controller.git
+cd esphome-jnge-mppt-controller
+
+# Create a secrets.yaml containing some setup specific secrets
+cat > secrets.yaml <<EOF
+wifi_ssid: MY_WIFI_SSID
+wifi_password: MY_WIFI_PASSWORD
+
+mqtt_host: MY_MQTT_HOST
+mqtt_username: MY_MQTT_USERNAME
+mqtt_password: MY_MQTT_PASSWORD
+EOF
+
+# Validate the configuration, create a binary, upload it, and start logs
+# If you use a esp8266 run the esp8266-example-jnge-mppt-controller.yaml
+esphome run esp32-example-jnge-mppt-controller.yaml
+```
 
 ## Configuration
 

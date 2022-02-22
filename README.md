@@ -45,7 +45,7 @@ ESPHome component to monitor and control a JN-MPPT or JN-W/S Controller via RS48
 
 ```
 
-### JN-MPPT RJ45 jack
+### RJ45 jack
 
 | Pin     | Purpose      | RS485-to-TTL pin  | Color T-568B |
 | :-----: | :----------- | :---------------- | ------------ |
@@ -65,37 +65,8 @@ If the device supports some load (untested!) at pin 7/8 it could be used to powe
 
 ## Installation
 
-You can install this component with [ESPHome external components feature](https://esphome.io/components/external_components.html) like this:
-```yaml
-external_components:
-  - source: github://syssi/esphome-jnge-mppt-controller@main
-```
-
-or just use the `esp32-example-jnge-mppt-controller.yaml` / `esp8266-example-jnge-mppt-controller.yaml` as proof of concept:
-
-```bash
-# Install esphome
-pip3 install esphome
-
-# Clone this external component
-git clone https://github.com/syssi/esphome-jnge-mppt-controller.git
-cd esphome-jnge-mppt-controller
-
-# Create a secrets.yaml containing some setup specific secrets
-cat > secrets.yaml <<EOF
-wifi_ssid: MY_WIFI_SSID
-wifi_password: MY_WIFI_PASSWORD
-
-mqtt_host: MY_MQTT_HOST
-mqtt_username: MY_MQTT_USERNAME
-mqtt_password: MY_MQTT_PASSWORD
-EOF
-
-# Validate the configuration, create a binary, upload it, and start logs
-# If you use a esp8266 run the esp8266-example-jnge-mppt-controller.yaml
-esphome run esp32-example-jnge-mppt-controller.yaml
-
-```
+* [JN-MPPT Buck Solar Charge Controller](jnge_mppt_controller.md)
+* [JN-W/S Wind and Solar Hybrid Controller](jnge_wind_solar_controller.md)
 
 ## References
 
