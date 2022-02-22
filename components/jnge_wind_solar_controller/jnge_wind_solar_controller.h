@@ -73,6 +73,12 @@ class JngeWindSolarController : public PollingComponent, public jnge_modbus::Jng
     battery_type_text_sensor_ = battery_type_text_sensor;
   }
 
+  void set_street_light_mode_switch(switch_::Switch *street_light_mode_switch) {
+    street_light_mode_switch_ = street_light_mode_switch;
+  }
+  void set_charging_switch(switch_::Switch *charging_switch) { charging_switch_ = charging_switch; }
+  void set_load_switch(switch_::Switch *load_switch) { load_switch_ = load_switch; }
+
   void dump_config() override;
 
   void on_jnge_modbus_data(const uint8_t &function, const std::vector<uint8_t> &data) override;
@@ -103,6 +109,10 @@ class JngeWindSolarController : public PollingComponent, public jnge_modbus::Jng
   sensor::Sensor *battery_strings_sensor_;
   sensor::Sensor *battery_voltage_level_sensor_;
   sensor::Sensor *error_bitmask_sensor_;
+
+  switch_::Switch *street_light_mode_switch_;
+  switch_::Switch *charging_switch_;
+  switch_::Switch *load_switch_;
 
   text_sensor::TextSensor *operation_mode_text_sensor_;
   text_sensor::TextSensor *errors_text_sensor_;

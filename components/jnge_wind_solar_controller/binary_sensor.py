@@ -4,7 +4,7 @@ from esphome.components import binary_sensor
 from esphome.const import CONF_ICON, CONF_ID
 
 from . import CONF_JNGE_WIND_SOLAR_CONTROLLER_ID, JngeWindSolarController
-from .const import CONF_LOAD, CONF_CHARGING
+from .const import CONF_CHARGING, CONF_LOAD
 
 DEPENDENCIES = ["jnge_wind_solar_controller"]
 
