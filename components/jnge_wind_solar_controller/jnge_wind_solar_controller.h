@@ -25,6 +25,12 @@ class JngeWindSolarController : public PollingComponent, public jnge_modbus::Jng
   void set_firmware_version_sensor(sensor::Sensor *firmware_version_sensor) {
     firmware_version_sensor_ = firmware_version_sensor;
   }
+  void set_peak_pv_charging_rating_sensor(sensor::Sensor *peak_pv_charging_rating_sensor) {
+    peak_pv_charging_rating_sensor_ = peak_pv_charging_rating_sensor;
+  }
+  void set_peak_fan_charging_rating_sensor(sensor::Sensor *peak_fan_charging_rating_sensor) {
+    peak_fan_charging_rating_sensor_ = peak_fan_charging_rating_sensor;
+  }
   void set_pv_voltage_sensor(sensor::Sensor *pv_voltage_sensor) { pv_voltage_sensor_ = pv_voltage_sensor; }
   void set_fan_voltage_sensor(sensor::Sensor *fan_voltage_sensor) { fan_voltage_sensor_ = fan_voltage_sensor; }
   void set_battery_voltage_sensor(sensor::Sensor *battery_voltage_sensor) {
@@ -82,6 +88,8 @@ class JngeWindSolarController : public PollingComponent, public jnge_modbus::Jng
 
   // status
   sensor::Sensor *firmware_version_sensor_;
+  sensor::Sensor *peak_pv_charging_rating_sensor_;
+  sensor::Sensor *peak_fan_charging_rating_sensor_;
   sensor::Sensor *pv_voltage_sensor_;
   sensor::Sensor *fan_voltage_sensor_;
   sensor::Sensor *battery_voltage_sensor_;

@@ -55,6 +55,10 @@ sensor:
     # status
     firmware_version:
       name: "${status} firmware version"
+    peak_pv_charging_rating:
+      name: "${status} peak pv charging rating"
+    peak_fan_charging_rating:
+      name: "${status} peak fan charging rating"
     pv_voltage:
       name: "${status} pv voltage"
     fan_voltage:
