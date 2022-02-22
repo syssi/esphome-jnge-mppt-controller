@@ -155,6 +155,7 @@ void JngeWindSolarController::on_read_registers_data_(const std::vector<uint8_t>
   // 0x1031: Light control turn on voltage      2 bytes        0.1      V
   // 0x1032: Light control turn off voltage     2 bytes        0.1      V
   // 0x1033: Household or street light mode     2 bytes                 0 (Household), 1 (Street light)
+  this->publish_state_(this->street_light_mode_switch_, (bool) (jnge_get_16bit(102) == 0x01));
   // 0x1034: Light control time period 1        2 bytes          1      h
   // 0x1035: Light control time period 1 light intensity    2 bytes      10     % (0, 10, 20, ..., 100)
   // 0x1036: Light control time period 2        2 bytes          1      h
@@ -163,9 +164,11 @@ void JngeWindSolarController::on_read_registers_data_(const std::vector<uint8_t>
   // 0x1039: Light control time period 3 light intensity    2 bytes      10     % (0, 10, 20, ..., 100)
   // 0x103A: Fan unloading voltage point        2 bytes        0.1      V
   // 0x103B: Charging switch                    2 bytes                 0 (Charger off), 1 (Charger on)
+  this->publish_state_(this->charging_switch_, (bool) (jnge_get_16bit(118) == 0x01));
   //                                                                    (PV pwm control 0)
   // 0x103C: Load switch                        2 bytes                 0 (Load off), 1 (Load on)
   //                                                                    (Controls Out1 and Out2 simultaneously)
+  this->publish_state_(this->load_switch_, (bool) (jnge_get_16bit(120) == 0x01));
 
   //
   // ----> 60 register * 2 bytes = 120 bytes data

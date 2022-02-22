@@ -86,6 +86,16 @@ sensor:
     error_bitmask:
       name: "${status} error bitmask"
 
+
+switch:
+  - platform: jnge_wind_solar_controller
+    street_light_mode:
+      name: "${config} street light mode"
+    charging:
+      name: "${config} charging"
+    load:
+      name: "${config} load"
+
 text_sensor:
   - platform: jnge_wind_solar_controller
     battery_type:
@@ -94,5 +104,3 @@ text_sensor:
       name: "${status} errors"
     operation_mode:
       name: "${status} operation mode"
-
-# The "switch:" platform isn't implemented yet

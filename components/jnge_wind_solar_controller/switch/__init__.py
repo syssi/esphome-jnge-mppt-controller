@@ -16,15 +16,13 @@ CODEOWNERS = ["@syssi"]
 CONF_BUZZER = "buzzer"
 CONF_STREET_LIGHT_MODE = "street_light_mode"
 
-ICON_BUZZER = "mdi:volume-high"
 ICON_STREET_LIGHT_MODE = "mdi:outdoor-lamp"
 ICON_CHARGING = "mdi:battery-charging-50"
 ICON_LOAD = "mdi:power-plug"
 
 SWITCHES = {
-    CONF_BUZZER: 0x1039,
-    CONF_STREET_LIGHT_MODE: 0x1036,
-    CONF_CHARGING: 0x1038,
+    CONF_STREET_LIGHT_MODE: 0x1033,
+    CONF_CHARGING: 0x103B,
     CONF_LOAD: 0x103C,
 }
 
@@ -37,12 +35,6 @@ CONFIG_SCHEMA = cv.Schema(
         cv.GenerateID(CONF_JNGE_WIND_SOLAR_CONTROLLER_ID): cv.use_id(
             JngeWindSolarController
         ),
-        cv.Optional(CONF_BUZZER): switch.SWITCH_SCHEMA.extend(
-            {
-                cv.GenerateID(): cv.declare_id(JngeSwitch),
-                cv.Optional(CONF_ICON, default=ICON_BUZZER): switch.icon,
-            }
-        ).extend(cv.COMPONENT_SCHEMA),
         cv.Optional(CONF_STREET_LIGHT_MODE): switch.SWITCH_SCHEMA.extend(
             {
                 cv.GenerateID(): cv.declare_id(JngeSwitch),
