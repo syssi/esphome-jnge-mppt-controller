@@ -1,13 +1,10 @@
-# esphome-jnge-mppt-controller
+# JN-W/S Wind and Solar Hybrid Controller
 
 ![GitHub actions](https://github.com/syssi/esphome-jnge-mppt-controller/actions/workflows/ci.yaml/badge.svg)
 ![GitHub stars](https://img.shields.io/github/stars/syssi/esphome-jnge-mppt-controller)
 ![GitHub forks](https://img.shields.io/github/forks/syssi/esphome-jnge-mppt-controller)
 ![GitHub watchers](https://img.shields.io/github/watchers/syssi/esphome-jnge-mppt-controller)
 [!["Buy Me A Coffee"](https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg)](https://www.buymeacoffee.com/syssi)
-
-ESPHome component to monitor and control a JN-MPPT or JN-W/S Controller via RS485
-
 
 ## Supported devices
 

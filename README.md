@@ -63,7 +63,7 @@ Please be aware of the different RJ45 pinout colors ([T-568A vs. T-568B](images/
 If the device supports some load (untested!) at pin 7/8 it could be used to power the ESP. A buck converter from 12V to 5V is required in this case.
 
 
-## Installation
+## Setup
 
 * [JN-MPPT Buck Solar Charge Controller](jnge_mppt_controller.md)
 * [JN-W/S Wind and Solar Hybrid Controller](jnge_wind_solar_controller.md)
