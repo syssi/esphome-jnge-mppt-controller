@@ -78,7 +78,7 @@ class JngeWindSolarController : public PollingComponent, public jnge_modbus::Jng
   }
   void set_charging_switch(switch_::Switch *charging_switch) { charging_switch_ = charging_switch; }
   void set_load_switch(switch_::Switch *load_switch) { load_switch_ = load_switch; }
-  
+
   void dump_config() override;
 
   void on_jnge_modbus_data(const uint8_t &function, const std::vector<uint8_t> &data) override;
