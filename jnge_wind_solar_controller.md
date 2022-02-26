@@ -12,6 +12,37 @@
 * JN-24-W600/S600, JN-24-W800/S800 Wind and Solar Hybrid Controller
 * JN-48-W800/S800, JN-48-W1000/S1000 Wind and Solar Hybrid Controller
 
+## Schematics
+
+```
+                  RS485                      UART
+┌────────────┐              ┌──────────┐                ┌─────────┐
+│            │              │          │<----- RX ----->│         │
+│    JNGE    │<-----B- ---->│  RS485   │<----- TX ----->│ ESP32/  │
+│ Controller │<---- A+ ---->│  to TTL  │<----- GND ---->│ ESP8266 │
+│            │<--- GND ---->│  module  │<--- 5V VCC --->│         │<-- 5V VCC
+│            │              │          │                │         │<-- GND
+└────────────┘              └──────────┘                └─────────┘
+
+```
+
+### RJ45 jack
+
+| Pin     | Purpose      | RS485-to-TTL pin  | Color T-568B |
+| :-----: | :----------- | :---------------- | ------------ |
+|    1    |              |                   |              |
+|    2    |              |                   |              |
+|    3    |              |                   |              |
+|    4    |              |                   |              |
+|  **5**  | **A+**       | **A+**            | Blue-White   |
+|  **6**  | **B-**       | **B-**            | Green        |
+|  **7**  | **VCC**      |                   | Brown-White  |
+|  **8**  | **GND**      | **GND**           | Brown        |
+
+Please be aware of the different RJ45 pinout colors ([T-568A vs. T-568B](images/rj45-colors-t568a-vs-t568.png)).
+
+If the device supports some load (untested!) at pin 7/8 it could be used to power the ESP. A buck converter from 12V to 5V is required in this case.
+
 ## Installation
 
 You can install this component with [ESPHome external components feature](https://esphome.io/components/external_components.html) like this:

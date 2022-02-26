@@ -27,42 +27,6 @@ ESPHome component to monitor and control a JN-MPPT or JN-W/S Controller via RS48
 * RS485-to-TTL module (`HW-0519` f.e.)
 * Generic ESP32 or ESP8266 board
 
-## Schematics
-
-<a href="https://raw.githubusercontent.com/syssi/esphome-jnge-mppt-controller/main/images/circuit.jpg" target="_blank">
-<img src="https://raw.githubusercontent.com/syssi/esphome-jnge-mppt-controller/main/images/circuit_thumbnail.jpg" width="50%">
-</a>
-
-```
-                  RS485                      UART
-┌────────────┐              ┌──────────┐                ┌─────────┐
-│            │              │          │<----- RX ----->│         │
-│    JNGE    │<-----B- ---->│  RS485   │<----- TX ----->│ ESP32/  │
-│ Controller │<---- A+ ---->│  to TTL  │<----- GND ---->│ ESP8266 │
-│            │<--- GND ---->│  module  │<--- 5V VCC --->│         │<-- 5V VCC
-│            │              │          │                │         │<-- GND
-└────────────┘              └──────────┘                └─────────┘
-
-```
-
-### RJ45 jack
-
-| Pin     | Purpose      | RS485-to-TTL pin  | Color T-568B |
-| :-----: | :----------- | :---------------- | ------------ |
-|  **1**  | **B-**       | **B-**            | Orange-White |
-|    2    | B-           |                   |              |
-|  **3**  | **A+**       | **A+**            | Green-White  |
-|    4    | A+           |                   |              |
-|  **5**  | **GND**      | **GND**           | Blue-White   |
-|    6    | GND          |                   |              |
-|    7    | +12V         |                   | Brown-White  |
-|    8    | +12V         |                   |              |
-
-Please be aware of the different RJ45 pinout colors ([T-568A vs. T-568B](images/rj45-colors-t568a-vs-t568.png)).
-
-If the device supports some load (untested!) at pin 7/8 it could be used to power the ESP. A buck converter from 12V to 5V is required in this case.
-
-
 ## Setup
 
 * [JN-MPPT Buck Solar Charge Controller](jnge_mppt_controller.md)
