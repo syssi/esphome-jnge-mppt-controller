@@ -334,13 +334,13 @@ void JngeMpptController::on_configuration_data_(const std::vector<uint8_t> &data
   // Address Content                          Length    Coeff.  Unit     Example value
   //
   // 0x1024: Overvoltage                      2 bytes   0.1     V
-  this->publish_state_(this->overvoltage_sensor_, (float) jnge_get_16bit(0) * 0.1f);
+  this->publish_state_(this->battery_overvoltage_sensor_, (float) jnge_get_16bit(0) * 0.1f);
 
   // 0x1025: Charging limit voltage           2 bytes   0.1     V
   this->publish_state_(this->charging_limit_voltage_sensor_, (float) jnge_get_16bit(2) * 0.1f);
 
   // 0x1026: Overvoltage recovery             2 bytes   0.1     V
-  this->publish_state_(this->overvoltage_recovery_sensor_, (float) jnge_get_16bit(4) * 0.1f);
+  this->publish_state_(this->battery_overvoltage_recovery_sensor_, (float) jnge_get_16bit(4) * 0.1f);
 
   // 0x1027: Equalizing charging voltage      2 bytes   0.1     V
   this->publish_state_(this->equalizing_charging_voltage_sensor_, (float) jnge_get_16bit(6) * 0.1f);
@@ -535,9 +535,9 @@ void JngeMpptController::dump_config() {  // NOLINT(google-readability-function-
   LOG_SENSOR("", "Battery Temperature Compensation Voltage Point",
              this->battery_temperature_compensation_voltage_point_sensor_);
 
-  LOG_SENSOR("", "Overvoltage", this->overvoltage_sensor_);
+  LOG_SENSOR("", "Battery Overvoltage", this->battery_overvoltage_sensor_);
   LOG_SENSOR("", "Charging Voltage Limit", this->charging_limit_voltage_sensor_);
-  LOG_SENSOR("", "Overvoltage Recovery", this->overvoltage_recovery_sensor_);
+  LOG_SENSOR("", "Battery Overvoltage Recovery", this->battery_overvoltage_recovery_sensor_);
   LOG_SENSOR("", "Equalizing Charging Voltage", this->equalizing_charging_voltage_sensor_);
   LOG_SENSOR("", "Boost Charging Voltage", this->boost_charging_voltage_sensor_);
   LOG_SENSOR("", "Boost Charging Return Voltage", this->boost_charging_return_voltage_sensor_);
