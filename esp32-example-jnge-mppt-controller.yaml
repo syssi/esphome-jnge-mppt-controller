@@ -94,12 +94,12 @@ sensor:
       name: "${status} battery temperature compensation voltage point"
 
     # config
-    overvoltage:
-      name: "${config} overvoltage"
+    battery_overvoltage:
+      name: "${config} battery overvoltage"
     charging_limit_voltage:
       name: "${config} charging limit voltage"
-    overvoltage_recovery:
-      name: "${config} overvoltage recovery"
+    battery_overvoltage_recovery:
+      name: "${config} battery overvoltage recovery"
     equalizing_charging_voltage:
       name: "${config} equalizing charging voltage"
     boost_charging_voltage:
