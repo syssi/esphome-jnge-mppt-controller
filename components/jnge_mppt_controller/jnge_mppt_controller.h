@@ -90,12 +90,14 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
   }
 
   // configuration
-  void set_overvoltage_sensor(sensor::Sensor *overvoltage_sensor) { overvoltage_sensor_ = overvoltage_sensor; }
+  void set_battery_overvoltage_sensor(sensor::Sensor *battery_overvoltage_sensor) {
+    battery_overvoltage_sensor_ = battery_overvoltage_sensor;
+  }
   void set_charging_limit_voltage_sensor(sensor::Sensor *charging_limit_voltage_sensor) {
     charging_limit_voltage_sensor_ = charging_limit_voltage_sensor;
   }
-  void set_overvoltage_recovery_sensor(sensor::Sensor *overvoltage_recovery_sensor) {
-    overvoltage_recovery_sensor_ = overvoltage_recovery_sensor;
+  void set_battery_overvoltage_recovery_sensor(sensor::Sensor *battery_overvoltage_recovery_sensor) {
+    battery_overvoltage_recovery_sensor_ = battery_overvoltage_recovery_sensor;
   }
   void set_equalizing_charging_voltage_sensor(sensor::Sensor *equalizing_charging_voltage_sensor) {
     equalizing_charging_voltage_sensor_ = equalizing_charging_voltage_sensor;
@@ -204,9 +206,9 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
   sensor::Sensor *battery_strings_sensor_;
 
   // configuration
-  sensor::Sensor *overvoltage_sensor_;
+  sensor::Sensor *battery_overvoltage_sensor_;
   sensor::Sensor *charging_limit_voltage_sensor_;
-  sensor::Sensor *overvoltage_recovery_sensor_;
+  sensor::Sensor *battery_overvoltage_recovery_sensor_;
   sensor::Sensor *equalizing_charging_voltage_sensor_;
   sensor::Sensor *boost_charging_voltage_sensor_;
   sensor::Sensor *boost_charging_return_voltage_sensor_;

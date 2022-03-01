@@ -52,9 +52,9 @@ CONF_BATTERY_TEMPERATURE_COMPENSATION_VOLTAGE_POINT = (
     "battery_temperature_compensation_voltage_point"
 )
 
-CONF_OVERVOLTAGE = "overvoltage"
+CONF_BATTERY_OVERVOLTAGE = "battery_overvoltage"
 CONF_CHARGING_LIMIT_VOLTAGE = "charging_limit_voltage"
-CONF_OVERVOLTAGE_RECOVERY = "overvoltage_recovery"
+CONF_BATTERY_OVERVOLTAGE_RECOVERY = "battery_overvoltage_recovery"
 CONF_EQUALIZING_CHARGING_VOLTAGE = "equalizing_charging_voltage"
 CONF_BOOST_CHARGING_VOLTAGE = "boost_charging_voltage"
 CONF_BOOST_CHARGING_RETURN_VOLTAGE = "boost_charging_return_voltage"
@@ -63,7 +63,6 @@ CONF_OVER_DISCHARGE_VOLTAGE = "over_discharge_voltage"
 CONF_OVER_DISCHARGE_RECOVERY_VOLTAGE = "over_discharge_recovery_voltage"
 CONF_BATTERY_UNDERVOLTAGE = "battery_undervoltage"
 CONF_EQUALIZATION_CHARGING_TIME = "equalization_charging_time"
-CONF_BATTERY_UNDERVOLTAGE = "battery_undervoltage"
 CONF_IMPROVE_CHARGING_TIME = "improve_charging_time"
 CONF_TEMPERATURE_COMPENSATION_COEFFICIENT = "temperature_compensation_coefficient"
 CONF_DEVICE_ADDRESS = "device_address"
@@ -98,9 +97,9 @@ SENSORS = [
     CONF_CONTROLLER_CURRENT_LEVEL,
     CONF_BATTERY_TEMPERATURE_COMPENSATION_VOLTAGE_POINT,
     # configuration
-    CONF_OVERVOLTAGE,
+    CONF_BATTERY_OVERVOLTAGE,
     CONF_CHARGING_LIMIT_VOLTAGE,
-    CONF_OVERVOLTAGE_RECOVERY,
+    CONF_BATTERY_OVERVOLTAGE_RECOVERY,
     CONF_EQUALIZING_CHARGING_VOLTAGE,
     CONF_BOOST_CHARGING_VOLTAGE,
     CONF_BOOST_CHARGING_RETURN_VOLTAGE,
@@ -263,13 +262,13 @@ CONFIG_SCHEMA = cv.Schema(
             STATE_CLASS_MEASUREMENT,
         ),
         # Configuration
-        cv.Optional(CONF_OVERVOLTAGE): sensor.sensor_schema(
+        cv.Optional(CONF_BATTERY_OVERVOLTAGE): sensor.sensor_schema(
             UNIT_VOLT, ICON_EMPTY, 1, DEVICE_CLASS_VOLTAGE, STATE_CLASS_MEASUREMENT
         ),
         cv.Optional(CONF_CHARGING_LIMIT_VOLTAGE): sensor.sensor_schema(
             UNIT_VOLT, ICON_EMPTY, 1, DEVICE_CLASS_VOLTAGE, STATE_CLASS_MEASUREMENT
         ),
-        cv.Optional(CONF_OVERVOLTAGE_RECOVERY): sensor.sensor_schema(
+        cv.Optional(CONF_BATTERY_OVERVOLTAGE_RECOVERY): sensor.sensor_schema(
             UNIT_VOLT, ICON_EMPTY, 1, DEVICE_CLASS_VOLTAGE, STATE_CLASS_MEASUREMENT
         ),
         cv.Optional(CONF_EQUALIZING_CHARGING_VOLTAGE): sensor.sensor_schema(
