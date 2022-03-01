@@ -361,7 +361,7 @@ void JngeMpptController::on_configuration_data_(const std::vector<uint8_t> &data
   this->publish_state_(this->over_discharge_recovery_voltage_sensor_, (float) jnge_get_16bit(16) * 0.1f);
 
   // 0x102D: Battery undervoltage             2 bytes   0.1     V
-  this->publish_state_(this->battery_undervoltage_sensor_, (float) jnge_get_16bit(18) * 0.1f);
+  this->publish_state_(this->undervoltage_sensor_, (float) jnge_get_16bit(18) * 0.1f);
 
   // 0x102E: Equalization charging time       2 bytes     1     H         1~3 H
   this->publish_state_(this->equalization_charging_time_sensor_, (float) jnge_get_16bit(20));
@@ -544,7 +544,7 @@ void JngeMpptController::dump_config() {  // NOLINT(google-readability-function-
   LOG_SENSOR("", "Floating Charge Voltage", this->floating_charge_voltage_sensor_);
   LOG_SENSOR("", "Over Discharge Voltage", this->over_discharge_voltage_sensor_);
   LOG_SENSOR("", "Over Discharge Recovery Voltage", this->over_discharge_recovery_voltage_sensor_);
-  LOG_SENSOR("", "Battery Undervoltage", this->battery_undervoltage_sensor_);
+  LOG_SENSOR("", "Undervoltage", this->undervoltage_sensor_);
   LOG_SENSOR("", "Equalization Charging Time", this->equalization_charging_time_sensor_);
   LOG_SENSOR("", "Improve Charging Time", this->improve_charging_time_sensor_);
   LOG_SENSOR("", "Temperature Compensation Coefficient", this->temperature_compensation_coefficient_sensor_);

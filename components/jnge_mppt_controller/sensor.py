@@ -61,9 +61,8 @@ CONF_BOOST_CHARGING_RETURN_VOLTAGE = "boost_charging_return_voltage"
 CONF_FLOATING_CHARGE_VOLTAGE = "floating_charge_voltage"
 CONF_OVER_DISCHARGE_VOLTAGE = "over_discharge_voltage"
 CONF_OVER_DISCHARGE_RECOVERY_VOLTAGE = "over_discharge_recovery_voltage"
-CONF_BATTERY_UNDERVOLTAGE = "battery_undervoltage"
 CONF_EQUALIZATION_CHARGING_TIME = "equalization_charging_time"
-CONF_BATTERY_UNDERVOLTAGE = "battery_undervoltage"
+CONF_UNDERVOLTAGE = "undervoltage"
 CONF_IMPROVE_CHARGING_TIME = "improve_charging_time"
 CONF_TEMPERATURE_COMPENSATION_COEFFICIENT = "temperature_compensation_coefficient"
 CONF_DEVICE_ADDRESS = "device_address"
@@ -107,7 +106,7 @@ SENSORS = [
     CONF_FLOATING_CHARGE_VOLTAGE,
     CONF_OVER_DISCHARGE_VOLTAGE,
     CONF_OVER_DISCHARGE_RECOVERY_VOLTAGE,
-    CONF_BATTERY_UNDERVOLTAGE,
+    CONF_UNDERVOLTAGE,
     CONF_EQUALIZATION_CHARGING_TIME,
     CONF_IMPROVE_CHARGING_TIME,
     CONF_TEMPERATURE_COMPENSATION_COEFFICIENT,
@@ -290,7 +289,7 @@ CONFIG_SCHEMA = cv.Schema(
         cv.Optional(CONF_OVER_DISCHARGE_RECOVERY_VOLTAGE): sensor.sensor_schema(
             UNIT_VOLT, ICON_EMPTY, 1, DEVICE_CLASS_VOLTAGE, STATE_CLASS_MEASUREMENT
         ),
-        cv.Optional(CONF_BATTERY_UNDERVOLTAGE): sensor.sensor_schema(
+        cv.Optional(CONF_UNDERVOLTAGE): sensor.sensor_schema(
             UNIT_VOLT, ICON_EMPTY, 1, DEVICE_CLASS_VOLTAGE, STATE_CLASS_MEASUREMENT
         ),
         cv.Optional(CONF_EQUALIZATION_CHARGING_TIME): sensor.sensor_schema(

@@ -114,8 +114,8 @@ sensor:
       name: "${config} over discharge voltage"
     over_discharge_recovery_voltage:
       name: "${config} over discharge recovery voltage"
-    battery_undervoltage:
-      name: "${config} battery undervoltage"
+    undervoltage:
+      name: "${config} undervoltage"
     equalization_charging_time:
       name: "${config} equalization charging time"
     improve_charging_time:

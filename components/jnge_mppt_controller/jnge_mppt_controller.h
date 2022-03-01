@@ -115,8 +115,8 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
   void set_over_discharge_recovery_voltage_sensor(sensor::Sensor *over_discharge_recovery_voltage_sensor) {
     over_discharge_recovery_voltage_sensor_ = over_discharge_recovery_voltage_sensor;
   }
-  void set_battery_undervoltage_sensor(sensor::Sensor *battery_undervoltage_sensor) {
-    battery_undervoltage_sensor_ = battery_undervoltage_sensor;
+  void set_undervoltage_sensor(sensor::Sensor *undervoltage_sensor) {
+    undervoltage_sensor_ = undervoltage_sensor;
   }
   void set_equalization_charging_time_sensor(sensor::Sensor *equalization_charging_time_sensor) {
     equalization_charging_time_sensor_ = equalization_charging_time_sensor;
@@ -213,7 +213,7 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
   sensor::Sensor *floating_charge_voltage_sensor_;
   sensor::Sensor *over_discharge_voltage_sensor_;
   sensor::Sensor *over_discharge_recovery_voltage_sensor_;
-  sensor::Sensor *battery_undervoltage_sensor_;
+  sensor::Sensor *undervoltage_sensor_;
   sensor::Sensor *equalization_charging_time_sensor_;
   sensor::Sensor *improve_charging_time_sensor_;
   sensor::Sensor *temperature_compensation_coefficient_sensor_;
