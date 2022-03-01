@@ -33,6 +33,7 @@ uart:
   rx_pin: GPIO3
 
 jnge_mppt_controller:
+  enable_fake_traffic: false
   suppress_battery_temperature_errors: false
   update_interval: 2s
 

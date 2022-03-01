@@ -35,6 +35,7 @@ uart:
   #   direction: BOTH
 
 jnge_wind_solar_controller:
+  enable_fake_traffic: false
   update_interval: 2s
 
 binary_sensor:
