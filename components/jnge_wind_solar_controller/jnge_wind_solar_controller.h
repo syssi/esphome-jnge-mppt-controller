@@ -79,6 +79,8 @@ class JngeWindSolarController : public PollingComponent, public jnge_modbus::Jng
   void set_charging_switch(switch_::Switch *charging_switch) { charging_switch_ = charging_switch; }
   void set_load_switch(switch_::Switch *load_switch) { load_switch_ = load_switch; }
 
+  void set_enable_fake_traffic(bool enable_fake_traffic) { enable_fake_traffic_ = enable_fake_traffic; }
+
   void dump_config() override;
 
   void on_jnge_modbus_data(const uint8_t &function, const std::vector<uint8_t> &data) override;
@@ -117,6 +119,8 @@ class JngeWindSolarController : public PollingComponent, public jnge_modbus::Jng
   text_sensor::TextSensor *operation_mode_text_sensor_;
   text_sensor::TextSensor *errors_text_sensor_;
   text_sensor::TextSensor *battery_type_text_sensor_;
+
+  bool enable_fake_traffic_;
 
   void on_read_registers_data_(const std::vector<uint8_t> &data);
   void on_write_single_register_data_(const std::vector<uint8_t> &data);

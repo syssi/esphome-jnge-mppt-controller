@@ -167,6 +167,8 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
     suppress_battery_temperature_errors_ = suppress_battery_temperature_errors;
   }
 
+  void set_enable_fake_traffic(bool enable_fake_traffic) { enable_fake_traffic_ = enable_fake_traffic; }
+
   void dump_config() override;
 
   void on_jnge_modbus_data(const uint8_t &function, const std::vector<uint8_t> &data) override;
@@ -235,6 +237,7 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
   text_sensor::TextSensor *errors_text_sensor_;
   text_sensor::TextSensor *battery_type_text_sensor_;
 
+  bool enable_fake_traffic_;
   bool suppress_battery_temperature_errors_;
 
   void on_status_data_(const std::vector<uint8_t> &data);
