@@ -222,7 +222,7 @@ void JngeMpptController::on_status_data_(const std::vector<uint8_t> &data) {
   uint16_t raw_error_bitmask = jnge_get_16bit(38);
 
   if (this->suppress_battery_temperature_errors_) {
-    raw_error_bitmask &= ~(1 << 14);
+    raw_error_bitmask &= ~(1 << 13);
   }
 
   this->publish_state_(this->error_bitmask_sensor_, (float) raw_error_bitmask);
