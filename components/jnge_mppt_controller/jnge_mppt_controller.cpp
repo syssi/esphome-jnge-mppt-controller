@@ -220,6 +220,11 @@ void JngeMpptController::on_status_data_(const std::vector<uint8_t> &data) {
 
   // 0x1013: Error code bitmask         2 bytes                  see (1) Error code bits
   uint16_t raw_error_bitmask = jnge_get_16bit(38);
+
+  if (this->suppress_battery_temperature_errors_) {
+    raw_error_bitmask &= ~(1 << 13);
+  }
+
   this->publish_state_(this->error_bitmask_sensor_, (float) raw_error_bitmask);
   this->publish_state_(this->errors_text_sensor_, this->error_bits_to_string_(raw_error_bitmask));
 
