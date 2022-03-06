@@ -2,6 +2,7 @@ substitutions:
   name: jn-mppt
   status: "${name} status"
   config: "${name} config"
+  external_components_source: github://syssi/esphome-jnge-mppt-controller@main
   tx_pin: GPIO16
   rx_pin: GPIO17
 
