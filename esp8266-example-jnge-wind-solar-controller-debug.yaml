@@ -1,6 +1,7 @@
 <<: !include esp8266-example-jnge-wind-solar-controller.yaml
 
 logger:
+  baud_rate: 0
   level: DEBUG
   logs:
     api.service: WARN

@@ -3,7 +3,7 @@ import esphome.config_validation as cv
 from esphome.components import jnge_modbus
 from esphome.const import CONF_ID
 
-AUTO_LOAD = ["jnge_modbus", "binary_sensor", "sensor", "switch", "text_sensor"]
+AUTO_LOAD = ["jnge_modbus", "binary_sensor", "sensor", "switch", "text_sensor", "output"]
 CODEOWNERS = ["@syssi"]
 MULTI_CONF = True
 

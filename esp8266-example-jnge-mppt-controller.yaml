@@ -21,14 +21,16 @@ wifi:
 
 ota:
 logger:
-  level: INFO
   baud_rate: 0
+  level: INFO
 
-mqtt:
-  broker: !secret mqtt_host
-  username: !secret mqtt_username
-  password: !secret mqtt_password
-  id: mqtt_client
+# mqtt:
+#   broker: !secret mqtt_host
+#   username: !secret mqtt_username
+#   password: !secret mqtt_password
+#   id: mqtt_client
+
+api:
 
 uart:
   baud_rate: 9600
@@ -158,3 +160,8 @@ text_sensor:
       name: "${status} errors"
     operation_mode:
       name: "${status} operation mode"
+
+output:
+  - platform: jnge_mppt_controller
+    battery_recharge_voltage:
+      id: inverter0_battery_recharge_voltage_out
