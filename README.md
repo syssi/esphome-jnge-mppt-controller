@@ -32,6 +32,27 @@ ESPHome component to monitor and control a JN-MPPT or JN-W/S Controller via RS48
 * [JN-MPPT Buck Solar Charge Controller](jnge_mppt_controller.md)
 * [JN-W/S Wind and Solar Hybrid Controller](jnge_wind_solar_controller.md)
 
+## Debugging
+
+If this component doesn't work out of the box for your device please update your configuration to enable the debug output of the UART component and increase the log level to the see outgoing and incoming serial traffic:
+
+```
+logger:
+  level: VERY_VERBOSE
+  logs:
+    api.service: WARN
+    ota: WARN
+    sensor: WARN
+
+uart:
+  id: uart0
+  baud_rate: 9600
+  tx_pin: ${tx_pin}
+  rx_pin: ${rx_pin}
+  debug:
+    direction: BOTH
+```
+
 ## References
 
 * JNGE MPPT Controller Internal Communication Proto.pdf
