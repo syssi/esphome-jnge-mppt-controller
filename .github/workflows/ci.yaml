@@ -161,17 +161,21 @@ jobs:
         shell: bash
         run: 'echo -e "wifi_ssid: ssid\nwifi_password: password\nmqtt_host: host\nmqtt_username: username\nmqtt_password: password" > secrets.yaml'
       - run: |
-          sed -i 's#source: github://syssi/esphome-jnge-mppt-controller@main#source: components#' esp32-example-jnge-mppt-controller.yaml
-          esphome config esp32-example-jnge-mppt-controller.yaml
+          esphome -s external_components_source components config esp32-example-jnge-mppt-controller.yaml
+          esphome -s external_components_source components config esp32-example-jnge-mppt-controller-debug.yaml
+          esphome -s external_components_source components config esp32-example-jnge-mppt-controller-faker.yaml
       - run: |
-          sed -i 's#source: github://syssi/esphome-jnge-mppt-controller@main#source: components#' esp8266-example-jnge-mppt-controller.yaml
-          esphome config esp8266-example-jnge-mppt-controller.yaml
+          esphome -s external_components_source components config esp8266-example-jnge-mppt-controller.yaml
+          esphome -s external_components_source components config esp8266-example-jnge-mppt-controller-debug.yaml
+          esphome -s external_components_source components config esp8266-example-jnge-mppt-controller-faker.yaml
       - run: |
-          sed -i 's#source: github://syssi/esphome-jnge-mppt-controller@main#source: components#' esp32-example-jnge-wind-solar-controller.yaml
-          esphome config esp32-example-jnge-wind-solar-controller.yaml
+          esphome -s external_components_source components config esp32-example-jnge-wind-solar-controller.yaml
+          esphome -s external_components_source components config esp32-example-jnge-wind-solar-controller-debug.yaml
+          esphome -s external_components_source components config esp32-example-jnge-wind-solar-controller-faker.yaml
       - run: |
-          sed -i 's#source: github://syssi/esphome-jnge-mppt-controller@main#source: components#' esp8266-example-jnge-wind-solar-controller.yaml
-          esphome config esp8266-example-jnge-wind-solar-controller.yaml
+          esphome -s external_components_source components config esp8266-example-jnge-wind-solar-controller.yaml
+          esphome -s external_components_source components config esp8266-example-jnge-wind-solar-controller-debug.yaml
+          esphome -s external_components_source components config esp8266-example-jnge-wind-solar-controller-faker.yaml
 
   esphome-compile:
     runs-on: ubuntu-latest
@@ -209,14 +213,10 @@ jobs:
         shell: bash
         run: 'echo -e "wifi_ssid: ssid\nwifi_password: password\nmqtt_host: host\nmqtt_username: username\nmqtt_password: password" > secrets.yaml'
       - run: |
-          sed -i 's#source: github://syssi/esphome-jnge-mppt-controller@main#source: components#' esp32-example-jnge-mppt-controller.yaml
-          esphome compile esp32-example-jnge-mppt-controller.yaml
+          esphome -s external_components_source components compile esp32-example-jnge-mppt-controller-faker.yaml
       - run: |
-          sed -i 's#source: github://syssi/esphome-jnge-mppt-controller@main#source: components#' esp8266-example-jnge-mppt-controller.yaml
-          esphome compile esp8266-example-jnge-mppt-controller.yaml
+          esphome -s external_components_source components compile esp8266-example-jnge-mppt-controller-faker.yaml
       - run: |
-          sed -i 's#source: github://syssi/esphome-jnge-mppt-controller@main#source: components#' esp32-example-jnge-wind-solar-controller.yaml
-          esphome compile esp32-example-jnge-wind-solar-controller.yaml
+          esphome -s external_components_source components compile esp32-example-jnge-wind-solar-controller-faker.yaml
       - run: |
-          sed -i 's#source: github://syssi/esphome-jnge-mppt-controller@main#source: components#' esp8266-example-jnge-wind-solar-controller.yaml
-          esphome compile esp8266-example-jnge-wind-solar-controller.yaml
+          esphome -s external_components_source components compile esp8266-example-jnge-wind-solar-controller-faker.yaml
