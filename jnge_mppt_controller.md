@@ -36,11 +36,13 @@ P:360/720W
 │            │              │          │<----- RX ----->│         │
 │    JNGE    │<-----B- ---->│  RS485   │<----- TX ----->│ ESP32/  │
 │ Controller │<---- A+ ---->│  to TTL  │<----- GND ---->│ ESP8266 │
-│            │<--- GND ---->│  module  │<--- 5V VCC --->│         │<-- 5V VCC
+│            │<--- GND ---->│  module  │<----- 3.3V --->│         │<-- VCC
 │            │              │          │                │         │<-- GND
 └────────────┘              └──────────┘                └─────────┘
 
 ```
+
+Please make sure to power the RS485 module with 3.3V because it affects the TTL (transistor-transistor logic) voltage between RS485 module and ESP.
 
 ### RJ45 jack
 
