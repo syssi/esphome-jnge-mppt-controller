@@ -2,6 +2,9 @@ substitutions:
   name: jnge-wind-solar-hybrid
   status: "${name} status"
   config: "${name} config"
+  external_components_source: github://syssi/esphome-jnge-mppt-controller@main
+  tx_pin: GPIO16
+  rx_pin: GPIO17
 
 esphome:
   name: ${name}
@@ -9,7 +12,7 @@ esphome:
   board: esp-wrover-kit
 
 external_components:
-  - source: github://syssi/esphome-jnge-mppt-controller@main
+  - source: ${external_components_source}
     refresh: 0s
 
 wifi:
@@ -27,10 +30,8 @@ mqtt:
 
 uart:
   baud_rate: 9600
-  tx_pin: GPIO14
-  rx_pin: GPIO4
-  # debug:
-  #   direction: BOTH
+  tx_pin: ${tx_pin}
+  rx_pin: ${rx_pin}
 
 jnge_wind_solar_controller:
   enable_fake_traffic: false
