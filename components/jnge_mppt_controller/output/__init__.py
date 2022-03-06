@@ -3,13 +3,20 @@ import esphome.config_validation as cv
 from esphome import automation
 from esphome.components import output
 from esphome.const import CONF_ID, CONF_VALUE
-from .. import JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA, CONF_JNGE_MPPT_CONTROLLER_ID, jnge_mppt_controller_ns
+
+from .. import (
+    CONF_JNGE_MPPT_CONTROLLER_ID,
+    JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA,
+    jnge_mppt_controller_ns,
+)
 
 DEPENDENCIES = ["jnge_mppt_controller"]
 
 CODEOWNERS = ["@syssi"]
 
-JngeOutput = jnge_mppt_controller_ns.class_("JngeOutput", output.FloatOutput, cg.Component)
+JngeOutput = jnge_mppt_controller_ns.class_(
+    "JngeOutput", output.FloatOutput, cg.Component
+)
 SetOutputAction = jnge_mppt_controller_ns.class_("SetOutputAction", automation.Action)
 
 CONF_POSSIBLE_VALUES = "possible_values"
@@ -63,7 +70,9 @@ async def to_code(config):
         }
     ),
 )
-def output_jnge_mppt_controller_set_level_to_code(config, action_id, template_arg, args):
+def output_jnge_mppt_controller_set_level_to_code(
+    config, action_id, template_arg, args
+):
     paren = yield cg.get_variable(config[CONF_ID])
     var = cg.new_Pvariable(action_id, template_arg, paren)
     template_ = yield cg.templatable(config[CONF_VALUE], args, float)
