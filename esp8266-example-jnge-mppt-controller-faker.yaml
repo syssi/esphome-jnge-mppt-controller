@@ -1,0 +1,6 @@
+<<: !include esp8266-example-jnge-mppt-controller-debug.yaml
+
+jnge_mppt_controller:
+  enable_fake_traffic: true
+  suppress_battery_temperature_errors: false
+  update_interval: 2s

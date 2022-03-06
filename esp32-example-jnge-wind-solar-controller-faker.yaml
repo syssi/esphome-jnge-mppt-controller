@@ -1,0 +1,5 @@
+<<: !include esp32-example-jnge-wind-solar-controller-debug.yaml
+
+jnge_wind_solar_controller:
+  enable_fake_traffic: true
+  update_interval: 2s

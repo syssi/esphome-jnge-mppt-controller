@@ -30,6 +30,11 @@ CONFIG_SCHEMA = (
     .extend(jnge_modbus.jnge_modbus_device_schema(0x06))
 )
 
+JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA = cv.Schema(
+    {
+        cv.GenerateID(CONF_JNGE_MPPT_CONTROLLER_ID): cv.use_id(JngeMpptController),
+    }
+)
 
 def to_code(config):
     var = cg.new_Pvariable(config[CONF_ID])
