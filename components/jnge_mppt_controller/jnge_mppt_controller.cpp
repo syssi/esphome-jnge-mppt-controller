@@ -169,8 +169,8 @@ void JngeMpptController::on_status_data_(const std::vector<uint8_t> &data) {
   // 0x1003: A channel current          2 bytes  0.1(oem), 0.01(guessed)      A
   this->publish_state_(this->channel_a_current_sensor_, (float) jnge_get_16bit(6) * 0.01f);  // A
 
-  // 0x1004: B channel current          2 bytes  0.1      A
-  this->publish_state_(this->channel_b_current_sensor_, (float) jnge_get_16bit(8) * 0.1f);  // A
+  // 0x1004: B channel current          2 bytes  0.1(oem), 0.01(guessed)      A
+  this->publish_state_(this->channel_b_current_sensor_, (float) jnge_get_16bit(8) * 0.01f);  // A
 
   // 0x1005: Total charging current     2 bytes  0.1      A
   this->publish_state_(this->charging_current_sensor_, (float) jnge_get_16bit(10) * 0.1f);  // A
