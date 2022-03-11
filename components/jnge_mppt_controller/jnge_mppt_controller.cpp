@@ -166,8 +166,8 @@ void JngeMpptController::on_status_data_(const std::vector<uint8_t> &data) {
   // 0x1002: Battery voltage            2 bytes  0.1      V
   this->publish_state_(this->battery_voltage_sensor_, (float) jnge_get_16bit(4) * 0.1f);  // V
 
-  // 0x1003: A channel current          2 bytes  0.1      A
-  this->publish_state_(this->channel_a_current_sensor_, (float) jnge_get_16bit(6) * 0.1f);  // A
+  // 0x1003: A channel current          2 bytes  0.1(oem), 0.01(guessed)      A
+  this->publish_state_(this->channel_a_current_sensor_, (float) jnge_get_16bit(6) * 0.01f);  // A
 
   // 0x1004: B channel current          2 bytes  0.1      A
   this->publish_state_(this->channel_b_current_sensor_, (float) jnge_get_16bit(8) * 0.1f);  // A
