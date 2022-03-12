@@ -3,7 +3,14 @@ import esphome.config_validation as cv
 from esphome.components import jnge_modbus
 from esphome.const import CONF_ID
 
-AUTO_LOAD = ["jnge_modbus", "binary_sensor", "sensor", "switch", "text_sensor"]
+AUTO_LOAD = [
+    "jnge_modbus",
+    "binary_sensor",
+    "number",
+    "sensor",
+    "switch",
+    "text_sensor",
+]
 CODEOWNERS = ["@syssi"]
 MULTI_CONF = True
 
@@ -11,9 +18,17 @@ CONF_JNGE_MPPT_CONTROLLER_ID = "jnge_mppt_controller_id"
 CONF_ENABLE_FAKE_TRAFFIC = "enable_fake_traffic"
 CONF_SUPPRESS_BATTERY_TEMPERATURE_ERRORS = "suppress_battery_temperature_errors"
 
+UNIT_HOURS = "h"
+
 jnge_mppt_controller_ns = cg.esphome_ns.namespace("jnge_mppt_controller")
 JngeMpptController = jnge_mppt_controller_ns.class_(
     "JngeMpptController", cg.PollingComponent, jnge_modbus.JngeModbusDevice
+)
+
+JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA = cv.Schema(
+    {
+        cv.GenerateID(CONF_JNGE_MPPT_CONTROLLER_ID): cv.use_id(JngeMpptController),
+    }
 )
 
 CONFIG_SCHEMA = (

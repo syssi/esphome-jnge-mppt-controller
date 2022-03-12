@@ -2,6 +2,7 @@
 
 #include "esphome/core/component.h"
 #include "esphome/components/binary_sensor/binary_sensor.h"
+#include "esphome/components/number/number.h"
 #include "esphome/components/sensor/sensor.h"
 #include "esphome/components/switch/switch.h"
 #include "esphome/components/text_sensor/text_sensor.h"
@@ -148,6 +149,67 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
     load_turn_off_time_sensor_ = load_turn_off_time_sensor;
   }
 
+  void set_battery_overvoltage_number(number::Number *battery_overvoltage_number) {
+    battery_overvoltage_number_ = battery_overvoltage_number;
+  }
+  void set_charging_limit_voltage_number(number::Number *charging_limit_voltage_number) {
+    charging_limit_voltage_number_ = charging_limit_voltage_number;
+  }
+  void set_battery_overvoltage_recovery_number(number::Number *battery_overvoltage_recovery_number) {
+    battery_overvoltage_recovery_number_ = battery_overvoltage_recovery_number;
+  }
+  void set_equalizing_charging_voltage_number(number::Number *equalizing_charging_voltage_number) {
+    equalizing_charging_voltage_number_ = equalizing_charging_voltage_number;
+  }
+  void set_boost_charging_voltage_number(number::Number *boost_charging_voltage_number) {
+    boost_charging_voltage_number_ = boost_charging_voltage_number;
+  }
+  void set_boost_charging_return_voltage_number(number::Number *boost_charging_return_voltage_number) {
+    boost_charging_return_voltage_number_ = boost_charging_return_voltage_number;
+  }
+  void set_floating_charge_voltage_number(number::Number *floating_charge_voltage_number) {
+    floating_charge_voltage_number_ = floating_charge_voltage_number;
+  }
+  void set_over_discharge_voltage_number(number::Number *over_discharge_voltage_number) {
+    over_discharge_voltage_number_ = over_discharge_voltage_number;
+  }
+  void set_over_discharge_recovery_voltage_number(number::Number *over_discharge_recovery_voltage_number) {
+    over_discharge_recovery_voltage_number_ = over_discharge_recovery_voltage_number;
+  }
+  void set_battery_undervoltage_number(number::Number *battery_undervoltage_number) {
+    battery_undervoltage_number_ = battery_undervoltage_number;
+  }
+  void set_equalization_charging_time_number(number::Number *equalization_charging_time_number) {
+    equalization_charging_time_number_ = equalization_charging_time_number;
+  }
+  void set_improve_charging_time_number(number::Number *improve_charging_time_number) {
+    improve_charging_time_number_ = improve_charging_time_number;
+  }
+  void set_temperature_compensation_coefficient_number(number::Number *temperature_compensation_coefficient_number) {
+    temperature_compensation_coefficient_number_ = temperature_compensation_coefficient_number;
+  }
+  void set_device_address_number(number::Number *device_address_number) {
+    device_address_number_ = device_address_number;
+  }
+  void set_light_control_on_voltage_number(number::Number *light_control_on_voltage_number) {
+    light_control_on_voltage_number_ = light_control_on_voltage_number;
+  }
+  void set_light_control_off_voltage_number(number::Number *light_control_off_voltage_number) {
+    light_control_off_voltage_number_ = light_control_off_voltage_number;
+  }
+  void set_light_control_on_period_1_number(number::Number *light_control_on_period_1_number) {
+    light_control_on_period_1_number_ = light_control_on_period_1_number;
+  }
+  void set_light_control_on_period_2_number(number::Number *light_control_on_period_2_number) {
+    light_control_on_period_2_number_ = light_control_on_period_2_number;
+  }
+  void set_load_turn_off_time_number(number::Number *load_turn_off_time_number) {
+    load_turn_off_time_number_ = load_turn_off_time_number;
+  }
+  void set_battery_strings_number(number::Number *battery_strings_number) {
+    battery_strings_number_ = battery_strings_number;
+  }
+
   void set_operation_mode_text_sensor(text_sensor::TextSensor *operation_mode_text_sensor) {
     operation_mode_text_sensor_ = operation_mode_text_sensor;
   }
@@ -228,6 +290,27 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
   sensor::Sensor *light_control_on_period_2_sensor_;
   sensor::Sensor *load_turn_off_time_sensor_;
 
+  number::Number *battery_overvoltage_number_;
+  number::Number *charging_limit_voltage_number_;
+  number::Number *battery_overvoltage_recovery_number_;
+  number::Number *equalizing_charging_voltage_number_;
+  number::Number *boost_charging_voltage_number_;
+  number::Number *boost_charging_return_voltage_number_;
+  number::Number *floating_charge_voltage_number_;
+  number::Number *over_discharge_voltage_number_;
+  number::Number *over_discharge_recovery_voltage_number_;
+  number::Number *battery_undervoltage_number_;
+  number::Number *equalization_charging_time_number_;
+  number::Number *improve_charging_time_number_;
+  number::Number *temperature_compensation_coefficient_number_;
+  number::Number *device_address_number_;
+  number::Number *light_control_on_voltage_number_;
+  number::Number *light_control_off_voltage_number_;
+  number::Number *light_control_on_period_1_number_;
+  number::Number *light_control_on_period_2_number_;
+  number::Number *load_turn_off_time_number_;
+  number::Number *battery_strings_number_;
+
   switch_::Switch *buzzer_switch_;
   switch_::Switch *street_light_mode_switch_;
   switch_::Switch *charging_switch_;
@@ -247,6 +330,7 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
   void publish_state_(text_sensor::TextSensor *text_sensor, const std::string &state);
   void publish_state_(binary_sensor::BinarySensor *binary_sensor, const bool &state);
   void publish_state_(switch_::Switch *obj, const bool &state);
+  void publish_state_(number::Number *number, const float &state);
   std::string error_bits_to_string_(uint16_t bitmask);
 };
 

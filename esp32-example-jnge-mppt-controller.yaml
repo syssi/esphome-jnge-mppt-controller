@@ -156,3 +156,42 @@ text_sensor:
       name: "${status} errors"
     operation_mode:
       name: "${status} operation mode"
+
+number:
+  - platform: jnge_mppt_controller
+    battery_overvoltage:
+      name: "${config} battery overvoltage"
+    charging_limit_voltage:
+      name: "${config} charging limit voltage"
+    battery_overvoltage_recovery:
+      name: "${config} battery overvoltage recovery"
+    equalizing_charging_voltage:
+      name: "${config} equalizing charging voltage"
+    boost_charging_voltage:
+      name: "${config} boost charging voltage"
+    boost_charging_return_voltage:
+      name: "${config} boost charging return voltage"
+    floating_charge_voltage:
+      name: "${config} floating charge voltage"
+    over_discharge_voltage:
+      name: "${config} over discharge voltage"
+    over_discharge_recovery_voltage:
+      name: "${config} over discharge recovery voltage"
+    battery_undervoltage:
+      name: "${config} battery undervoltage"
+    equalization_charging_time:
+      name: "${config} equalization charging time"
+    improve_charging_time:
+      name: "${config} improve charging time"
+    light_control_on_voltage:
+      name: "${config} light control on voltage"
+    light_control_off_voltage:
+      name: "${config} light control off voltage"
+    light_control_on_period_1:
+      name: "${config} light control on period 1"
+    light_control_on_period_2:
+      name: "${config} light control on period 2"
+    load_turn_off_time:
+      name: "${config} load turn off time"
+    battery_strings:
+      name: "${config} battery strings"
