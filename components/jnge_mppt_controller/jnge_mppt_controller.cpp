@@ -475,11 +475,11 @@ void JngeMpptController::publish_state_(binary_sensor::BinarySensor *binary_sens
   binary_sensor->publish_state(state);
 }
 
-void JngeMpptController::publish_state_(number::Number *number, const float &state) {
+void JngeMpptController::publish_state_(number::Number *number, float value) {
   if (number == nullptr)
     return;
 
-  number->publish_state(state);
+  number->publish_state(value);
 }
 
 void JngeMpptController::publish_state_(sensor::Sensor *sensor, float value) {
