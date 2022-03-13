@@ -1,9 +1,15 @@
 import esphome.codegen as cg
 import esphome.config_validation as cv
 from esphome.components import text_sensor
-from esphome.const import CONF_ICON, CONF_ID
+from esphome.const import (
+    CONF_ICON,
+    CONF_ID,
+    ENTITY_CATEGORY_CONFIG,
+    CONF_ENTITY_CATEGORY,
+    ENTITY_CATEGORY_DIAGNOSTIC,
+)
 
-from . import CONF_JNGE_MPPT_CONTROLLER_ID, JngeMpptController
+from . import CONF_JNGE_MPPT_CONTROLLER_ID, JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA
 
 DEPENDENCIES = ["jnge_mppt_controller"]
 
@@ -23,25 +29,33 @@ TEXT_SENSORS = [
     CONF_BATTERY_TYPE,
 ]
 
-CONFIG_SCHEMA = cv.Schema(
+CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
     {
-        cv.GenerateID(CONF_JNGE_MPPT_CONTROLLER_ID): cv.use_id(JngeMpptController),
         cv.Optional(CONF_OPERATION_MODE): text_sensor.TEXT_SENSOR_SCHEMA.extend(
             {
                 cv.GenerateID(): cv.declare_id(text_sensor.TextSensor),
                 cv.Optional(CONF_ICON, default=ICON_OPERATION_MODE): cv.icon,
+                cv.Optional(
+                    CONF_ENTITY_CATEGORY, default=ENTITY_CATEGORY_DIAGNOSTIC
+                ): cv.entity_category,
             }
         ),
         cv.Optional(CONF_ERRORS): text_sensor.TEXT_SENSOR_SCHEMA.extend(
             {
                 cv.GenerateID(): cv.declare_id(text_sensor.TextSensor),
                 cv.Optional(CONF_ICON, default=ICON_ERRORS): cv.icon,
+                cv.Optional(
+                    CONF_ENTITY_CATEGORY, default=ENTITY_CATEGORY_DIAGNOSTIC
+                ): cv.entity_category,
             }
         ),
         cv.Optional(CONF_BATTERY_TYPE): text_sensor.TEXT_SENSOR_SCHEMA.extend(
             {
                 cv.GenerateID(): cv.declare_id(text_sensor.TextSensor),
                 cv.Optional(CONF_ICON, default=ICON_BATTERY_TYPE): cv.icon,
+                cv.Optional(
+                    CONF_ENTITY_CATEGORY, default=ENTITY_CATEGORY_CONFIG
+                ): cv.entity_category,
             }
         ),
     }

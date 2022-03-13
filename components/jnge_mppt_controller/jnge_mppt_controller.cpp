@@ -335,39 +335,51 @@ void JngeMpptController::on_configuration_data_(const std::vector<uint8_t> &data
   //
   // 0x1024: Overvoltage                      2 bytes   0.1     V
   this->publish_state_(this->battery_overvoltage_sensor_, (float) jnge_get_16bit(0) * 0.1f);
+  this->publish_state_(this->battery_overvoltage_number_, (float) jnge_get_16bit(0) * 0.1f);
 
   // 0x1025: Charging limit voltage           2 bytes   0.1     V
   this->publish_state_(this->charging_limit_voltage_sensor_, (float) jnge_get_16bit(2) * 0.1f);
+  this->publish_state_(this->charging_limit_voltage_number_, (float) jnge_get_16bit(2) * 0.1f);
 
   // 0x1026: Overvoltage recovery             2 bytes   0.1     V
   this->publish_state_(this->battery_overvoltage_recovery_sensor_, (float) jnge_get_16bit(4) * 0.1f);
+  this->publish_state_(this->battery_overvoltage_recovery_number_, (float) jnge_get_16bit(4) * 0.1f);
 
   // 0x1027: Equalizing charging voltage      2 bytes   0.1     V
   this->publish_state_(this->equalizing_charging_voltage_sensor_, (float) jnge_get_16bit(6) * 0.1f);
+  this->publish_state_(this->equalizing_charging_voltage_number_, (float) jnge_get_16bit(6) * 0.1f);
 
   // 0x1028: Boost charging voltage           2 bytes   0.1     V
   this->publish_state_(this->boost_charging_voltage_sensor_, (float) jnge_get_16bit(8) * 0.1f);
+  this->publish_state_(this->boost_charging_voltage_number_, (float) jnge_get_16bit(8) * 0.1f);
 
   // 0x1029: Boost charging return voltage    2 bytes   0.1     V
   this->publish_state_(this->boost_charging_return_voltage_sensor_, (float) jnge_get_16bit(10) * 0.1f);
+  this->publish_state_(this->boost_charging_return_voltage_number_, (float) jnge_get_16bit(10) * 0.1f);
 
   // 0x102A: Floating charge voltage          2 bytes   0.1     V
   this->publish_state_(this->floating_charge_voltage_sensor_, (float) jnge_get_16bit(12) * 0.1f);
+  this->publish_state_(this->floating_charge_voltage_number_, (float) jnge_get_16bit(12) * 0.1f);
 
   // 0x102B: Over discharge voltage           2 bytes   0.1     V
   this->publish_state_(this->over_discharge_voltage_sensor_, (float) jnge_get_16bit(14) * 0.1f);
+  this->publish_state_(this->over_discharge_voltage_number_, (float) jnge_get_16bit(14) * 0.1f);
 
   // 0x102C: Over discharge recovery voltage  2 bytes   0.1     V
   this->publish_state_(this->over_discharge_recovery_voltage_sensor_, (float) jnge_get_16bit(16) * 0.1f);
+  this->publish_state_(this->over_discharge_recovery_voltage_number_, (float) jnge_get_16bit(16) * 0.1f);
 
   // 0x102D: Battery undervoltage             2 bytes   0.1     V
   this->publish_state_(this->battery_undervoltage_sensor_, (float) jnge_get_16bit(18) * 0.1f);
+  this->publish_state_(this->battery_undervoltage_number_, (float) jnge_get_16bit(18) * 0.1f);
 
   // 0x102E: Equalization charging time       2 bytes     1     H         1~3 H
   this->publish_state_(this->equalization_charging_time_sensor_, (float) jnge_get_16bit(20));
+  this->publish_state_(this->equalization_charging_time_number_, (float) jnge_get_16bit(20));
 
   // 0x102F: Improve charging time            2 bytes     1     H         1~3 H
   this->publish_state_(this->improve_charging_time_sensor_, (float) jnge_get_16bit(22));
+  this->publish_state_(this->improve_charging_time_number_, (float) jnge_get_16bit(22));
 
   // 0x1030: Temperature compensation coefficient  2 bytes                0~6 mV/°C/2V
   this->publish_state_(this->temperature_compensation_coefficient_sensor_, (float) jnge_get_16bit(24));
@@ -377,21 +389,26 @@ void JngeMpptController::on_configuration_data_(const std::vector<uint8_t> &data
 
   // 0x1032: Light control on voltage         2 bytes   0.1     V         5~11V
   this->publish_state_(this->light_control_on_voltage_sensor_, (float) jnge_get_16bit(28) * 0.1f);
+  this->publish_state_(this->light_control_on_voltage_number_, (float) jnge_get_16bit(28) * 0.1f);
 
   // 0x1033: Light control off voltage        2 bytes   0.1     V         5~11V
   this->publish_state_(this->light_control_off_voltage_sensor_, (float) jnge_get_16bit(30) * 0.1f);
+  this->publish_state_(this->light_control_off_voltage_number_, (float) jnge_get_16bit(30) * 0.1f);
 
   // 0x1034: Light control on period 1        2 bytes     1     H
   this->publish_state_(this->light_control_on_period_1_sensor_, (float) jnge_get_16bit(32));
+  this->publish_state_(this->light_control_on_period_1_number_, (float) jnge_get_16bit(32));
 
   // 0x1035: Light control on period 2        2 bytes     1     H
   this->publish_state_(this->light_control_on_period_2_sensor_, (float) jnge_get_16bit(34));
+  this->publish_state_(this->light_control_on_period_2_number_, (float) jnge_get_16bit(34));
 
   // 0x1036: Household or street light mode   2 bytes                     0 (Household), 1 (Street light)
   this->publish_state_(this->street_light_mode_switch_, (bool) (jnge_get_16bit(36) == 0x01));
 
   // 0x1037: Turn the load off                2 bytes     1     H
   this->publish_state_(this->load_turn_off_time_sensor_, (float) jnge_get_16bit(38));
+  this->publish_state_(this->load_turn_off_time_number_, (float) jnge_get_16bit(38));
 
   // 0x1038: Charging on/off                  2 bytes                     0 (Charger off), 1 (Charger on)
   this->publish_state_(this->charging_switch_, (bool) (jnge_get_16bit(40) == 0x01));
@@ -400,7 +417,7 @@ void JngeMpptController::on_configuration_data_(const std::vector<uint8_t> &data
   this->publish_state_(this->buzzer_switch_, (bool) (jnge_get_16bit(42) == 0x01));
 
   // 0x103A: Number of battery strings        2 bytes
-  // this->publish_state_(this->battery_strings_number_, (float) jnge_get_16bit(44));
+  this->publish_state_(this->battery_strings_number_, (float) jnge_get_16bit(44));
 
   // 0x103B: Battery Type                     2 bytes                     0 (Lead-acid), 1 (gel), 2 (ternary lithium),
   //                                                                      3 (LiFePo4), 4 (Custom)
@@ -456,6 +473,13 @@ void JngeMpptController::publish_state_(binary_sensor::BinarySensor *binary_sens
     return;
 
   binary_sensor->publish_state(state);
+}
+
+void JngeMpptController::publish_state_(number::Number *number, const float &state) {
+  if (number == nullptr)
+    return;
+
+  number->publish_state(state);
 }
 
 void JngeMpptController::publish_state_(sensor::Sensor *sensor, float value) {

@@ -22,9 +22,15 @@ from esphome.const import (
     UNIT_PERCENT,
     UNIT_VOLT,
     UNIT_WATT,
+    ENTITY_CATEGORY_DIAGNOSTIC,
+    ENTITY_CATEGORY_CONFIG,
 )
 
-from . import CONF_JNGE_MPPT_CONTROLLER_ID, JngeMpptController
+from . import (
+    CONF_JNGE_MPPT_CONTROLLER_ID,
+    JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA,
+    UNIT_HOURS,
+)
 
 DEPENDENCIES = ["jnge_mppt_controller"]
 
@@ -127,15 +133,13 @@ ICON_TEMPERATURE_COMPENSATION_COEFFICIENT = "mdi:thermometer-plus"
 ICON_OPERATION_MODE = "mdi:heart-pulse"
 ICON_DISCHARGE_TIMES = "mdi:counter"
 
-UNIT_HOURS = "h"
 UNIT_KILO_WATT_HOURS = "kWh"
 UNIT_MILLIVOLT = "mV"
 UNIT_MILLIVOLT_PER_CELSIUS = "mV/°C"
 
 # pylint: disable=too-many-function-args
-CONFIG_SCHEMA = cv.Schema(
+CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
     {
-        cv.GenerateID(CONF_JNGE_MPPT_CONTROLLER_ID): cv.use_id(JngeMpptController),
         # status
         cv.Optional(CONF_FIRMWARE_VERSION): sensor.sensor_schema(
             unit_of_measurement=UNIT_EMPTY,
@@ -143,6 +147,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_PV_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -150,6 +155,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_BATTERY_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -157,6 +163,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_CHANNEL_A_CURRENT): sensor.sensor_schema(
             unit_of_measurement=UNIT_AMPERE,
@@ -164,6 +171,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_CURRENT,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_CHANNEL_B_CURRENT): sensor.sensor_schema(
             unit_of_measurement=UNIT_AMPERE,
@@ -171,6 +179,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_CURRENT,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_CHARGING_CURRENT): sensor.sensor_schema(
             unit_of_measurement=UNIT_AMPERE,
@@ -178,6 +187,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_CURRENT,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_CHARGER_TEMPERATURE): sensor.sensor_schema(
             unit_of_measurement=UNIT_CELSIUS,
@@ -185,6 +195,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_TEMPERATURE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_CHARGING_POWER): sensor.sensor_schema(
             unit_of_measurement=UNIT_WATT,
@@ -192,6 +203,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_POWER,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_DISCHARGE_POWER): sensor.sensor_schema(
             unit_of_measurement=UNIT_WATT,
@@ -199,6 +211,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_POWER,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_BATTERY_CAPACITY): sensor.sensor_schema(
             unit_of_measurement=UNIT_PERCENT,
@@ -206,6 +219,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_OPERATION_MODE_ID): sensor.sensor_schema(
             unit_of_measurement=UNIT_EMPTY,
@@ -213,6 +227,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_DISCHARGE_CURRENT): sensor.sensor_schema(
             unit_of_measurement=UNIT_AMPERE,
@@ -220,6 +235,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_CURRENT,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_DISCHARGE_TIMES): sensor.sensor_schema(
             unit_of_measurement=UNIT_EMPTY,
@@ -227,6 +243,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_TOTAL_CHARGING_ENERGY): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILO_WATT_HOURS,
@@ -234,6 +251,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_ENERGY,
             state_class=STATE_CLASS_TOTAL_INCREASING,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_TOTAL_DISCHARGE_ENERGY): sensor.sensor_schema(
             unit_of_measurement=UNIT_KILO_WATT_HOURS,
@@ -241,6 +259,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_ENERGY,
             state_class=STATE_CLASS_TOTAL_INCREASING,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_BATTERY_TEMPERATURE): sensor.sensor_schema(
             unit_of_measurement=UNIT_CELSIUS,
@@ -248,6 +267,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_TEMPERATURE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_ERROR_BITMASK): sensor.sensor_schema(
             unit_of_measurement=UNIT_EMPTY,
@@ -255,6 +275,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_CONTROLLER_VOLTAGE_LEVEL): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -262,6 +283,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_PV_STANDBY_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -269,6 +291,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_CONTROLLER_CURRENT_LEVEL): sensor.sensor_schema(
             unit_of_measurement=UNIT_AMPERE,
@@ -276,6 +299,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_CURRENT,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(
             CONF_BATTERY_TEMPERATURE_COMPENSATION_VOLTAGE_POINT
@@ -285,6 +309,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         # Configuration
         cv.Optional(CONF_BATTERY_OVERVOLTAGE): sensor.sensor_schema(
@@ -293,6 +318,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_CHARGING_LIMIT_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -300,6 +326,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_BATTERY_OVERVOLTAGE_RECOVERY): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -307,6 +334,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_EQUALIZING_CHARGING_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -314,6 +342,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_BOOST_CHARGING_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -321,6 +350,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_BOOST_CHARGING_RETURN_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -328,6 +358,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_FLOATING_CHARGE_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -335,6 +366,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_OVER_DISCHARGE_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -342,6 +374,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_OVER_DISCHARGE_RECOVERY_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -349,6 +382,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_BATTERY_UNDERVOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -356,6 +390,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_EQUALIZATION_CHARGING_TIME): sensor.sensor_schema(
             unit_of_measurement=UNIT_HOURS,
@@ -363,6 +398,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_IMPROVE_CHARGING_TIME): sensor.sensor_schema(
             unit_of_measurement=UNIT_HOURS,
@@ -370,6 +406,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_TEMPERATURE_COMPENSATION_COEFFICIENT): sensor.sensor_schema(
             unit_of_measurement=UNIT_MILLIVOLT_PER_CELSIUS,  # 0~6 mV/°C/2V
@@ -377,6 +414,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_DEVICE_ADDRESS): sensor.sensor_schema(
             unit_of_measurement=UNIT_EMPTY,
@@ -384,6 +422,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_LIGHT_CONTROL_ON_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -391,6 +430,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_LIGHT_CONTROL_OFF_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -398,6 +438,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_LIGHT_CONTROL_ON_PERIOD_1): sensor.sensor_schema(
             unit_of_measurement=UNIT_HOURS,
@@ -405,6 +446,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_LIGHT_CONTROL_ON_PERIOD_2): sensor.sensor_schema(
             unit_of_measurement=UNIT_HOURS,
@@ -412,6 +454,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_LOAD_TURN_OFF_TIME): sensor.sensor_schema(
             unit_of_measurement=UNIT_HOURS,
@@ -419,6 +462,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_BATTERY_STRINGS): sensor.sensor_schema(
             unit_of_measurement=UNIT_EMPTY,
@@ -426,6 +470,7 @@ CONFIG_SCHEMA = cv.Schema(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
     }
 )
