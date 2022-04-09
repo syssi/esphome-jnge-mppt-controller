@@ -449,7 +449,7 @@ void JngeMpptController::write_register(uint16_t address, uint16_t value) {
            (uint8_t)(value >> 8), (uint8_t) value);
 }
 
-void SoyosourceInverter::publish_device_offline_() {
+void JngeMpptController::publish_device_offline_() {
   this->publish_state_(this->operation_mode_id_sensor_, -1);
   this->publish_state_(this->operation_mode_text_sensor_, "Offline");
 }

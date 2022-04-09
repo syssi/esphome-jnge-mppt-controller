@@ -333,6 +333,7 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
   void publish_state_(binary_sensor::BinarySensor *binary_sensor, const bool &state);
   void publish_state_(switch_::Switch *obj, const bool &state);
   void publish_state_(number::Number *number, float value);
+  void publish_device_offline_();
   std::string error_bits_to_string_(uint16_t bitmask);
 };
 
