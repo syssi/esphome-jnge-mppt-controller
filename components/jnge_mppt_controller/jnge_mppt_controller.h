@@ -324,6 +324,7 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
 
   bool enable_fake_traffic_;
   bool suppress_battery_temperature_errors_;
+  uint8_t no_response_count_ = 0;
 
   void on_status_data_(const std::vector<uint8_t> &data);
   void on_configuration_data_(const std::vector<uint8_t> &data);

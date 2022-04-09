@@ -123,6 +123,7 @@ class JngeWindSolarController : public PollingComponent, public jnge_modbus::Jng
   text_sensor::TextSensor *battery_type_text_sensor_;
 
   bool enable_fake_traffic_;
+  uint8_t no_response_count_ = 0;
 
   void on_read_registers_data_(const std::vector<uint8_t> &data);
   void on_write_single_register_data_(const std::vector<uint8_t> &data);
