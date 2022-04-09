@@ -172,6 +172,8 @@ void JngeWindSolarController::on_read_registers_data_(const std::vector<uint8_t>
 
   //
   // ----> 60 register * 2 bytes = 120 bytes data
+
+  this->no_response_count_ = 0;
 }
 
 void JngeWindSolarController::on_write_single_register_data_(const std::vector<uint8_t> &data) {
@@ -187,7 +189,19 @@ void JngeWindSolarController::write_register(uint16_t address, uint16_t value) {
            (uint8_t)(value >> 8), (uint8_t) value);
 }
 
+void JngeWindSolarController::publish_device_offline_() {
+  this->publish_state_(this->operation_mode_id_sensor_, -1);
+  this->publish_state_(this->operation_mode_text_sensor_, "Offline");
+}
+
 void JngeWindSolarController::update() {
+  if (this->no_response_count_ >= NO_RESPONSE_THRESHOLD) {
+    this->publish_device_offline_();
+    ESP_LOGW(TAG, "The device didn't respond to the last %d status requests", this->no_response_count_);
+    this->no_response_count_ = 0;
+  }
+  no_response_count_++;
+
   // Request device status -> 0x06 0x03 0x10 0x00 0x00 0x3C 0x40 0xAC
   this->send(READ_REGISTERS, 0x1000, 60);
 

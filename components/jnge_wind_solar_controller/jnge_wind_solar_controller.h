@@ -10,6 +10,8 @@
 namespace esphome {
 namespace jnge_wind_solar_controller {
 
+static const uint8_t NO_RESPONSE_THRESHOLD = 15;
+
 class JngeWindSolarController : public PollingComponent, public jnge_modbus::JngeModbusDevice {
  public:
   void set_load_detected_binary_sensor(binary_sensor::BinarySensor *load_detected_binary_sensor) {
@@ -121,6 +123,7 @@ class JngeWindSolarController : public PollingComponent, public jnge_modbus::Jng
   text_sensor::TextSensor *battery_type_text_sensor_;
 
   bool enable_fake_traffic_;
+  uint8_t no_response_count_ = 0;
 
   void on_read_registers_data_(const std::vector<uint8_t> &data);
   void on_write_single_register_data_(const std::vector<uint8_t> &data);
@@ -129,6 +132,7 @@ class JngeWindSolarController : public PollingComponent, public jnge_modbus::Jng
   void publish_state_(text_sensor::TextSensor *text_sensor, const std::string &state);
   void publish_state_(binary_sensor::BinarySensor *binary_sensor, const bool &state);
   void publish_state_(switch_::Switch *obj, const bool &state);
+  void publish_device_offline_();
   std::string error_bits_to_string_(uint16_t bitmask);
 };
 

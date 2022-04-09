@@ -11,6 +11,8 @@
 namespace esphome {
 namespace jnge_mppt_controller {
 
+static const uint8_t NO_RESPONSE_THRESHOLD = 15;
+
 class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModbusDevice {
  public:
   void set_load_detected_binary_sensor(binary_sensor::BinarySensor *load_detected_binary_sensor) {
@@ -322,6 +324,7 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
 
   bool enable_fake_traffic_;
   bool suppress_battery_temperature_errors_;
+  uint8_t no_response_count_ = 0;
 
   void on_status_data_(const std::vector<uint8_t> &data);
   void on_configuration_data_(const std::vector<uint8_t> &data);
@@ -331,6 +334,7 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
   void publish_state_(binary_sensor::BinarySensor *binary_sensor, const bool &state);
   void publish_state_(switch_::Switch *obj, const bool &state);
   void publish_state_(number::Number *number, float value);
+  void publish_device_offline_();
   std::string error_bits_to_string_(uint16_t bitmask);
 };
 

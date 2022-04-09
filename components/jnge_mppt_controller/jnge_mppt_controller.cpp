@@ -300,6 +300,8 @@ void JngeMpptController::on_status_data_(const std::vector<uint8_t> &data) {
   // 13: Battery temperature sensor failure     warning
   // 14: PV array undervoltage                  warning
   // 15: Reserved                               warning
+
+  this->no_response_count_ = 0;
 }
 
 void JngeMpptController::on_configuration_data_(const std::vector<uint8_t> &data) {
@@ -447,7 +449,19 @@ void JngeMpptController::write_register(uint16_t address, uint16_t value) {
            (uint8_t)(value >> 8), (uint8_t) value);
 }
 
+void JngeMpptController::publish_device_offline_() {
+  this->publish_state_(this->operation_mode_id_sensor_, -1);
+  this->publish_state_(this->operation_mode_text_sensor_, "Offline");
+}
+
 void JngeMpptController::update() {
+  if (this->no_response_count_ >= NO_RESPONSE_THRESHOLD) {
+    this->publish_device_offline_();
+    ESP_LOGW(TAG, "The device didn't respond to the last %d status requests", this->no_response_count_);
+    this->no_response_count_ = 0;
+  }
+  no_response_count_++;
+
   // Request device status -> 0x06 0x04 0x10 0x00 0x00 0x1D 0x35 0x74
   this->send(READ_INPUT_REGISTERS, 0x1000, 29);
 
