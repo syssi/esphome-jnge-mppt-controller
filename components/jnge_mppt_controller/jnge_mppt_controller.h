@@ -11,6 +11,8 @@
 namespace esphome {
 namespace jnge_mppt_controller {
 
+static const uint8_t NO_RESPONSE_THRESHOLD = 15;
+
 class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModbusDevice {
  public:
   void set_load_detected_binary_sensor(binary_sensor::BinarySensor *load_detected_binary_sensor) {
