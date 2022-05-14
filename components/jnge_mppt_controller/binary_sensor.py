@@ -76,11 +76,11 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
 )
 
 
-def to_code(config):
-    hub = yield cg.get_variable(config[CONF_JNGE_MPPT_CONTROLLER_ID])
+async def to_code(config):
+    hub = await cg.get_variable(config[CONF_JNGE_MPPT_CONTROLLER_ID])
     for key in BINARY_SENSORS:
         if key in config:
             conf = config[key]
             sens = cg.new_Pvariable(conf[CONF_ID])
-            yield binary_sensor.register_binary_sensor(sens, conf)
+            await binary_sensor.register_binary_sensor(sens, conf)
             cg.add(getattr(hub, f"set_{key}_binary_sensor")(sens))
