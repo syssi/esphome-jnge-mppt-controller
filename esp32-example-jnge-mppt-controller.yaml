@@ -199,3 +199,14 @@ number:
       name: "${config} load turn off time"
     battery_strings:
       name: "${config} battery strings"
+
+select:
+  - platform: jnge_mppt_controller
+    battery_type:
+      name: "{config} battery type"
+      optionsmap:
+        "Lead acid": 0
+        "Gel": 1
+        "Ternary Lithium": 2
+        "LiFePo4": 3
+        "Custom": 4
