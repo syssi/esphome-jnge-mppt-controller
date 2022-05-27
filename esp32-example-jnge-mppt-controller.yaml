@@ -203,7 +203,7 @@ number:
 select:
   - platform: jnge_mppt_controller
     battery_type:
-      name: "{config} battery type"
+      name: "${config} battery type"
       optionsmap:
         "Lead acid": 0
         "Gel": 1
