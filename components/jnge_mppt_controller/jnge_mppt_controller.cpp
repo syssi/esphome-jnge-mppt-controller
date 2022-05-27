@@ -264,6 +264,9 @@ void JngeMpptController::on_status_data_(const std::vector<uint8_t> &data) {
   } else {
     this->publish_state_(this->battery_type_text_sensor_, "Unknown");
   }
+  if (this->battery_type_select_ != nullptr) {
+    this->battery_type_select_->map_and_publish(raw_battery_type);
+  }
 
   // 0x1019: Charging switch status     2 bytes                  0 (Charging off), 1 (Charging on)
   this->publish_state_(this->charging_binary_sensor_, (bool) (jnge_get_16bit(50) == 0x01));

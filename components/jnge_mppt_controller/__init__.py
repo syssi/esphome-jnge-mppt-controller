@@ -8,6 +8,7 @@ AUTO_LOAD = [
     "binary_sensor",
     "number",
     "sensor",
+    "select",
     "switch",
     "text_sensor",
 ]

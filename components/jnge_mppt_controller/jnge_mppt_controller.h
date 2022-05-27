@@ -4,12 +4,16 @@
 #include "esphome/components/binary_sensor/binary_sensor.h"
 #include "esphome/components/number/number.h"
 #include "esphome/components/sensor/sensor.h"
+#include "esphome/components/select/select.h"
+#include "esphome/components/jnge_mppt_controller/select/jnge_select.h"
 #include "esphome/components/switch/switch.h"
 #include "esphome/components/text_sensor/text_sensor.h"
 #include "esphome/components/jnge_modbus/jnge_modbus.h"
 
 namespace esphome {
 namespace jnge_mppt_controller {
+
+class JngeSelect;
 
 static const uint8_t NO_RESPONSE_THRESHOLD = 15;
 
@@ -149,6 +153,10 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
   }
   void set_load_turn_off_time_sensor(sensor::Sensor *load_turn_off_time_sensor) {
     load_turn_off_time_sensor_ = load_turn_off_time_sensor;
+  }
+
+  void set_battery_type_select(jnge_mppt_controller::JngeSelect *battery_type_select) {
+    battery_type_select_ = battery_type_select;
   }
 
   void set_battery_overvoltage_number(number::Number *battery_overvoltage_number) {
@@ -291,6 +299,8 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
   sensor::Sensor *light_control_on_period_1_sensor_;
   sensor::Sensor *light_control_on_period_2_sensor_;
   sensor::Sensor *load_turn_off_time_sensor_;
+
+  jnge_mppt_controller::JngeSelect *battery_type_select_;
 
   number::Number *battery_overvoltage_number_;
   number::Number *charging_limit_voltage_number_;

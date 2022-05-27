@@ -1,0 +1,71 @@
+import esphome.codegen as cg
+from esphome.components import select
+import esphome.config_validation as cv
+from esphome.const import CONF_ID
+
+from .. import (
+    CONF_JNGE_MPPT_CONTROLLER_ID,
+    JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA,
+    jnge_mppt_controller_ns,
+)
+
+DEPENDENCIES = ["jnge_mppt_controller"]
+
+CODEOWNERS = ["@syssi"]
+
+CONF_BATTERY_TYPE = "battery_type"
+CONF_OPTIONSMAP = "optionsmap"
+
+JngeSelect = jnge_mppt_controller_ns.class_("JngeSelect", select.Select, cg.Component)
+
+
+def ensure_option_map():
+    def validator(value):
+        cv.check_not_templatable(value)
+        option = cv.All(cv.string_strict)
+        mapping = cv.All(cv.int_range(0, 65535))
+        options_map_schema = cv.Schema({option: mapping})
+        value = options_map_schema(value)
+
+        all_values = list(value.values())
+        unique_values = set(value.values())
+        if len(all_values) != len(unique_values):
+            raise cv.Invalid("Mapping values must be unique.")
+
+        return value
+
+    return validator
+
+
+SELECTS = {
+    CONF_BATTERY_TYPE: 0x103B,
+}
+
+JNGESELECT_SCHEMA = select.SELECT_SCHEMA.extend(
+    {
+        cv.GenerateID(): cv.declare_id(JngeSelect),
+        cv.Optional(CONF_OPTIONSMAP): ensure_option_map(),
+    }
+).extend(cv.COMPONENT_SCHEMA)
+
+
+CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
+    {cv.Optional(type): JNGESELECT_SCHEMA for type in SELECTS}
+)
+
+
+async def to_code(config):
+    hub = await cg.get_variable(config[CONF_JNGE_MPPT_CONTROLLER_ID])
+
+    for key, address in SELECTS.items():
+        if key in config:
+            conf = config[key]
+            options_map = conf[CONF_OPTIONSMAP]
+            var = cg.new_Pvariable(conf[CONF_ID])
+            await cg.register_component(var, conf)
+            await select.register_select(var, conf, options=list(options_map.keys()))
+            cg.add(getattr(hub, f"set_{key}_select")(var))
+            cg.add(var.set_parent(hub))
+            cg.add(var.set_holding_register(address))
+            for mappingkey in options_map.keys():
+                cg.add(var.add_mapping(mappingkey, options_map[mappingkey]))
