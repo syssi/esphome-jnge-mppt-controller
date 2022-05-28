@@ -16,15 +16,14 @@ class JngeSelect : public Component, public select::Select {
  public:
   void set_parent(JngeMpptController *const parent) { this->parent_ = parent; }
   void set_holding_register(uint16_t holding_register) { this->holding_register_ = holding_register; };
-  void set_select_mappings(std::vector<uint8_t> mappings) { this->mappings_ = std::move(mappings); }
+  void set_select_mappings(std::vector<uint16_t> mappings) { this->mappings_ = std::move(mappings); }
 
+  void setup() override;
   void dump_config() override;
-  void map_and_publish(uint16_t &value);
   void control(const std::string &value) override;
 
  protected:
-  std::vector<uint8_t> mappings_;
-  uint8_t select_id_;
+  std::vector<uint16_t> mappings_;
   JngeMpptController *parent_;
   uint16_t holding_register_;
 };

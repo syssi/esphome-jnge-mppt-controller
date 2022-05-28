@@ -21,7 +21,7 @@ JngeSelect = jnge_mppt_controller_ns.class_("JngeSelect", select.Select, cg.Comp
 
 def ensure_option_map(value):
     cv.check_not_templatable(value)
-    option = cv.All(cv.int_range(0, 2**8 - 1))
+    option = cv.All(cv.int_range(0, 2**16 - 1))
     mapping = cv.All(cv.string_strict)
     options_map_schema = cv.Schema({option: mapping})
     value = options_map_schema(value)

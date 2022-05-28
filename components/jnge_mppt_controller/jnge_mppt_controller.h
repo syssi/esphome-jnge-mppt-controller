@@ -14,6 +14,11 @@ namespace jnge_mppt_controller {
 
 static const uint8_t NO_RESPONSE_THRESHOLD = 15;
 
+struct JngeSelectListener {
+  uint16_t holding_register;
+  std::function<void(uint16_t)> on_value;
+};
+
 class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModbusDevice {
  public:
   void set_load_detected_binary_sensor(binary_sensor::BinarySensor *load_detected_binary_sensor) {
@@ -235,6 +240,7 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
   }
 
   void set_enable_fake_traffic(bool enable_fake_traffic) { enable_fake_traffic_ = enable_fake_traffic; }
+  void register_listener(uint16_t holding_register, const std::function<void(uint16_t)> &func);
 
   void dump_config() override;
 
@@ -330,6 +336,8 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
   bool enable_fake_traffic_;
   bool suppress_battery_temperature_errors_;
   uint8_t no_response_count_ = 0;
+
+  std::vector<JngeSelectListener> select_listeners_;
 
   void on_status_data_(const std::vector<uint8_t> &data);
   void on_configuration_data_(const std::vector<uint8_t> &data);
