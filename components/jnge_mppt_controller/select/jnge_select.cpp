@@ -17,8 +17,6 @@ void JngeSelect::dump_config() {
 }
 
 void JngeSelect::control(const std::string &value) {
-  ESP_LOGD(TAG, "Got option: %s", value.c_str());
-
   auto idx = this->index_of(value);
   if (idx.has_value()) {
     uint8_t mapping = this->mappings_.at(idx.value());
