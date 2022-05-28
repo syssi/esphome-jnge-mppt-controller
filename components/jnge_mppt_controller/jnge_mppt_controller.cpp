@@ -43,7 +43,7 @@ static const char *const OPERATION_MODES[OPERATION_MODES_SIZE] = {
 
 static const uint8_t BATTERY_TYPES_SIZE = 5;
 static const char *const BATTERY_TYPES[BATTERY_TYPES_SIZE] = {
-    "Lead-Acid",        // 0x00
+    "Lead Acid",        // 0x00
     "Gel",              // 0x01
     "Ternary Lithium",  // 0x02
     "LiFePo4",          // 0x03
@@ -256,7 +256,7 @@ void JngeMpptController::on_status_data_(const std::vector<uint8_t> &data) {
   // 0x1017: Number of battery strings  2 bytes    1
   this->publish_state_(this->battery_strings_sensor_, (float) jnge_get_16bit(46));
 
-  // 0x1018: Battery type               2 bytes                  0 (Lead-Acid), 1 (Gel), 2 (Ternary Lithium),
+  // 0x1018: Battery type               2 bytes                  0 (Lead Acid), 1 (Gel), 2 (Ternary Lithium),
   //                                                             3 (LiFePo4), 4 (Custom)
   uint16_t raw_battery_type = jnge_get_16bit(48);
   if (raw_battery_type < BATTERY_TYPES_SIZE) {
@@ -428,7 +428,7 @@ void JngeMpptController::on_configuration_data_(const std::vector<uint8_t> &data
   // 0x103A: Number of battery strings        2 bytes
   this->publish_state_(this->battery_strings_number_, (float) jnge_get_16bit(44));
 
-  // 0x103B: Battery Type                     2 bytes                     0 (Lead-acid), 1 (gel), 2 (ternary lithium),
+  // 0x103B: Battery Type                     2 bytes                     0 (Lead Acid), 1 (Gel), 2 (Ternary Lithium),
   //                                                                      3 (LiFePo4), 4 (Custom)
   // this->publish_state_(this->battery_type_control_sensor_, (float) jnge_get_16bit(46));
 
