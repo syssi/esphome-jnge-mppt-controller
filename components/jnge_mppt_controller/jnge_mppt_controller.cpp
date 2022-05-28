@@ -489,7 +489,8 @@ void JngeMpptController::update() {
   }
 }
 
-void JngeMpptController::register_listener(uint16_t holding_register, const std::function<void(uint16_t)> &func) {
+void JngeMpptController::register_select_listener(uint16_t holding_register,
+                                                  const std::function<void(uint16_t)> &func) {
   auto select_listener = JngeSelectListener{
       .holding_register = holding_register,
       .on_value = func,

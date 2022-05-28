@@ -240,7 +240,7 @@ class JngeMpptController : public PollingComponent, public jnge_modbus::JngeModb
   }
 
   void set_enable_fake_traffic(bool enable_fake_traffic) { enable_fake_traffic_ = enable_fake_traffic; }
-  void register_listener(uint16_t holding_register, const std::function<void(uint16_t)> &func);
+  void register_select_listener(uint16_t holding_register, const std::function<void(uint16_t)> &func);
 
   void dump_config() override;
 

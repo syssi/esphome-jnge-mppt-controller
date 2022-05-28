@@ -7,7 +7,7 @@ namespace jnge_mppt_controller {
 static const char *const TAG = "jnge_mppt_controller.select";
 
 void JngeSelect::setup() {
-  this->parent_->register_listener(this->holding_register_, [this](const uint16_t &enum_value) {
+  this->parent_->register_select_listener(this->holding_register_, [this](const uint16_t &enum_value) {
     ESP_LOGV(TAG, "Device reported select %u value %u", this->holding_register_, enum_value);
     auto mappings = this->mappings_;
     auto it = std::find(mappings.cbegin(), mappings.cend(), enum_value);
