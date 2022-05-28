@@ -43,7 +43,7 @@ static const char *const OPERATION_MODES[OPERATION_MODES_SIZE] = {
 
 static const uint8_t BATTERY_TYPES_SIZE = 5;
 static const char *const BATTERY_TYPES[BATTERY_TYPES_SIZE] = {
-    "Lead-Acid",        // 0x00
+    "Lead Acid",        // 0x00
     "Gel",              // 0x01
     "Ternary Lithium",  // 0x02
     "LiFePo4",          // 0x03
@@ -256,7 +256,7 @@ void JngeMpptController::on_status_data_(const std::vector<uint8_t> &data) {
   // 0x1017: Number of battery strings  2 bytes    1
   this->publish_state_(this->battery_strings_sensor_, (float) jnge_get_16bit(46));
 
-  // 0x1018: Battery type               2 bytes                  0 (Lead-Acid), 1 (Gel), 2 (Ternary Lithium),
+  // 0x1018: Battery type               2 bytes                  0 (Lead Acid), 1 (Gel), 2 (Ternary Lithium),
   //                                                             3 (LiFePo4), 4 (Custom)
   uint16_t raw_battery_type = jnge_get_16bit(48);
   if (raw_battery_type < BATTERY_TYPES_SIZE) {
@@ -265,7 +265,11 @@ void JngeMpptController::on_status_data_(const std::vector<uint8_t> &data) {
     this->publish_state_(this->battery_type_text_sensor_, "Unknown");
   }
   if (this->battery_type_select_ != nullptr) {
-    this->battery_type_select_->map_and_publish(raw_battery_type);
+    for (auto &listener : this->select_listeners_) {
+      if (listener.holding_register == 0x103B) {
+        listener.on_value(raw_battery_type);
+      }
+    }
   }
 
   // 0x1019: Charging switch status     2 bytes                  0 (Charging off), 1 (Charging on)
@@ -424,7 +428,7 @@ void JngeMpptController::on_configuration_data_(const std::vector<uint8_t> &data
   // 0x103A: Number of battery strings        2 bytes
   this->publish_state_(this->battery_strings_number_, (float) jnge_get_16bit(44));
 
-  // 0x103B: Battery Type                     2 bytes                     0 (Lead-acid), 1 (gel), 2 (ternary lithium),
+  // 0x103B: Battery Type                     2 bytes                     0 (Lead Acid), 1 (Gel), 2 (Ternary Lithium),
   //                                                                      3 (LiFePo4), 4 (Custom)
   // this->publish_state_(this->battery_type_control_sensor_, (float) jnge_get_16bit(46));
 
@@ -483,6 +487,15 @@ void JngeMpptController::update() {
          0x83, 0x00, 0x6C, 0x00, 0x02, 0x00, 0x01, 0x00, 0x03, 0x00, 0x06, 0x00, 0x32, 0x00, 0x3C, 0x00, 0x18,
          0x00, 0x00, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x00, 0x00, 0x01});
   }
+}
+
+void JngeMpptController::register_select_listener(uint16_t holding_register,
+                                                  const std::function<void(uint16_t)> &func) {
+  auto select_listener = JngeSelectListener{
+      .holding_register = holding_register,
+      .on_value = func,
+  };
+  this->select_listeners_.push_back(select_listener);
 }
 
 void JngeMpptController::publish_state_(binary_sensor::BinarySensor *binary_sensor, const bool &state) {

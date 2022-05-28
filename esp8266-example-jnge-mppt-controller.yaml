@@ -201,8 +201,8 @@ select:
     battery_type:
       name: "${config} battery type"
       optionsmap:
-        "Lead Acid": 0
-        "Gel": 1
-        "Ternary Lithium": 2
-        "LiFePo4": 3
-        "Custom": 4
+        0: "Lead Acid"
+        1: "Gel"
+        2: "Ternary Lithium"
+        3: "LiFePo4"
+        4: "Custom"
