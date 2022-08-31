@@ -20,9 +20,10 @@ class JngeSelect : public Component, public select::Select {
 
   void setup() override;
   void dump_config() override;
-  void control(const std::string &value) override;
 
  protected:
+  void control(const std::string &value) override;
+
   std::vector<uint16_t> mappings_;
   JngeMpptController *parent_;
   uint16_t holding_register_;

@@ -39,19 +39,19 @@ CONFIG_SCHEMA = cv.Schema(
         cv.Optional(CONF_STREET_LIGHT_MODE): switch.SWITCH_SCHEMA.extend(
             {
                 cv.GenerateID(): cv.declare_id(JngeSwitch),
-                cv.Optional(CONF_ICON, default=ICON_STREET_LIGHT_MODE): switch.icon,
+                cv.Optional(CONF_ICON, default=ICON_STREET_LIGHT_MODE): cv.icon,
             }
         ).extend(cv.COMPONENT_SCHEMA),
         cv.Optional(CONF_CHARGING): switch.SWITCH_SCHEMA.extend(
             {
                 cv.GenerateID(): cv.declare_id(JngeSwitch),
-                cv.Optional(CONF_ICON, default=ICON_CHARGING): switch.icon,
+                cv.Optional(CONF_ICON, default=ICON_CHARGING): cv.icon,
             }
         ).extend(cv.COMPONENT_SCHEMA),
         cv.Optional(CONF_LOAD): switch.SWITCH_SCHEMA.extend(
             {
                 cv.GenerateID(): cv.declare_id(JngeSwitch),
-                cv.Optional(CONF_ICON, default=ICON_LOAD): switch.icon,
+                cv.Optional(CONF_ICON, default=ICON_LOAD): cv.icon,
             }
         ).extend(cv.COMPONENT_SCHEMA),
     }

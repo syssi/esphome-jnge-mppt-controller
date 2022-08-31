@@ -41,7 +41,7 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
         cv.Optional(CONF_BUZZER): switch.SWITCH_SCHEMA.extend(
             {
                 cv.GenerateID(): cv.declare_id(JngeSwitch),
-                cv.Optional(CONF_ICON, default=ICON_BUZZER): switch.icon,
+                cv.Optional(CONF_ICON, default=ICON_BUZZER): cv.icon,
                 cv.Optional(
                     CONF_ENTITY_CATEGORY, default=ENTITY_CATEGORY_CONFIG
                 ): cv.entity_category,
@@ -50,7 +50,7 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
         cv.Optional(CONF_STREET_LIGHT_MODE): switch.SWITCH_SCHEMA.extend(
             {
                 cv.GenerateID(): cv.declare_id(JngeSwitch),
-                cv.Optional(CONF_ICON, default=ICON_STREET_LIGHT_MODE): switch.icon,
+                cv.Optional(CONF_ICON, default=ICON_STREET_LIGHT_MODE): cv.icon,
                 cv.Optional(
                     CONF_ENTITY_CATEGORY, default=ENTITY_CATEGORY_CONFIG
                 ): cv.entity_category,
@@ -59,13 +59,13 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
         cv.Optional(CONF_CHARGING): switch.SWITCH_SCHEMA.extend(
             {
                 cv.GenerateID(): cv.declare_id(JngeSwitch),
-                cv.Optional(CONF_ICON, default=ICON_CHARGING): switch.icon,
+                cv.Optional(CONF_ICON, default=ICON_CHARGING): cv.icon,
             }
         ).extend(cv.COMPONENT_SCHEMA),
         cv.Optional(CONF_LOAD): switch.SWITCH_SCHEMA.extend(
             {
                 cv.GenerateID(): cv.declare_id(JngeSwitch),
-                cv.Optional(CONF_ICON, default=ICON_LOAD): switch.icon,
+                cv.Optional(CONF_ICON, default=ICON_LOAD): cv.icon,
             }
         ).extend(cv.COMPONENT_SCHEMA),
     }
