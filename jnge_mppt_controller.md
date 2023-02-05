@@ -46,6 +46,8 @@ Please make sure to power the RS485 module with 3.3V because it affects the TTL 
 
 ### RJ45 jack
 
+#### Old pinout (< 2021/05)
+
 | Pin     | Purpose      | RS485-to-TTL pin  | Color T-568B |
 | :-----: | :----------- | :---------------- | ------------ |
 |  **1**  | **B-**       | **B-**            | Orange-White |
@@ -56,6 +58,20 @@ Please make sure to power the RS485 module with 3.3V because it affects the TTL 
 |    6    | GND          |                   |              |
 |    7    | +12V         |                   | Brown-White  |
 |    8    | +12V         |                   |              |
+
+#### New pinout (> 2022/11)
+
+| Pin     | Purpose      | RS485-to-TTL pin  | Color T-568B |
+| :-----: | :----------- | :---------------- | ------------ |
+|    1    |              |                   |              |
+|    2    |              |                   |              |
+|    3    |              |                   |              |
+|    4    |              |                   |              |
+|  **5**  | **A+**       | **A+**            | Blue-White   |
+|  **6**  | **B-**       | **B-**            | Green        |
+|  **7**  | **VCC**      |                   | Brown-White  |
+|  **8**  | **GND**      | **GND**           | Brown        |
+
 
 Please be aware of the different RJ45 pinout colors ([T-568A vs. T-568B](images/rj45-colors-t568a-vs-t568.png)).
 
