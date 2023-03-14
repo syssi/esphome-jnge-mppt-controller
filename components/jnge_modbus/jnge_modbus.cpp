@@ -86,7 +86,7 @@ bool JngeModbus::parse_jnge_modbus_byte_(uint8_t byte) {
   uint16_t computed_crc = crc16(raw, data_offset + data_len);
   uint16_t remote_crc = uint16_t(raw[data_offset + data_len]) | (uint16_t(raw[data_offset + data_len + 1]) << 8);
   if (computed_crc != remote_crc) {
-    ESP_LOGW(TAG, "JngeModbus CRC Check failed! %02X!=%02X", computed_crc, remote_crc);
+    ESP_LOGW(TAG, "CRC Check failed! 0x%04X != 0x%04X", computed_crc, remote_crc);
     return false;
   }
 
