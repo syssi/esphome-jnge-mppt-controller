@@ -1,19 +1,21 @@
-import esphome.codegen as cg
-import esphome.config_validation as cv
 from esphome import pins
+import esphome.codegen as cg
 from esphome.components import uart
+import esphome.config_validation as cv
 from esphome.const import CONF_ADDRESS, CONF_FLOW_CONTROL_PIN, CONF_ID
 from esphome.cpp_helpers import gpio_pin_expression
 
 CODEOWNERS = ["@syssi"]
+
 DEPENDENCIES = ["uart"]
+MULTI_CONF = True
+
+CONF_JNGE_MODBUS_ID = "jnge_modbus_id"
 
 jnge_modbus_ns = cg.esphome_ns.namespace("jnge_modbus")
 JngeModbus = jnge_modbus_ns.class_("JngeModbus", cg.Component, uart.UARTDevice)
 JngeModbusDevice = jnge_modbus_ns.class_("JngeModbusDevice")
-MULTI_CONF = True
 
-CONF_JNGE_MODBUS_ID = "jnge_modbus_id"
 CONFIG_SCHEMA = (
     cv.Schema(
         {

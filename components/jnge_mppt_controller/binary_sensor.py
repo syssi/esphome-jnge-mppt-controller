@@ -1,17 +1,14 @@
 import esphome.codegen as cg
-import esphome.config_validation as cv
 from esphome.components import binary_sensor
+import esphome.config_validation as cv
 from esphome.const import (
+    CONF_ENTITY_CATEGORY,
     CONF_ICON,
     CONF_ID,
-    CONF_ENTITY_CATEGORY,
     ENTITY_CATEGORY_DIAGNOSTIC,
 )
 
-from . import (
-    CONF_JNGE_MPPT_CONTROLLER_ID,
-    JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA,
-)
+from . import CONF_JNGE_MPPT_CONTROLLER_ID, JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA
 from .const import CONF_CHARGING, CONF_LOAD
 
 DEPENDENCIES = ["jnge_mppt_controller"]

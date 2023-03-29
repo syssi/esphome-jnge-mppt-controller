@@ -1,18 +1,12 @@
 import esphome.codegen as cg
-import esphome.config_validation as cv
 from esphome.components import jnge_modbus
+import esphome.config_validation as cv
 from esphome.const import CONF_ID
 
-AUTO_LOAD = [
-    "jnge_modbus",
-    "binary_sensor",
-    "number",
-    "sensor",
-    "select",
-    "switch",
-    "text_sensor",
-]
 CODEOWNERS = ["@syssi"]
+
+DEPENDENCIES = ["jnge_modbus"]
+AUTO_LOAD = ["binary_sensor", "number", "sensor", "select", "switch", "text_sensor"]
 MULTI_CONF = True
 
 CONF_JNGE_MPPT_CONTROLLER_ID = "jnge_mppt_controller_id"

@@ -1,6 +1,6 @@
 import esphome.codegen as cg
-import esphome.config_validation as cv
 from esphome.components import sensor
+import esphome.config_validation as cv
 from esphome.const import (
     CONF_BATTERY_VOLTAGE,
     DEVICE_CLASS_CURRENT,
@@ -9,6 +9,8 @@ from esphome.const import (
     DEVICE_CLASS_POWER,
     DEVICE_CLASS_TEMPERATURE,
     DEVICE_CLASS_VOLTAGE,
+    ENTITY_CATEGORY_CONFIG,
+    ENTITY_CATEGORY_DIAGNOSTIC,
     ICON_COUNTER,
     ICON_EMPTY,
     ICON_PERCENT,
@@ -22,8 +24,6 @@ from esphome.const import (
     UNIT_PERCENT,
     UNIT_VOLT,
     UNIT_WATT,
-    ENTITY_CATEGORY_DIAGNOSTIC,
-    ENTITY_CATEGORY_CONFIG,
 )
 
 from . import (

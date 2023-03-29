@@ -1,11 +1,11 @@
 import esphome.codegen as cg
-import esphome.config_validation as cv
 from esphome.components import text_sensor
+import esphome.config_validation as cv
 from esphome.const import (
+    CONF_ENTITY_CATEGORY,
     CONF_ICON,
     CONF_ID,
     ENTITY_CATEGORY_CONFIG,
-    CONF_ENTITY_CATEGORY,
     ENTITY_CATEGORY_DIAGNOSTIC,
 )
 
