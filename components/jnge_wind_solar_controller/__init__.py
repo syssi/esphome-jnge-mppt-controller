@@ -5,8 +5,7 @@ from esphome.const import CONF_ID
 
 CODEOWNERS = ["@syssi"]
 
-DEPENDENCIES = ["jnge_modbus"]
-AUTO_LOAD = ["binary_sensor", "sensor", "switch", "text_sensor"]
+AUTO_LOAD = ["jnge_modbus", "binary_sensor", "sensor", "switch", "text_sensor"]
 MULTI_CONF = True
 
 CONF_JNGE_WIND_SOLAR_CONTROLLER_ID = "jnge_wind_solar_controller_id"

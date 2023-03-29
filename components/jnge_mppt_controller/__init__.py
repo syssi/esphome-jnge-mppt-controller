@@ -5,8 +5,15 @@ from esphome.const import CONF_ID
 
 CODEOWNERS = ["@syssi"]
 
-DEPENDENCIES = ["jnge_modbus"]
-AUTO_LOAD = ["binary_sensor", "number", "sensor", "select", "switch", "text_sensor"]
+AUTO_LOAD = [
+    "jnge_modbus",
+    "binary_sensor",
+    "number",
+    "sensor",
+    "select",
+    "switch",
+    "text_sensor",
+]
 MULTI_CONF = True
 
 CONF_JNGE_MPPT_CONTROLLER_ID = "jnge_mppt_controller_id"
