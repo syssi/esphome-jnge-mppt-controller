@@ -2,12 +2,20 @@ substitutions:
   name: jn-mppt
   status: "${name} status"
   config: "${name} config"
+  device_description: "Monitor and control a JN-MPPT Solar Charge Controller via RS485 (Modbus)"
   external_components_source: github://syssi/esphome-jnge-mppt-controller@main
   tx_pin: GPIO16
   rx_pin: GPIO17
+  # The circuit.jpg at the documentation shows GPIO14/GPIO4 instead of GPIO16/GPIO17:
+  # tx_pin: GPIO14
+  # rx_pin: GPIO4
 
 esphome:
   name: ${name}
+  comment: ${device_description}
+  project:
+    name: "syssi.esphome-jnge-mppt-controller"
+    version: 1.0.0
 
 esp32:
   board: wemos_d1_mini32
@@ -24,6 +32,9 @@ wifi:
 
 ota:
 logger:
+
+# If you use Home Assistant please uncomment the native `api` component and remove the `mqtt` section!
+# api:
 
 mqtt:
   broker: !secret mqtt_host

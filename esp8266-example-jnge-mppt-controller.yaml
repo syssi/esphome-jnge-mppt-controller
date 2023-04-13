@@ -2,13 +2,19 @@ substitutions:
   name: jn-mppt
   status: "${name} status"
   config: "${name} config"
+  device_description: "Monitor and control a JN-MPPT Solar Charge Controller via RS485 (Modbus)"
   external_components_source: github://syssi/esphome-jnge-mppt-controller@main
   tx_pin: GPIO4
   rx_pin: GPIO5
 
 esphome:
   name: ${name}
-  platform: ESP8266
+  comment: ${device_description}
+  project:
+    name: "syssi.esphome-jnge-mppt-controller"
+    version: 1.0.0
+
+esp8266:
   board: d1_mini
 
 external_components:
@@ -21,6 +27,9 @@ wifi:
 
 ota:
 logger:
+
+# If you use Home Assistant please uncomment the native `api` component and remove the `mqtt` section!
+# api:
 
 mqtt:
   broker: !secret mqtt_host
