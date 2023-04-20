@@ -452,8 +452,8 @@ void JngeMpptController::write_register(uint16_t address, uint16_t value) {
   // this->write_register(0x1024, 157); -> 0x06 0x06 0x10 0x24 0x00 0x9D 0x0D 0x1F
   this->send(WRITE_SINGLE_REGISTER, address, value);
 
-  ESP_LOGI(TAG, "Write register request: 0x%02X 0x%02X 0x%02X 0x%02X (4)", (uint8_t)(address >> 8), (uint8_t) address,
-           (uint8_t)(value >> 8), (uint8_t) value);
+  ESP_LOGI(TAG, "Write register request: 0x%02X 0x%02X 0x%02X 0x%02X (4)", (uint8_t) (address >> 8), (uint8_t) address,
+           (uint8_t) (value >> 8), (uint8_t) value);
 }
 
 void JngeMpptController::publish_device_offline_() {
