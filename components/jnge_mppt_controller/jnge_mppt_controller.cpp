@@ -131,6 +131,8 @@ void JngeMpptController::on_status_data_(const std::vector<uint8_t> &data) {
     return (uint32_t(jnge_get_16bit(i + 0)) << 16) | (uint32_t(jnge_get_16bit(i + 2)) << 0);
   };
 
+  ESP_LOGI(TAG, "Status frame received");
+
   // Status request
   // -> 0x06 0x04 0x10 0x00 0x00 0x0D 0x35 0x74
   //    ^^^^ ^^^^ ^^^^^^^^^ ^^^^^^^^^ ^^^^^^^^^
@@ -315,6 +317,8 @@ void JngeMpptController::on_configuration_data_(const std::vector<uint8_t> &data
   auto jnge_get_16bit = [&](size_t i) -> uint16_t {
     return (uint16_t(data[i + 0]) << 8) | (uint16_t(data[i + 1]) << 0);
   };
+
+  ESP_LOGI(TAG, "Config frame received");
 
   // Configuration request
   // -> 0x06 0x03 0x10 0x24 0x00 0x19 0xC1 0x7C

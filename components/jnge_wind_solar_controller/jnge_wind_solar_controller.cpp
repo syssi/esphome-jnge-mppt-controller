@@ -78,6 +78,8 @@ void JngeWindSolarController::on_read_registers_data_(const std::vector<uint8_t>
     return (uint32_t(jnge_get_16bit(i + 0)) << 16) | (uint32_t(jnge_get_16bit(i + 2)) << 0);
   };
 
+  ESP_LOGI(TAG, "Frame received");
+
   // *readonly registers*
   //
   // Address: Field                     Length    Coeff.  Unit      Example value
