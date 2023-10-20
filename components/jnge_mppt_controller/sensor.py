@@ -9,7 +9,6 @@ from esphome.const import (
     DEVICE_CLASS_POWER,
     DEVICE_CLASS_TEMPERATURE,
     DEVICE_CLASS_VOLTAGE,
-    ENTITY_CATEGORY_CONFIG,
     ENTITY_CATEGORY_DIAGNOSTIC,
     ICON_COUNTER,
     ICON_EMPTY,
@@ -318,7 +317,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_CHARGING_LIMIT_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -326,7 +324,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_BATTERY_OVERVOLTAGE_RECOVERY): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -334,7 +331,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_EQUALIZING_CHARGING_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -342,7 +338,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_BOOST_CHARGING_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -350,7 +345,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_BOOST_CHARGING_RETURN_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -358,7 +352,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_FLOATING_CHARGE_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -366,7 +359,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_OVER_DISCHARGE_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -374,7 +366,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_OVER_DISCHARGE_RECOVERY_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -382,7 +373,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_BATTERY_UNDERVOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -390,7 +380,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_EQUALIZATION_CHARGING_TIME): sensor.sensor_schema(
             unit_of_measurement=UNIT_HOURS,
@@ -398,7 +387,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_IMPROVE_CHARGING_TIME): sensor.sensor_schema(
             unit_of_measurement=UNIT_HOURS,
@@ -406,7 +394,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_TEMPERATURE_COMPENSATION_COEFFICIENT): sensor.sensor_schema(
             unit_of_measurement=UNIT_MILLIVOLT_PER_CELSIUS,  # 0~6 mV/°C/2V
@@ -414,7 +401,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_DEVICE_ADDRESS): sensor.sensor_schema(
             unit_of_measurement=UNIT_EMPTY,
@@ -422,7 +408,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_LIGHT_CONTROL_ON_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -430,7 +415,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_LIGHT_CONTROL_OFF_VOLTAGE): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
@@ -438,7 +422,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_LIGHT_CONTROL_ON_PERIOD_1): sensor.sensor_schema(
             unit_of_measurement=UNIT_HOURS,
@@ -446,7 +429,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_LIGHT_CONTROL_ON_PERIOD_2): sensor.sensor_schema(
             unit_of_measurement=UNIT_HOURS,
@@ -454,7 +436,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_LOAD_TURN_OFF_TIME): sensor.sensor_schema(
             unit_of_measurement=UNIT_HOURS,
@@ -462,7 +443,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_BATTERY_STRINGS): sensor.sensor_schema(
             unit_of_measurement=UNIT_EMPTY,
@@ -470,7 +450,6 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             accuracy_decimals=0,
             device_class=DEVICE_CLASS_EMPTY,
             state_class=STATE_CLASS_MEASUREMENT,
-            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
     }
 )
