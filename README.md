@@ -22,7 +22,7 @@ ESPHome component to monitor and control a JN-MPPT or JN-W/S Controller via RS48
 
 ## Requirements
 
-* [ESPHome 2023.7.0 or higher](https://github.com/esphome/esphome/releases).
+* [ESPHome 2024.6.0 or higher](https://github.com/esphome/esphome/releases).
 * One half of an ethernet cable with RJ45 connector
 * RS485-to-TTL module (`HW-0519` f.e.)
 * Generic ESP32 or ESP8266 board
