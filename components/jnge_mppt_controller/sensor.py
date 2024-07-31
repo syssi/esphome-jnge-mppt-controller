@@ -20,6 +20,7 @@ from esphome.const import (
     UNIT_AMPERE,
     UNIT_CELSIUS,
     UNIT_EMPTY,
+    UNIT_KILOWATT_HOURS,
     UNIT_PERCENT,
     UNIT_VOLT,
     UNIT_WATT,
@@ -132,7 +133,6 @@ ICON_TEMPERATURE_COMPENSATION_COEFFICIENT = "mdi:thermometer-plus"
 ICON_OPERATION_MODE = "mdi:heart-pulse"
 ICON_DISCHARGE_TIMES = "mdi:counter"
 
-UNIT_KILO_WATT_HOURS = "kWh"
 UNIT_MILLIVOLT = "mV"
 UNIT_MILLIVOLT_PER_CELSIUS = "mV/°C"
 
@@ -245,7 +245,7 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_TOTAL_CHARGING_ENERGY): sensor.sensor_schema(
-            unit_of_measurement=UNIT_KILO_WATT_HOURS,
+            unit_of_measurement=UNIT_KILOWATT_HOURS,
             icon=ICON_COUNTER,
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_ENERGY,
@@ -253,7 +253,7 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
             entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_TOTAL_DISCHARGE_ENERGY): sensor.sensor_schema(
-            unit_of_measurement=UNIT_KILO_WATT_HOURS,
+            unit_of_measurement=UNIT_KILOWATT_HOURS,
             icon=ICON_COUNTER,
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_ENERGY,

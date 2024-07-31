@@ -5,15 +5,15 @@ from esphome.const import (
     CONF_ENTITY_CATEGORY,
     CONF_ICON,
     CONF_ID,
-    CONF_MODE,
     CONF_MAX_VALUE,
     CONF_MIN_VALUE,
+    CONF_MODE,
     CONF_STEP,
     CONF_UNIT_OF_MEASUREMENT,
-    ICON_EMPTY,
-    UNIT_VOLT,
-    UNIT_EMPTY,
     ENTITY_CATEGORY_CONFIG,
+    ICON_EMPTY,
+    UNIT_EMPTY,
+    UNIT_VOLT,
 )
 
 from .. import (

@@ -14,6 +14,7 @@ from esphome.const import (
     STATE_CLASS_TOTAL_INCREASING,
     UNIT_AMPERE,
     UNIT_EMPTY,
+    UNIT_KILOWATT_HOURS,
     UNIT_VOLT,
     UNIT_WATT,
 )
@@ -68,7 +69,6 @@ ICON_OPERATION_MODE = "mdi:heart-pulse"
 ICON_DISCHARGE_TIMES = "mdi:counter"
 
 UNIT_HOURS = "h"
-UNIT_KILO_WATT_HOURS = "kWh"
 UNIT_MILLIVOLT = "mV"
 UNIT_MILLIVOLT_PER_CELSIUS = "mV/°C"
 
@@ -150,14 +150,14 @@ CONFIG_SCHEMA = cv.Schema(
             state_class=STATE_CLASS_MEASUREMENT,
         ),
         cv.Optional(CONF_PV_TOTAL_ENERGY): sensor.sensor_schema(
-            unit_of_measurement=UNIT_KILO_WATT_HOURS,
+            unit_of_measurement=UNIT_KILOWATT_HOURS,
             icon=ICON_COUNTER,
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_ENERGY,
             state_class=STATE_CLASS_TOTAL_INCREASING,
         ),
         cv.Optional(CONF_FAN_TOTAL_ENERGY): sensor.sensor_schema(
-            unit_of_measurement=UNIT_KILO_WATT_HOURS,
+            unit_of_measurement=UNIT_KILOWATT_HOURS,
             icon=ICON_COUNTER,
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_ENERGY,
