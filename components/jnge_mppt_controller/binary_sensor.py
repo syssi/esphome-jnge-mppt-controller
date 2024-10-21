@@ -1,12 +1,7 @@
 import esphome.codegen as cg
 from esphome.components import binary_sensor
 import esphome.config_validation as cv
-from esphome.const import (
-    CONF_ENTITY_CATEGORY,
-    CONF_ICON,
-    CONF_ID,
-    ENTITY_CATEGORY_DIAGNOSTIC,
-)
+from esphome.const import CONF_ID, ENTITY_CATEGORY_DIAGNOSTIC
 
 from . import CONF_JNGE_MPPT_CONTROLLER_ID, JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA
 from .const import CONF_CHARGING, CONF_LOAD
@@ -15,59 +10,35 @@ DEPENDENCIES = ["jnge_mppt_controller"]
 
 CODEOWNERS = ["@syssi"]
 
-# readonly
-CONF_LOAD_DETECTED = "load_detected"
+# CONF_CHARGING = "charging"
 CONF_FAN_RUNNING = "fan_running"
-
-ICON_CHARGING = "mdi:battery-charging-50"
-ICON_FAN_RUNNING = "mdi:fan"
-ICON_LOAD = "mdi:lightbulb-on"
-ICON_LOAD_DETECTED = "mdi:lightbulb-on"
+# CONF_LOAD = "load"
+CONF_LOAD_DETECTED = "load_detected"
 
 BINARY_SENSORS = [
-    CONF_LOAD_DETECTED,
+    CONF_CHARGING,
     CONF_FAN_RUNNING,
     CONF_LOAD,
-    CONF_CHARGING,
+    CONF_LOAD_DETECTED,
 ]
 
 CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
     {
-        cv.Optional(CONF_LOAD_DETECTED): binary_sensor.BINARY_SENSOR_SCHEMA.extend(
-            {
-                cv.GenerateID(): cv.declare_id(binary_sensor.BinarySensor),
-                cv.Optional(CONF_ICON, default=ICON_LOAD_DETECTED): cv.icon,
-                cv.Optional(
-                    CONF_ENTITY_CATEGORY, default=ENTITY_CATEGORY_DIAGNOSTIC
-                ): cv.entity_category,
-            }
+        cv.Optional(CONF_CHARGING): binary_sensor.binary_sensor_schema(
+            icon="mdi:battery-charging-50",
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
-        cv.Optional(CONF_FAN_RUNNING): binary_sensor.BINARY_SENSOR_SCHEMA.extend(
-            {
-                cv.GenerateID(): cv.declare_id(binary_sensor.BinarySensor),
-                cv.Optional(CONF_ICON, default=ICON_FAN_RUNNING): cv.icon,
-                cv.Optional(
-                    CONF_ENTITY_CATEGORY, default=ENTITY_CATEGORY_DIAGNOSTIC
-                ): cv.entity_category,
-            }
+        cv.Optional(CONF_FAN_RUNNING): binary_sensor.binary_sensor_schema(
+            icon="mdi:fan",
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
-        cv.Optional(CONF_LOAD): binary_sensor.BINARY_SENSOR_SCHEMA.extend(
-            {
-                cv.GenerateID(): cv.declare_id(binary_sensor.BinarySensor),
-                cv.Optional(CONF_ICON, default=ICON_LOAD): cv.icon,
-                cv.Optional(
-                    CONF_ENTITY_CATEGORY, default=ENTITY_CATEGORY_DIAGNOSTIC
-                ): cv.entity_category,
-            }
+        cv.Optional(CONF_LOAD): binary_sensor.binary_sensor_schema(
+            icon="mdi:lightbulb-on",
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
-        cv.Optional(CONF_CHARGING): binary_sensor.BINARY_SENSOR_SCHEMA.extend(
-            {
-                cv.GenerateID(): cv.declare_id(binary_sensor.BinarySensor),
-                cv.Optional(CONF_ICON, default=ICON_CHARGING): cv.icon,
-                cv.Optional(
-                    CONF_ENTITY_CATEGORY, default=ENTITY_CATEGORY_DIAGNOSTIC
-                ): cv.entity_category,
-            }
+        cv.Optional(CONF_LOAD_DETECTED): binary_sensor.binary_sensor_schema(
+            icon="mdi:lightbulb-on",
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
     }
 )

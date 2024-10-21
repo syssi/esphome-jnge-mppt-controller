@@ -1,7 +1,7 @@
 import esphome.codegen as cg
 from esphome.components import binary_sensor
 import esphome.config_validation as cv
-from esphome.const import CONF_ICON, CONF_ID
+from esphome.const import CONF_ID, ENTITY_CATEGORY_DIAGNOSTIC
 
 from . import CONF_JNGE_WIND_SOLAR_CONTROLLER_ID, JngeWindSolarController
 from .const import CONF_CHARGING, CONF_LOAD
@@ -10,17 +10,14 @@ DEPENDENCIES = ["jnge_wind_solar_controller"]
 
 CODEOWNERS = ["@syssi"]
 
-# readonly
+# CONF_CHARGING = "charging"
+# CONF_LOAD = "load"
 CONF_LOAD_DETECTED = "load_detected"
 
-ICON_CHARGING = "mdi:battery-charging-50"
-ICON_LOAD = "mdi:lightbulb-on"
-ICON_LOAD_DETECTED = "mdi:lightbulb-on"
-
 BINARY_SENSORS = [
-    CONF_LOAD_DETECTED,
-    CONF_LOAD,
     CONF_CHARGING,
+    CONF_LOAD,
+    CONF_LOAD_DETECTED,
 ]
 
 CONFIG_SCHEMA = cv.Schema(
@@ -28,23 +25,17 @@ CONFIG_SCHEMA = cv.Schema(
         cv.GenerateID(CONF_JNGE_WIND_SOLAR_CONTROLLER_ID): cv.use_id(
             JngeWindSolarController
         ),
-        cv.Optional(CONF_LOAD_DETECTED): binary_sensor.BINARY_SENSOR_SCHEMA.extend(
-            {
-                cv.GenerateID(): cv.declare_id(binary_sensor.BinarySensor),
-                cv.Optional(CONF_ICON, default=ICON_LOAD_DETECTED): cv.icon,
-            }
+        cv.Optional(CONF_CHARGING): binary_sensor.binary_sensor_schema(
+            icon="mdi:battery-charging-50",
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
-        cv.Optional(CONF_LOAD): binary_sensor.BINARY_SENSOR_SCHEMA.extend(
-            {
-                cv.GenerateID(): cv.declare_id(binary_sensor.BinarySensor),
-                cv.Optional(CONF_ICON, default=ICON_LOAD): cv.icon,
-            }
+        cv.Optional(CONF_LOAD): binary_sensor.binary_sensor_schema(
+            icon="mdi:lightbulb-on",
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
-        cv.Optional(CONF_CHARGING): binary_sensor.BINARY_SENSOR_SCHEMA.extend(
-            {
-                cv.GenerateID(): cv.declare_id(binary_sensor.BinarySensor),
-                cv.Optional(CONF_ICON, default=ICON_CHARGING): cv.icon,
-            }
+        cv.Optional(CONF_LOAD_DETECTED): binary_sensor.binary_sensor_schema(
+            icon="mdi:lightbulb-on",
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
     }
 )
