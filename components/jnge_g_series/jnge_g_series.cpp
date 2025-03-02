@@ -128,7 +128,7 @@ void JngeGSeries::update() {
   no_response_count_++;
 
   // Request device status -> 0x06, 0x12, 0x10, 0x00, 0x00, 0x24, 0xBC, 0xA5
-  this->send(READ_INPUT_REGISTERS, 0x1000, 29);
+  this->send(0x12, 0x1000, 0x24);
 }
 
 void JngeGSeries::publish_state_(binary_sensor::BinarySensor *binary_sensor, const bool &state) {

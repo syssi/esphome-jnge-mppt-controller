@@ -38,6 +38,8 @@ uart:
   baud_rate: 9600
   tx_pin: ${tx_pin}
   rx_pin: ${rx_pin}
+  debug:
+    direction: BOTH
 
 jnge_g_series:
   id: jnge0
