@@ -72,9 +72,7 @@ void JngeGSeries::on_status_data_(const std::vector<uint8_t> &data) {
 
   ESP_LOGI(TAG, "Byte 36-37: %.0f (0x%04X)", jnge_get_16bit(36) * 1.0f, jnge_get_16bit(36));
   ESP_LOGI(TAG, "Byte 38-39: %.0f (0x%04X)", jnge_get_16bit(38) * 1.0f, jnge_get_16bit(38));
-
-  ESP_LOGI(TAG, "Byte 40-41 - Current: %.2f A", jnge_get_16bit(40) * 0.1f);
-
+  ESP_LOGI(TAG, "Byte 40-41: %.0f (0x%04X)", jnge_get_16bit(40) * 1.0f, jnge_get_16bit(40));
   ESP_LOGI(TAG, "Byte 42-43: %.0f (0x%04X)", jnge_get_16bit(42) * 1.0f, jnge_get_16bit(42));
   ESP_LOGI(TAG, "Byte 44-45: %.0f (0x%04X)", jnge_get_16bit(44) * 1.0f, jnge_get_16bit(44));
   ESP_LOGI(TAG, "Byte 46-47: %.0f (0x%04X)", jnge_get_16bit(46) * 1.0f, jnge_get_16bit(46));
