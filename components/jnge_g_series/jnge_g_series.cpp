@@ -43,19 +43,23 @@ void JngeGSeries::on_status_data_(const std::vector<uint8_t> &data) {
 
   ESP_LOGI(TAG, "Status frame received");
 
-  ESP_LOGI(TAG, "Byte 0-1: %.0f (0x%04X)", jnge_get_16bit(0) * 1.0f, jnge_get_16bit(0));
+  // ESP_LOGI(TAG, "Byte 0-1: %.0f (0x%04X)", jnge_get_16bit(0) * 1.0f, jnge_get_16bit(0));
   ESP_LOGI(TAG, "Byte 2-3: %.0f (0x%04X)", jnge_get_16bit(2) * 1.0f, jnge_get_16bit(2));
-  ESP_LOGI(TAG, "Byte 4-5: %.1f V (0x%04X)", jnge_get_16bit(4) * 0.1f, jnge_get_16bit(4));
+
+  ESP_LOGI(TAG, "AC voltage1: %.1f V", jnge_get_16bit(4) * 0.1f);
+
   ESP_LOGI(TAG, "Byte 6-7: %.0f (0x%04X)", jnge_get_16bit(6) * 1.0f, jnge_get_16bit(6));
-  ESP_LOGI(TAG, "Byte 8-9: %.1f V (0x%04X)", jnge_get_16bit(8) * 0.1f, jnge_get_16bit(8));
+
+  ESP_LOGI(TAG, "AC voltage2: %.1f V", jnge_get_16bit(8) * 0.1f);
+
   ESP_LOGI(TAG, "Byte 10-11: %.2f Hz (0x%04X)", jnge_get_16bit(10) * 0.01f, jnge_get_16bit(10));
   ESP_LOGI(TAG, "Byte 12-13: %.0f (0x%04X)", jnge_get_16bit(12) * 1.0f, jnge_get_16bit(12));
-  ESP_LOGI(TAG, "Byte 14-15: %.0f (0x%04X)", jnge_get_16bit(14) * 1.0f, jnge_get_16bit(14));
+  ESP_LOGI(TAG, "Byte 14-15: %.0f (0x%04X) <-- What is this? (A)", jnge_get_16bit(14) * 1.0f, jnge_get_16bit(14));
 
-  ESP_LOGI(TAG, "Byte 16-17 - Battery voltage: %.1f V", jnge_get_16bit(16) * 0.1f);
+  ESP_LOGI(TAG, "Battery voltage: %.1f V", jnge_get_16bit(16) * 0.1f);
   this->publish_state_(this->battery_voltage_sensor_, jnge_get_16bit(16) * 0.1f);
 
-  ESP_LOGI(TAG, "Byte 18-19: %.0f (0x%04X)", jnge_get_16bit(18) * 1.0f, jnge_get_16bit(18));
+  ESP_LOGI(TAG, "Byte 18-19: %.1f (0x%04X) <-- What is this? (B)", jnge_get_16bit(18) * 0.1f, jnge_get_16bit(18));
   ESP_LOGI(TAG, "Byte 20-21: %.0f (0x%04X)", jnge_get_16bit(20) * 1.0f, jnge_get_16bit(20));
   ESP_LOGI(TAG, "Byte 22-23: %.0f (0x%04X)", jnge_get_16bit(22) * 1.0f, jnge_get_16bit(22));
   ESP_LOGI(TAG, "Byte 24-25: %.0f (0x%04X)", jnge_get_16bit(24) * 1.0f, jnge_get_16bit(24));
