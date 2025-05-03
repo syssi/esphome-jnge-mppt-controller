@@ -1,0 +1,300 @@
+substitutions:
+  name: esp32c6-compatibility-test
+  device_description: "Verify the project builds from source on ESP32C6"
+  external_components_source: github://syssi/esphome-jnge-mppt-controller@main
+
+esphome:
+  name: ${name}
+  comment: ${device_description}
+  min_version: 2024.6.0
+  platformio_options:
+    # board_build.f_cpu: 160000000L
+    # board_build.f_flash: 80000000L
+    board_build.flash_size: 8MB
+    # build_flags: "-DBOARD_HAS_PSRAM"
+    # board_build.arduino.memory_type: qio_opi
+
+# Board is waveshare esp32-c6-devkit-n8
+esp32:
+  board: esp32-c6-devkitc-1
+  variant: esp32c6
+  framework:
+    type: esp-idf
+    version: 5.3.1
+    platform_version: 6.9.0
+    sdkconfig_options:
+      CONFIG_ESPTOOLPY_FLASHSIZE_8MB: y
+
+external_components:
+  - source: ${external_components_source}
+    refresh: 0s
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+ota:
+  platform: esphome
+
+logger:
+  level: VERY_VERBOSE
+
+api:
+  reboot_timeout: 0s
+
+uart:
+  - id: uart_0
+    baud_rate: 9600
+    tx_pin: GPIO16
+    rx_pin: GPIO17
+  - id: uart_1
+    baud_rate: 9600
+    tx_pin: GPIO14
+    rx_pin: GPIO4
+
+jnge_modbus:
+  - id: modbus0
+    uart_id: uart_0
+  - id: modbus1
+    uart_id: uart_1
+
+jnge_mppt_controller:
+  - id: inverter0
+    jnge_modbus_id: modbus0
+    enable_fake_traffic: false
+    suppress_battery_temperature_errors: false
+    update_interval: 2s
+
+jnge_wind_solar_controller:
+  - id: inverter1
+    jnge_modbus_id: modbus1
+    enable_fake_traffic: false
+    update_interval: 2s
+
+binary_sensor:
+  - platform: jnge_mppt_controller
+    fan_running:
+      name: "inverter0 fan running"
+    load_detected:
+      name: "inverter0 load detected"
+    load:
+      name: "inverter0 load"
+    charging:
+      name: "inverter0 charging"
+
+  - platform: jnge_wind_solar_controller
+    load_detected:
+      name: "inverter1 load detected"
+    load:
+      name: "inverter1 load"
+    charging:
+      name: "inverter1 charging"
+
+sensor:
+  - platform: jnge_mppt_controller
+    # status
+    firmware_version:
+      name: "inverter0 firmware version"
+    pv_voltage:
+      name: "inverter0 pv voltage"
+    battery_voltage:
+      name: "inverter0 battery voltage"
+    channel_a_current:
+      name: "inverter0 channel a current"
+    channel_b_current:
+      name: "inverter0 channel b current"
+    charging_current:
+      name: "inverter0 charging current"
+    charger_temperature:
+      name: "inverter0 charger temperature"
+    charging_power:
+      name: "inverter0 charging power"
+    discharge_power:
+      name: "inverter0 discharge power"
+    battery_capacity:
+      name: "inverter0 battery capacity"
+    operation_mode_id:
+      name: "inverter0 operation mode id"
+    discharge_current:
+      name: "inverter0 discharge current"
+    discharge_times:
+      name: "inverter0 discharge times"
+    total_charging_energy:
+      name: "inverter0 total charging energy"
+    total_discharge_energy:
+      name: "inverter0 total discharge energy"
+    battery_temperature:
+      name: "inverter0 battery temperature"
+    error_bitmask:
+      name: "inverter0 error bitmask"
+    controller_voltage_level:
+      name: "inverter0 controller voltage level"
+    pv_standby_voltage:
+      name: "inverter0 pv standby voltage"
+    controller_current_level:
+      name: "inverter0 controller current level"
+    battery_strings:
+      name: "inverter0 battery strings"
+    battery_temperature_compensation_voltage_point:
+      name: "inverter0 battery temperature compensation voltage point"
+
+    # config
+    battery_overvoltage:
+      name: "inverter0 battery overvoltage"
+    charging_limit_voltage:
+      name: "inverter0 charging limit voltage"
+    battery_overvoltage_recovery:
+      name: "inverter0 battery overvoltage recovery"
+    equalizing_charging_voltage:
+      name: "inverter0 equalizing charging voltage"
+    boost_charging_voltage:
+      name: "inverter0 boost charging voltage"
+    boost_charging_return_voltage:
+      name: "inverter0 boost charging return voltage"
+    floating_charge_voltage:
+      name: "inverter0 floating charge voltage"
+    over_discharge_voltage:
+      name: "inverter0 over discharge voltage"
+    over_discharge_recovery_voltage:
+      name: "inverter0 over discharge recovery voltage"
+    battery_undervoltage:
+      name: "inverter0 battery undervoltage"
+    equalization_charging_time:
+      name: "inverter0 equalization charging time"
+    improve_charging_time:
+      name: "inverter0 improve charging time"
+    temperature_compensation_coefficient:
+      name: "inverter0 temperature compensation coefficient"
+    device_address:
+      name: "inverter0 device address"
+    light_control_on_voltage:
+      name: "inverter0 light control on voltage"
+    light_control_off_voltage:
+      name: "inverter0 light control off voltage"
+    light_control_on_period_1:
+      name: "inverter0 light control on period 1"
+    light_control_on_period_2:
+      name: "inverter0 light control on period 2"
+    load_turn_off_time:
+      name: "inverter0 load turn off time"
+
+  - platform: jnge_wind_solar_controller
+    # status
+    firmware_version:
+      name: "inverter1 firmware version"
+    peak_pv_charging_rating:
+      name: "inverter1 peak pv charging rating"
+    peak_fan_charging_rating:
+      name: "inverter1 peak fan charging rating"
+    pv_voltage:
+      name: "inverter1 pv voltage"
+    fan_voltage:
+      name: "inverter1 fan voltage"
+    battery_voltage:
+      name: "inverter1 battery voltage"
+    pv_charging_current:
+      name: "inverter1 pv charging current"
+    fan_charging_current:
+      name: "inverter1 fan charging current"
+    pv_charging_power:
+      name: "inverter1 pv charging power"
+    fan_charging_power:
+      name: "inverter1 fan charging power"
+    pv_total_energy:
+      name: "inverter1 pv total energy"
+    fan_total_energy:
+      name: "inverter1 fan total energy"
+    operation_mode_id:
+      name: "inverter1 operation mode id"
+    battery_strings:
+      name: "inverter1 battery strings"
+    battery_voltage_level:
+      name: "inverter1 battery voltage level"
+    error_bitmask:
+      name: "inverter1 error bitmask"
+
+switch:
+  - platform: jnge_mppt_controller
+    buzzer:
+      name: "inverter0 buzzer"
+    street_light_mode:
+      name: "inverter0 street light mode"
+    charging:
+      name: "inverter0 charging"
+    load:
+      name: "inverter0 load"
+
+  - platform: jnge_wind_solar_controller
+    street_light_mode:
+      name: "inverter1 street light mode"
+    charging:
+      name: "inverter1 charging"
+    load:
+      name: "inverter1 load"
+
+text_sensor:
+  - platform: jnge_mppt_controller
+    battery_type:
+      name: "inverter0 battery type"
+    errors:
+      name: "inverter0 errors"
+    operation_mode:
+      name: "inverter0 operation mode"
+
+  - platform: jnge_wind_solar_controller
+    battery_type:
+      name: "inverter1 battery type"
+    errors:
+      name: "inverter1 errors"
+    operation_mode:
+      name: "inverter1 operation mode"
+
+number:
+  - platform: jnge_mppt_controller
+    battery_overvoltage:
+      name: "inverter0 battery overvoltage"
+    charging_limit_voltage:
+      name: "inverter0 charging limit voltage"
+    battery_overvoltage_recovery:
+      name: "inverter0 battery overvoltage recovery"
+    equalizing_charging_voltage:
+      name: "inverter0 equalizing charging voltage"
+    boost_charging_voltage:
+      name: "inverter0 boost charging voltage"
+    boost_charging_return_voltage:
+      name: "inverter0 boost charging return voltage"
+    floating_charge_voltage:
+      name: "inverter0 floating charge voltage"
+    over_discharge_voltage:
+      name: "inverter0 over discharge voltage"
+    over_discharge_recovery_voltage:
+      name: "inverter0 over discharge recovery voltage"
+    battery_undervoltage:
+      name: "inverter0 battery undervoltage"
+    equalization_charging_time:
+      name: "inverter0 equalization charging time"
+    improve_charging_time:
+      name: "inverter0 improve charging time"
+    light_control_on_voltage:
+      name: "inverter0 light control on voltage"
+    light_control_off_voltage:
+      name: "inverter0 light control off voltage"
+    light_control_on_period_1:
+      name: "inverter0 light control on period 1"
+    light_control_on_period_2:
+      name: "inverter0 light control on period 2"
+    load_turn_off_time:
+      name: "inverter0 load turn off time"
+    battery_strings:
+      name: "inverter0 battery strings"
+
+select:
+  - platform: jnge_mppt_controller
+    battery_type:
+      name: "inverter0 battery type"
+      optionsmap:
+        0: "Lead Acid"
+        1: "Gel"
+        2: "Ternary Lithium"
+        3: "LiFePo4"
+        4: "Custom"
