@@ -1,5 +1,6 @@
 import esphome.codegen as cg
 from esphome.components import select
+from esphome.components.select import select_schema
 import esphome.config_validation as cv
 from esphome.const import CONF_ID
 
@@ -38,12 +39,15 @@ SELECTS = {
     CONF_BATTERY_TYPE: 0x103B,
 }
 
-JNGESELECT_SCHEMA = select.SELECT_SCHEMA.extend(
-    {
-        cv.GenerateID(): cv.declare_id(JngeSelect),
-        cv.Optional(CONF_OPTIONSMAP): ensure_option_map,
-    }
-).extend(cv.COMPONENT_SCHEMA)
+JNGESELECT_SCHEMA = (
+    select_schema(JngeSelect)
+    .extend(
+        {
+            cv.Optional(CONF_OPTIONSMAP): ensure_option_map,
+        }
+    )
+    .extend(cv.COMPONENT_SCHEMA)
+)
 
 
 CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(

@@ -1,12 +1,7 @@
 import esphome.codegen as cg
 from esphome.components import switch
 import esphome.config_validation as cv
-from esphome.const import (
-    CONF_ENTITY_CATEGORY,
-    CONF_ICON,
-    CONF_ID,
-    ENTITY_CATEGORY_CONFIG,
-)
+from esphome.const import CONF_ID, ENTITY_CATEGORY_CONFIG
 
 from .. import (
     CONF_JNGE_MPPT_CONTROLLER_ID,
@@ -38,36 +33,20 @@ JngeSwitch = jnge_mppt_controller_ns.class_("JngeSwitch", switch.Switch, cg.Comp
 
 CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
     {
-        cv.Optional(CONF_BUZZER): switch.SWITCH_SCHEMA.extend(
-            {
-                cv.GenerateID(): cv.declare_id(JngeSwitch),
-                cv.Optional(CONF_ICON, default=ICON_BUZZER): cv.icon,
-                cv.Optional(
-                    CONF_ENTITY_CATEGORY, default=ENTITY_CATEGORY_CONFIG
-                ): cv.entity_category,
-            }
+        cv.Optional(CONF_BUZZER): switch.switch_schema(
+            JngeSwitch, icon=ICON_BUZZER, entity_category=ENTITY_CATEGORY_CONFIG
         ).extend(cv.COMPONENT_SCHEMA),
-        cv.Optional(CONF_STREET_LIGHT_MODE): switch.SWITCH_SCHEMA.extend(
-            {
-                cv.GenerateID(): cv.declare_id(JngeSwitch),
-                cv.Optional(CONF_ICON, default=ICON_STREET_LIGHT_MODE): cv.icon,
-                cv.Optional(
-                    CONF_ENTITY_CATEGORY, default=ENTITY_CATEGORY_CONFIG
-                ): cv.entity_category,
-            }
+        cv.Optional(CONF_STREET_LIGHT_MODE): switch.switch_schema(
+            JngeSwitch,
+            icon=ICON_STREET_LIGHT_MODE,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ).extend(cv.COMPONENT_SCHEMA),
-        cv.Optional(CONF_CHARGING): switch.SWITCH_SCHEMA.extend(
-            {
-                cv.GenerateID(): cv.declare_id(JngeSwitch),
-                cv.Optional(CONF_ICON, default=ICON_CHARGING): cv.icon,
-            }
+        cv.Optional(CONF_CHARGING): switch.switch_schema(
+            JngeSwitch, icon=ICON_CHARGING
         ).extend(cv.COMPONENT_SCHEMA),
-        cv.Optional(CONF_LOAD): switch.SWITCH_SCHEMA.extend(
-            {
-                cv.GenerateID(): cv.declare_id(JngeSwitch),
-                cv.Optional(CONF_ICON, default=ICON_LOAD): cv.icon,
-            }
-        ).extend(cv.COMPONENT_SCHEMA),
+        cv.Optional(CONF_LOAD): switch.switch_schema(JngeSwitch, icon=ICON_LOAD).extend(
+            cv.COMPONENT_SCHEMA
+        ),
     }
 )
 
