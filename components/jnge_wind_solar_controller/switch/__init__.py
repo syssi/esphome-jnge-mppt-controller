@@ -1,7 +1,7 @@
 import esphome.codegen as cg
 from esphome.components import switch
 import esphome.config_validation as cv
-from esphome.const import CONF_ICON, CONF_ID
+from esphome.const import CONF_ID
 
 from .. import (
     CONF_JNGE_WIND_SOLAR_CONTROLLER_ID,
@@ -36,24 +36,15 @@ CONFIG_SCHEMA = cv.Schema(
         cv.GenerateID(CONF_JNGE_WIND_SOLAR_CONTROLLER_ID): cv.use_id(
             JngeWindSolarController
         ),
-        cv.Optional(CONF_STREET_LIGHT_MODE): switch.SWITCH_SCHEMA.extend(
-            {
-                cv.GenerateID(): cv.declare_id(JngeSwitch),
-                cv.Optional(CONF_ICON, default=ICON_STREET_LIGHT_MODE): cv.icon,
-            }
+        cv.Optional(CONF_STREET_LIGHT_MODE): switch.switch_schema(
+            JngeSwitch, icon=ICON_STREET_LIGHT_MODE
         ).extend(cv.COMPONENT_SCHEMA),
-        cv.Optional(CONF_CHARGING): switch.SWITCH_SCHEMA.extend(
-            {
-                cv.GenerateID(): cv.declare_id(JngeSwitch),
-                cv.Optional(CONF_ICON, default=ICON_CHARGING): cv.icon,
-            }
+        cv.Optional(CONF_CHARGING): switch.switch_schema(
+            JngeSwitch, icon=ICON_CHARGING
         ).extend(cv.COMPONENT_SCHEMA),
-        cv.Optional(CONF_LOAD): switch.SWITCH_SCHEMA.extend(
-            {
-                cv.GenerateID(): cv.declare_id(JngeSwitch),
-                cv.Optional(CONF_ICON, default=ICON_LOAD): cv.icon,
-            }
-        ).extend(cv.COMPONENT_SCHEMA),
+        cv.Optional(CONF_LOAD): switch.switch_schema(JngeSwitch, icon=ICON_LOAD).extend(
+            cv.COMPONENT_SCHEMA
+        ),
     }
 )
 
