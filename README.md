@@ -19,6 +19,7 @@ ESPHome component to monitor and control a JN-MPPT or JN-W/S Controller via RS48
 * JN-12-W300/S300, JN-12-W500/S500 Wind and Solar Hybrid Controller
 * JN-24-W600/S600, JN-24-W800/S800 Wind and Solar Hybrid Controller
 * JN-48-W800/S800, JN-48-W1000/S1000 Wind and Solar Hybrid Controller
+* JN-G series (JN-G1000, JN-G1500, JN-G2000, ..., JN-G6000) Pure Sine Wave Inverter
 
 ## Requirements
 
@@ -31,6 +32,7 @@ ESPHome component to monitor and control a JN-MPPT or JN-W/S Controller via RS48
 
 * [JN-MPPT Buck Solar Charge Controller](jnge_mppt_controller.md)
 * [JN-W/S Wind and Solar Hybrid Controller](jnge_wind_solar_controller.md)
+* [JN-G Pure Sine Wave Inverter](jnge_g_series.md)
 
 ## Debugging
 
