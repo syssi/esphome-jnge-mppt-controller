@@ -19,7 +19,7 @@ from esphome.const import (
     UNIT_WATT,
 )
 
-from . import CONF_JNGE_WIND_SOLAR_CONTROLLER_ID, JngeWindSolarController
+from . import JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA
 
 DEPENDENCIES = ["jnge_wind_solar_controller"]
 
@@ -73,11 +73,8 @@ UNIT_MILLIVOLT = "mV"
 UNIT_MILLIVOLT_PER_CELSIUS = "mV/°C"
 
 # pylint: disable=too-many-function-args
-CONFIG_SCHEMA = cv.Schema(
+CONFIG_SCHEMA = JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA.extend(
     {
-        cv.GenerateID(CONF_JNGE_WIND_SOLAR_CONTROLLER_ID): cv.use_id(
-            JngeWindSolarController
-        ),
         # status
         cv.Optional(CONF_FIRMWARE_VERSION): sensor.sensor_schema(
             unit_of_measurement=UNIT_EMPTY,
@@ -196,6 +193,8 @@ CONFIG_SCHEMA = cv.Schema(
 
 
 async def to_code(config):
+    from . import CONF_JNGE_WIND_SOLAR_CONTROLLER_ID
+
     hub = await cg.get_variable(config[CONF_JNGE_WIND_SOLAR_CONTROLLER_ID])
     for key in SENSORS:
         if key in config:

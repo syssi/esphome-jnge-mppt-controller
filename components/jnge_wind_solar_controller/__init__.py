@@ -16,6 +16,14 @@ JngeWindSolarController = jnge_wind_solar_controller_ns.class_(
     "JngeWindSolarController", cg.PollingComponent, jnge_modbus.JngeModbusDevice
 )
 
+JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA = cv.Schema(
+    {
+        cv.GenerateID(CONF_JNGE_WIND_SOLAR_CONTROLLER_ID): cv.use_id(
+            JngeWindSolarController
+        ),
+    }
+)
+
 CONFIG_SCHEMA = (
     cv.Schema(
         {

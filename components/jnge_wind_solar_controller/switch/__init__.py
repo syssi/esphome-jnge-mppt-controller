@@ -4,8 +4,7 @@ import esphome.config_validation as cv
 from esphome.const import CONF_ID
 
 from .. import (
-    CONF_JNGE_WIND_SOLAR_CONTROLLER_ID,
-    JngeWindSolarController,
+    JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA,
     jnge_wind_solar_controller_ns,
 )
 from ..const import CONF_CHARGING, CONF_LOAD
@@ -31,11 +30,8 @@ JngeSwitch = jnge_wind_solar_controller_ns.class_(
     "JngeSwitch", switch.Switch, cg.Component
 )
 
-CONFIG_SCHEMA = cv.Schema(
+CONFIG_SCHEMA = JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA.extend(
     {
-        cv.GenerateID(CONF_JNGE_WIND_SOLAR_CONTROLLER_ID): cv.use_id(
-            JngeWindSolarController
-        ),
         cv.Optional(CONF_STREET_LIGHT_MODE): switch.switch_schema(
             JngeSwitch, icon=ICON_STREET_LIGHT_MODE
         ).extend(cv.COMPONENT_SCHEMA),
@@ -50,6 +46,8 @@ CONFIG_SCHEMA = cv.Schema(
 
 
 async def to_code(config):
+    from .. import CONF_JNGE_WIND_SOLAR_CONTROLLER_ID
+
     hub = await cg.get_variable(config[CONF_JNGE_WIND_SOLAR_CONTROLLER_ID])
     for key, address in SWITCHES.items():
         if key in config:
