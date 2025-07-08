@@ -3,7 +3,7 @@ from esphome.components import binary_sensor
 import esphome.config_validation as cv
 from esphome.const import CONF_ID, ENTITY_CATEGORY_DIAGNOSTIC
 
-from . import CONF_JNGE_WIND_SOLAR_CONTROLLER_ID, JngeWindSolarController
+from . import JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA
 from .const import CONF_CHARGING, CONF_LOAD
 
 DEPENDENCIES = ["jnge_wind_solar_controller"]
@@ -20,11 +20,8 @@ BINARY_SENSORS = [
     CONF_LOAD_DETECTED,
 ]
 
-CONFIG_SCHEMA = cv.Schema(
+CONFIG_SCHEMA = JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA.extend(
     {
-        cv.GenerateID(CONF_JNGE_WIND_SOLAR_CONTROLLER_ID): cv.use_id(
-            JngeWindSolarController
-        ),
         cv.Optional(CONF_CHARGING): binary_sensor.binary_sensor_schema(
             icon="mdi:battery-charging-50",
             entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
@@ -42,6 +39,8 @@ CONFIG_SCHEMA = cv.Schema(
 
 
 async def to_code(config):
+    from . import CONF_JNGE_WIND_SOLAR_CONTROLLER_ID
+
     hub = await cg.get_variable(config[CONF_JNGE_WIND_SOLAR_CONTROLLER_ID])
     for key in BINARY_SENSORS:
         if key in config:

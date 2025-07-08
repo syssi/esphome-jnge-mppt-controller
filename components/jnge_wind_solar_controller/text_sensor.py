@@ -3,7 +3,7 @@ from esphome.components import text_sensor
 import esphome.config_validation as cv
 from esphome.const import CONF_ID
 
-from . import CONF_JNGE_WIND_SOLAR_CONTROLLER_ID, JngeWindSolarController
+from . import JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA
 
 DEPENDENCIES = ["jnge_wind_solar_controller"]
 
@@ -23,11 +23,8 @@ TEXT_SENSORS = [
     CONF_BATTERY_TYPE,
 ]
 
-CONFIG_SCHEMA = cv.Schema(
+CONFIG_SCHEMA = JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA.extend(
     {
-        cv.GenerateID(CONF_JNGE_WIND_SOLAR_CONTROLLER_ID): cv.use_id(
-            JngeWindSolarController
-        ),
         cv.Optional(CONF_OPERATION_MODE): text_sensor.text_sensor_schema(
             text_sensor.TextSensor, icon=ICON_OPERATION_MODE
         ),
@@ -42,6 +39,8 @@ CONFIG_SCHEMA = cv.Schema(
 
 
 async def to_code(config):
+    from . import CONF_JNGE_WIND_SOLAR_CONTROLLER_ID
+
     hub = await cg.get_variable(config[CONF_JNGE_WIND_SOLAR_CONTROLLER_ID])
     for key in TEXT_SENSORS:
         if key in config:
