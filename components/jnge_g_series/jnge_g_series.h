@@ -17,6 +17,7 @@ class JngeGSeries : public PollingComponent, public jnge_modbus::JngeModbusDevic
   void set_ac_voltage1_sensor(sensor::Sensor *ac_voltage1_sensor) { ac_voltage1_sensor_ = ac_voltage1_sensor; }
   void set_ac_voltage2_sensor(sensor::Sensor *ac_voltage2_sensor) { ac_voltage2_sensor_ = ac_voltage2_sensor; }
   void set_ac_frequency_sensor(sensor::Sensor *ac_frequency_sensor) { ac_frequency_sensor_ = ac_frequency_sensor; }
+  void set_ac_current_sensor(sensor::Sensor *ac_current_sensor) { ac_current_sensor_ = ac_current_sensor; }
   void set_total_energy_sensor(sensor::Sensor *total_energy_sensor) { total_energy_sensor_ = total_energy_sensor; }
   void set_inverter_temperature_sensor(sensor::Sensor *inverter_temperature_sensor) {
     inverter_temperature_sensor_ = inverter_temperature_sensor;
@@ -35,6 +36,7 @@ class JngeGSeries : public PollingComponent, public jnge_modbus::JngeModbusDevic
   sensor::Sensor *ac_voltage1_sensor_;
   sensor::Sensor *ac_voltage2_sensor_;
   sensor::Sensor *ac_frequency_sensor_;
+  sensor::Sensor *ac_current_sensor_;
   sensor::Sensor *total_energy_sensor_;
   sensor::Sensor *inverter_temperature_sensor_;
 
