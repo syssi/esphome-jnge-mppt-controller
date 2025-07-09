@@ -54,7 +54,7 @@ void JngeGSeries::on_status_data_(const std::vector<uint8_t> &data) {
   this->publish_state_(this->ac_voltage1_sensor_, jnge_get_16bit(4) * 0.1f);
   this->publish_state_(this->ac_voltage2_sensor_, jnge_get_16bit(8) * 0.1f);
   this->publish_state_(this->ac_frequency_sensor_, jnge_get_16bit(10) * 0.01f);
-  ESP_LOGI(TAG, "Unknown 14:   %.0f", jnge_get_16bit(14) * 1.0f);
+  this->publish_state_(this->ac_current_sensor_, jnge_get_16bit(14) * 0.01f);
   this->publish_state_(this->battery_voltage_sensor_, jnge_get_16bit(16) * 0.1f);
   this->publish_state_(this->total_energy_sensor_, jnge_get_32bit(32) * 0.1f);
   this->publish_state_(this->inverter_temperature_sensor_, jnge_get_16bit(36) * 0.1f);
@@ -92,6 +92,7 @@ void JngeGSeries::publish_device_offline_() {
   this->publish_state_(this->ac_voltage1_sensor_, NAN);
   this->publish_state_(this->ac_voltage2_sensor_, NAN);
   this->publish_state_(this->ac_frequency_sensor_, NAN);
+  this->publish_state_(this->ac_current_sensor_, NAN);
   this->publish_state_(this->battery_voltage_sensor_, NAN);
   this->publish_state_(this->total_energy_sensor_, NAN);
   this->publish_state_(this->inverter_temperature_sensor_, NAN);
@@ -122,6 +123,7 @@ void JngeGSeries::dump_config() {  // NOLINT(google-readability-function-size,re
   LOG_SENSOR("", "AC Voltage 1", this->ac_voltage1_sensor_);
   LOG_SENSOR("", "AC Voltage 2", this->ac_voltage2_sensor_);
   LOG_SENSOR("", "AC Frequency", this->ac_frequency_sensor_);
+  LOG_SENSOR("", "AC Current", this->ac_current_sensor_);
   LOG_SENSOR("", "Battery Voltage", this->battery_voltage_sensor_);
   LOG_SENSOR("", "Total Energy", this->total_energy_sensor_);
   LOG_SENSOR("", "Inverter Temperature", this->inverter_temperature_sensor_);

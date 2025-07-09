@@ -3,6 +3,7 @@ from esphome.components import sensor
 import esphome.config_validation as cv
 from esphome.const import (
     CONF_BATTERY_VOLTAGE,
+    DEVICE_CLASS_CURRENT,
     DEVICE_CLASS_ENERGY,
     DEVICE_CLASS_FREQUENCY,
     DEVICE_CLASS_TEMPERATURE,
@@ -12,6 +13,7 @@ from esphome.const import (
     ICON_EMPTY,
     STATE_CLASS_MEASUREMENT,
     STATE_CLASS_TOTAL_INCREASING,
+    UNIT_AMPERE,
     UNIT_CELSIUS,
     UNIT_HERTZ,
     UNIT_KILOWATT_HOURS,
@@ -28,6 +30,7 @@ CODEOWNERS = ["@syssi"]
 CONF_AC_VOLTAGE1 = "ac_voltage1"
 CONF_AC_VOLTAGE2 = "ac_voltage2"
 CONF_AC_FREQUENCY = "ac_frequency"
+CONF_AC_CURRENT = "ac_current"
 CONF_TOTAL_ENERGY = "total_energy"
 CONF_INVERTER_TEMPERATURE = "inverter_temperature"
 
@@ -36,6 +39,7 @@ SENSORS = [
     CONF_AC_VOLTAGE1,
     CONF_AC_VOLTAGE2,
     CONF_AC_FREQUENCY,
+    CONF_AC_CURRENT,
     CONF_TOTAL_ENERGY,
     CONF_INVERTER_TEMPERATURE,
 ]
@@ -72,6 +76,14 @@ CONFIG_SCHEMA = JNGE_G_SERIES_COMPONENT_SCHEMA.extend(
             icon=ICON_EMPTY,
             accuracy_decimals=2,
             device_class=DEVICE_CLASS_FREQUENCY,
+            state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
+        ),
+        cv.Optional(CONF_AC_CURRENT): sensor.sensor_schema(
+            unit_of_measurement=UNIT_AMPERE,
+            icon=ICON_EMPTY,
+            accuracy_decimals=2,
+            device_class=DEVICE_CLASS_CURRENT,
             state_class=STATE_CLASS_MEASUREMENT,
             entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),

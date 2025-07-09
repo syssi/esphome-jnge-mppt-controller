@@ -55,6 +55,8 @@ sensor:
       name: "${status} AC voltage2"
     ac_frequency:
       name: "${status} AC frequency"
+    ac_current:
+      name: "${status} AC current"
     battery_voltage:
       name: "${status} battery voltage"
     total_energy:
