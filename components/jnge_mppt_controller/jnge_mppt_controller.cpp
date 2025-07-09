@@ -609,6 +609,7 @@ void JngeMpptController::dump_config() {  // NOLINT(google-readability-function-
   LOG_SENSOR("", "Light Control On Period 2", this->light_control_on_period_2_sensor_);
   LOG_SENSOR("", "Load Turn Off Time", this->load_turn_off_time_sensor_);
   LOG_BINARY_SENSOR("", "Load", this->load_binary_sensor_);
+  LOG_BINARY_SENSOR("", "Load Detected", this->load_detected_binary_sensor_);
 }
 
 }  // namespace jnge_mppt_controller

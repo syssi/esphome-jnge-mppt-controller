@@ -275,6 +275,7 @@ std::string JngeWindSolarController::error_bits_to_string_(const uint16_t mask) 
 void JngeWindSolarController::dump_config() {  // NOLINT(google-readability-function-size,readability-function-size)
   ESP_LOGCONFIG(TAG, "JngeWindSolarController:");
   ESP_LOGCONFIG(TAG, "  Address: 0x%02X", this->address_);
+
   LOG_SENSOR("", "Battery Voltage", this->battery_voltage_sensor_);
   LOG_SENSOR("", "PV Voltage", this->pv_voltage_sensor_);
   LOG_SENSOR("", "Fan Voltage", this->fan_voltage_sensor_);
@@ -285,18 +286,20 @@ void JngeWindSolarController::dump_config() {  // NOLINT(google-readability-func
   LOG_SENSOR("", "PV Total Energy", this->pv_total_energy_sensor_);
   LOG_SENSOR("", "Fan Total Energy", this->fan_total_energy_sensor_);
   LOG_SENSOR("", "Operation Mode Id", this->operation_mode_id_sensor_);
-  LOG_TEXT_SENSOR("", "Operation Mode", this->operation_mode_text_sensor_);
-  LOG_BINARY_SENSOR("", "Load detected", this->load_detected_binary_sensor_);
   LOG_SENSOR("", "Firmware Version", this->firmware_version_sensor_);
   LOG_SENSOR("", "Peak PV Charging Rating", this->peak_pv_charging_rating_sensor_);
   LOG_SENSOR("", "Peak Fan Charging Rating", this->peak_fan_charging_rating_sensor_);
   LOG_SENSOR("", "Battery Strings", this->battery_strings_sensor_);
-  LOG_TEXT_SENSOR("", "Battery Type", this->battery_type_text_sensor_);
   LOG_SENSOR("", "Battery Voltage Level", this->battery_voltage_level_sensor_);
   LOG_SENSOR("", "Error bitmask", this->error_bitmask_sensor_);
-  LOG_TEXT_SENSOR("", "Errors", this->errors_text_sensor_);
+
+  LOG_BINARY_SENSOR("", "Load detected", this->load_detected_binary_sensor_);
   LOG_BINARY_SENSOR("", "Charging", this->charging_binary_sensor_);
   LOG_BINARY_SENSOR("", "Load enabled", this->load_binary_sensor_);
+
+  LOG_TEXT_SENSOR("", "Operation Mode", this->operation_mode_text_sensor_);
+  LOG_TEXT_SENSOR("", "Battery Type", this->battery_type_text_sensor_);
+  LOG_TEXT_SENSOR("", "Errors", this->errors_text_sensor_);
 }
 
 }  // namespace jnge_wind_solar_controller
