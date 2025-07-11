@@ -51,10 +51,16 @@ void JngeGSeries::on_status_data_(const std::vector<uint8_t> &data) {
     ESP_LOGD(TAG, "Status Byte %2d-%2d: %5.0f (0x%04X)", i, i + 1, jnge_get_16bit(i) * 1.0f, jnge_get_16bit(i));
   }
 
-  this->publish_state_(this->ac_voltage1_sensor_, jnge_get_16bit(4) * 0.1f);
+  float ac_voltage1 = jnge_get_16bit(4) * 0.1f;
+  this->publish_state_(this->ac_voltage1_sensor_, ac_voltage1);
+
   this->publish_state_(this->ac_voltage2_sensor_, jnge_get_16bit(8) * 0.1f);
   this->publish_state_(this->ac_frequency_sensor_, jnge_get_16bit(10) * 0.01f);
-  this->publish_state_(this->ac_current_sensor_, jnge_get_16bit(14) * 0.01f);
+
+  float ac_current = jnge_get_16bit(14) * 0.01f;
+  this->publish_state_(this->ac_current_sensor_, ac_current);
+  this->publish_state_(this->ac_output_power_sensor_, ac_voltage1 * ac_current);
+
   this->publish_state_(this->battery_voltage_sensor_, jnge_get_16bit(16) * 0.1f);
   this->publish_state_(this->inverter_temperature_sensor_, jnge_get_16bit(18) * 0.1f);
   this->publish_state_(this->total_energy_sensor_, jnge_get_32bit(32) * 0.1f);
@@ -99,6 +105,7 @@ void JngeGSeries::publish_device_offline_() {
   this->publish_state_(this->total_energy_sensor_, NAN);
   this->publish_state_(this->inverter_temperature_sensor_, NAN);
   this->publish_state_(this->ac_output_load_sensor_, NAN);
+  this->publish_state_(this->ac_output_power_sensor_, NAN);
 }
 
 void JngeGSeries::update() {
@@ -131,6 +138,7 @@ void JngeGSeries::dump_config() {  // NOLINT(google-readability-function-size,re
   LOG_SENSOR("", "Total Energy", this->total_energy_sensor_);
   LOG_SENSOR("", "Inverter Temperature", this->inverter_temperature_sensor_);
   LOG_SENSOR("", "AC Output Load", this->ac_output_load_sensor_);
+  LOG_SENSOR("", "AC Output Power", this->ac_output_power_sensor_);
 }
 
 }  // namespace jnge_g_series
