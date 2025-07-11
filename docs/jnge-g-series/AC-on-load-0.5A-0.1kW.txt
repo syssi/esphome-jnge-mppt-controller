@@ -1,0 +1,1615 @@
+[00:08:20][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:20][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:20][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:20][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:20][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:20][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:20][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:20][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:20][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:20][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:20][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:20][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:21][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:21][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:21][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:21][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:21][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:21][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:21][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:21][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:21][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:21][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:21][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:21][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:21][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:21][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:21][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:21][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:21][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:21][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:21][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:21][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.60001 V with 1 decimals of accuracy
+[00:08:21][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:21][I][jnge_g_series:057]: Unknown 14:   53
+[00:08:21][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:21][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:21][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:08:21][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:09:02:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:08:5E
+[00:08:21][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:21][W][component:278]: Component jnge_modbus took a long time for an operation (333 ms).
+[00:08:21][W][component:279]: Components should block for at most 30 ms.
+[00:08:21][W][jnge_modbus:089]: CRC check failed! 0x92AF != 0x0000
+[00:08:21][W][jnge_modbus:089]: CRC check failed! 0xF351 != 0x2C01
+[00:08:21][W][jnge_modbus:089]: CRC check failed! 0x8241 != 0x0000
+[00:08:21][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x1B00
+[00:08:21][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:23][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:23][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:23][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:23][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:23][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:23][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:23][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:23][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:23][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:23][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:23][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:23][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:23][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:23][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:23][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:23][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:23][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:23][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:23][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:23][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:08:23][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:23][I][jnge_g_series:057]: Unknown 14:   53
+[00:08:23][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:23][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:23][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:08:23][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:09:00:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:21:E6
+[00:08:23][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:23][W][component:278]: Component jnge_modbus took a long time for an operation (361 ms).
+[00:08:23][W][component:279]: Components should block for at most 30 ms.
+[00:08:23][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x1B00
+[00:08:23][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:25][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:25][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:25][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:25][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:25][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:25][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:25][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:25][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:25][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:25][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:25][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:25][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:25][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:25][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:25][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:25][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:25][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:25][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:25][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:25][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:08:25][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:25][I][jnge_g_series:057]: Unknown 14:   53
+[00:08:25][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:25][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:25][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:08:25][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:09:00:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:21:E6
+[00:08:25][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:25][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:27][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:27][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:27][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:27][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:27][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:27][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:27][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:27][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:27][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:27][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:27][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:27][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:27][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:27][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:27][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:27][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:27][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:27][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:27][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:27][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.20000 V with 1 decimals of accuracy
+[00:08:27][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:27][I][jnge_g_series:057]: Unknown 14:   53
+[00:08:27][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:27][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:27][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:08:27][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:08:FE:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:35:CD
+[00:08:27][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:27][W][jnge_modbus:089]: CRC check failed! 0x92AF != 0x0000
+[00:08:27][W][jnge_modbus:089]: CRC check failed! 0xF351 != 0x2C01
+[00:08:27][W][jnge_modbus:089]: CRC check failed! 0x8241 != 0x0000
+[00:08:27][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x1B00
+[00:08:27][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:29][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:29][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:29][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:29][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:29][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:29][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:29][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:29][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:29][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:29][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:29][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:29][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:29][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:29][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:29][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:29][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:29][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:29][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:29][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:29][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:08:29][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:29][I][jnge_g_series:057]: Unknown 14:   52
+[00:08:29][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:29][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:29][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 11.90000 °C with 1 decimals of accuracy
+[00:08:29][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:09:00:13:87:00:01:00:34:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:77:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:BE:DA
+[00:08:29][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:29][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x0000
+[00:08:29][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x0000
+[00:08:29][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:31][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:31][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:31][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:31][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:31][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:31][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:31][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:31][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:31][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:31][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:31][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:31][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:31][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:31][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:31][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:31][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:31][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:31][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:31][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:08:31][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:31][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:31][I][jnge_g_series:057]: Unknown 14:   52
+[00:08:31][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:31][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:31][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 11.90000 °C with 1 decimals of accuracy
+[00:08:31][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:09:00:00:00:08:FF:13:87:00:01:00:34:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:77:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:0E:C9
+[00:08:31][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:31][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x1B00
+[00:08:31][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:33][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:33][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:33][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:33][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:33][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:33][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:33][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:33][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:33][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:33][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:33][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:33][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:33][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:33][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:33][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:33][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:33][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:33][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:33][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:08:33][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:33][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:33][I][jnge_g_series:057]: Unknown 14:   52
+[00:08:33][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:33][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:33][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 11.90000 °C with 1 decimals of accuracy
+[00:08:33][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:09:00:00:00:08:FF:13:87:00:01:00:34:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:77:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:0E:C9
+[00:08:33][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:33][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:35][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:35][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:36][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:36][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:36][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:36][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:36][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:36][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:36][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:36][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:36][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:36][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:36][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:36][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:36][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:36][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:36][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:36][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:37][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:37][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:37][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:37][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:37][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:37][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:37][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:37][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:37][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:37][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:37][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:37][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:37][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:37][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:37][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:37][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:37][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:37][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:37][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:08:37][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.20000 V with 1 decimals of accuracy
+[00:08:37][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:37][I][jnge_g_series:057]: Unknown 14:   52
+[00:08:37][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:37][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:37][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 11.90000 °C with 1 decimals of accuracy
+[00:08:37][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:09:00:00:00:08:FE:13:87:00:01:00:34:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:77:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:1B:35
+[00:08:37][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:37][W][jnge_modbus:089]: CRC check failed! 0x8241 != 0x0000
+[00:08:37][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x1B00
+[00:08:37][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:39][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:39][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:39][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:39][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:39][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:39][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:39][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:39][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:39][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:39][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:39][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:39][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:39][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:39][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:39][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:39][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:39][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:39][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:39][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:39][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.60001 V with 1 decimals of accuracy
+[00:08:39][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:39][I][jnge_g_series:057]: Unknown 14:   53
+[00:08:39][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:39][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:39][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:08:39][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:09:02:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:08:5E
+[00:08:39][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:39][W][jnge_modbus:089]: CRC check failed! 0xFC72 != 0xF609
+[00:08:39][W][jnge_modbus:089]: CRC check failed! 0xA052 != 0x0078
+[00:08:39][W][jnge_modbus:089]: CRC check failed! 0x0020 != 0x0100
+[00:08:39][W][jnge_modbus:089]: CRC check failed! 0xC03C != 0x1100
+[00:08:39][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:41][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:41][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:41][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:41][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:41][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:41][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:41][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:41][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:41][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:41][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:41][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:41][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:41][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:41][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:41][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:41][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:41][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:41][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:41][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:41][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.60001 V with 1 decimals of accuracy
+[00:08:41][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:41][I][jnge_g_series:057]: Unknown 14:   53
+[00:08:41][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:41][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:41][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:08:41][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:09:02:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:08:5E
+[00:08:41][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:41][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x0000
+[00:08:41][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x0000
+[00:08:41][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x0000
+[00:08:41][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x0000
+[00:08:41][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:43][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:43][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:43][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:43][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:43][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:43][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:43][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:43][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:43][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:43][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:43][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:43][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:43][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:43][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:43][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:43][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:43][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:43][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:43][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:43][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:43][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:43][I][jnge_g_series:057]: Unknown 14:   53
+[00:08:43][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:43][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:43][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:08:43][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:08:FF:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:20:31
+[00:08:43][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:43][W][jnge_modbus:089]: CRC check failed! 0x13D3 != 0x09F6
+[00:08:43][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:45][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:45][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:45][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:45][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:45][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:45][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:45][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:45][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:45][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:45][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:45][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:45][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:45][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:45][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:45][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:45][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:45][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:45][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:45][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:45][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:08:45][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:45][I][jnge_g_series:057]: Unknown 14:   53
+[00:08:45][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:45][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:45][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:08:45][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:09:00:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:21:E6
+[00:08:45][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:45][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x0101
+[00:08:45][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:47][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:47][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:47][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:47][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:47][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:47][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:47][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:47][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:47][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:47][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:47][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:47][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:47][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:47][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:47][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:47][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:47][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:47][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:47][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:47][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:47][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:47][I][jnge_g_series:057]: Unknown 14:   54
+[00:08:47][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:47][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:47][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.40000 °C with 1 decimals of accuracy
+[00:08:47][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:08:FF:13:87:00:01:00:36:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7C:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:11:18
+[00:08:47][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:47][W][jnge_modbus:089]: CRC check failed! 0x6FA8 != 0x0100
+[00:08:47][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x0101
+[00:08:47][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:49][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:49][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:49][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:49][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:49][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:49][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:49][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:49][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:49][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:49][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:49][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:49][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:49][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:49][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:49][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:49][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:49][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:49][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:49][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:49][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:49][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:49][I][jnge_g_series:057]: Unknown 14:   54
+[00:08:49][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:49][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:49][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.40000 °C with 1 decimals of accuracy
+[00:08:49][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:08:FF:13:87:00:01:00:36:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7C:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:11:18
+[00:08:49][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:49][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:51][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:51][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:51][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:51][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:51][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:51][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:51][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:51][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:51][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:51][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:51][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:51][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:51][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:51][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:51][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:51][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:51][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:51][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:51][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:51][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:08:51][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:51][I][jnge_g_series:057]: Unknown 14:   53
+[00:08:51][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:51][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:51][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:08:51][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:09:00:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:21:E6
+[00:08:51][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:51][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x0000
+[00:08:51][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x0000
+[00:08:51][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x1B00
+[00:08:51][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:53][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:53][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:53][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:53][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:53][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:53][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:53][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:53][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:53][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:53][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:53][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:53][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:53][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:53][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:53][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:53][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:53][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:53][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:53][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:08:53][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:08:53][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:53][I][jnge_g_series:057]: Unknown 14:   53
+[00:08:53][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:53][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:53][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:08:53][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:09:00:00:00:09:00:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:90:22
+[00:08:53][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:53][W][jnge_modbus:089]: CRC check failed! 0xA052 != 0x0078
+[00:08:53][W][jnge_modbus:089]: CRC check failed! 0x0020 != 0x0100
+[00:08:53][W][jnge_modbus:089]: CRC check failed! 0xC03C != 0x1100
+[00:08:53][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:55][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:55][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:55][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:55][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:55][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:55][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:55][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:55][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:55][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:55][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:55][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:55][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:55][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:55][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:55][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:55][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:55][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:55][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:55][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:08:55][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:55][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:55][I][jnge_g_series:057]: Unknown 14:   53
+[00:08:55][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:55][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:55][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:08:55][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:09:00:00:00:08:FF:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:91:F5
+[00:08:55][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:55][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:57][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:57][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:57][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:57][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:57][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:57][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:57][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:57][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:57][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:57][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:57][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:57][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:57][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:57][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:57][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:57][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:57][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:57][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:57][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:08:57][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:08:57][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:57][I][jnge_g_series:057]: Unknown 14:   53
+[00:08:57][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:57][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:57][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:08:57][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:09:00:00:00:08:FF:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:91:F5
+[00:08:57][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:57][I][jnge_g_series:070]: Config frame received (82 bytes)
+[00:08:57][D][jnge_g_series:073]: Config Byte  0- 1:  4352 (0x1100)
+[00:08:57][D][jnge_g_series:073]: Config Byte  2- 3:  6021 (0x1785)
+[00:08:57][D][jnge_g_series:073]: Config Byte  4- 5:   142 (0x008E)
+[00:08:57][D][jnge_g_series:073]: Config Byte  6- 7:   141 (0x008D)
+[00:08:57][D][jnge_g_series:073]: Config Byte  8- 9:   144 (0x0090)
+[00:08:57][D][jnge_g_series:073]: Config Byte 10-11:   141 (0x008D)
+[00:08:57][D][jnge_g_series:073]: Config Byte 12-13:   135 (0x0087)
+[00:08:57][D][jnge_g_series:073]: Config Byte 14-15:   140 (0x008C)
+[00:08:57][D][jnge_g_series:073]: Config Byte 16-17:   104 (0x0068)
+[00:08:57][D][jnge_g_series:073]: Config Byte 18-19:   103 (0x0067)
+[00:08:57][D][jnge_g_series:073]: Config Byte 20-21:   102 (0x0066)
+[00:08:57][D][jnge_g_series:073]: Config Byte 22-23:     1 (0x0001)
+[00:08:57][D][jnge_g_series:073]: Config Byte 24-25:     3 (0x0003)
+[00:08:57][D][jnge_g_series:073]: Config Byte 26-27:     4 (0x0004)
+[00:08:57][D][jnge_g_series:073]: Config Byte 28-29:     3 (0x0003)
+[00:08:57][D][jnge_g_series:073]: Config Byte 30-31:     6 (0x0006)
+[00:08:57][D][jnge_g_series:073]: Config Byte 32-33: 40951 (0x9FF7)
+[00:08:57][D][jnge_g_series:073]: Config Byte 34-35:  1750 (0x06D6)
+[00:08:57][D][jnge_g_series:073]: Config Byte 36-37:  1800 (0x0708)
+[00:08:57][D][jnge_g_series:073]: Config Byte 38-39:  2550 (0x09F6)
+[00:08:57][D][jnge_g_series:073]: Config Byte 40-41:  2450 (0x0992)
+[00:08:57][D][jnge_g_series:073]: Config Byte 42-43:   122 (0x007A)
+[00:08:57][D][jnge_g_series:073]: Config Byte 44-45:   120 (0x0078)
+[00:08:57][D][jnge_g_series:073]: Config Byte 46-47:     1 (0x0001)
+[00:08:57][D][jnge_g_series:073]: Config Byte 48-49:     0 (0x0000)
+[00:08:57][D][jnge_g_series:073]: Config Byte 50-51:     1 (0x0001)
+[00:08:57][D][jnge_g_series:073]: Config Byte 52-53:   500 (0x01F4)
+[00:08:57][D][jnge_g_series:073]: Config Byte 54-55:   300 (0x012C)
+[00:08:57][D][jnge_g_series:073]: Config Byte 56-57:     0 (0x0000)
+[00:08:57][D][jnge_g_series:073]: Config Byte 58-59:  4595 (0x11F3)
+[00:08:57][D][jnge_g_series:073]: Config Byte 60-61:   132 (0x0084)
+[00:08:57][D][jnge_g_series:073]: Config Byte 62-63:     0 (0x0000)
+[00:08:57][D][jnge_g_series:073]: Config Byte 64-65:     0 (0x0000)
+[00:08:57][D][jnge_g_series:073]: Config Byte 66-67:     0 (0x0000)
+[00:08:57][D][jnge_g_series:073]: Config Byte 68-69:     0 (0x0000)
+[00:08:57][D][jnge_g_series:073]: Config Byte 70-71:     0 (0x0000)
+[00:08:57][D][jnge_g_series:073]: Config Byte 72-73:     0 (0x0000)
+[00:08:57][D][jnge_g_series:073]: Config Byte 74-75:     0 (0x0000)
+[00:08:57][D][jnge_g_series:073]: Config Byte 76-77:     0 (0x0000)
+[00:08:57][D][jnge_g_series:073]: Config Byte 78-79:     0 (0x0000)
+[00:08:57][D][jnge_g_series:073]: Config Byte 80-81:     0 (0x0000)
+[00:08:57][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:08:59][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:08:59][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:08:59][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:08:59][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:08:59][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:08:59][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:08:59][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:08:59][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:08:59][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:08:59][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:08:59][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:08:59][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:08:59][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:08:59][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:08:59][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:08:59][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:08:59][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:08:59][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:08:59][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.20000 V with 1 decimals of accuracy
+[00:08:59][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:08:59][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:08:59][I][jnge_g_series:057]: Unknown 14:   53
+[00:08:59][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:08:59][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:08:59][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:08:59][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FE:00:00:09:00:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:E5:DA
+[00:08:59][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:08:59][W][jnge_modbus:089]: CRC check failed! 0x0073 != 0x0003
+[00:08:59][W][jnge_modbus:089]: CRC check failed! 0x13D3 != 0x09F6
+[00:08:59][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:09:01][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:09:01][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:09:01][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:09:01][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:09:01][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:09:01][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:09:01][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:09:01][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:09:01][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:09:01][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:09:01][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:09:01][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:09:01][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:09:01][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:09:01][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:09:01][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:09:01][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:09:01][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:09:01][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:09:01][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.50000 V with 1 decimals of accuracy
+[00:09:01][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:09:01][I][jnge_g_series:057]: Unknown 14:   53
+[00:09:01][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:09:01][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:09:01][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:09:01][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:09:00:00:00:09:01:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:85:DE
+[00:09:01][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:09:01][W][jnge_modbus:089]: CRC check failed! 0xC03C != 0x1100
+[00:09:01][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:09:03][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:09:03][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:09:03][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:09:03][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:09:03][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:09:03][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:09:03][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:09:03][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:09:03][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:09:03][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:09:03][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:09:03][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:09:03][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:09:03][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:09:03][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:09:03][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:09:03][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:09:03][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:09:03][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:09:03][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:09:03][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:09:03][I][jnge_g_series:057]: Unknown 14:   53
+[00:09:03][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:09:03][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:09:03][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:09:03][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:09:00:00:00:08:FF:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:91:F5
+[00:09:03][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:09:03][W][jnge_modbus:089]: CRC check failed! 0x3071 != 0x9F06
+[00:09:03][W][jnge_modbus:089]: CRC check failed! 0x13D3 != 0x09F6
+[00:09:03][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:09:05][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:09:05][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:09:05][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:09:05][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:09:05][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:09:05][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:09:05][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:09:05][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:09:05][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:09:05][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:09:05][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:09:05][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:09:05][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:09:05][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:09:05][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:09:05][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:09:05][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:09:05][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:09:05][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:09:05][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:09:05][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:09:05][I][jnge_g_series:057]: Unknown 14:   53
+[00:09:05][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:09:05][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:09:05][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:09:05][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:09:00:00:00:08:FF:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:91:F5
+[00:09:05][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:09:05][W][jnge_modbus:089]: CRC check failed! 0x3071 != 0x0004
+[00:09:05][W][jnge_modbus:089]: CRC check failed! 0xFC72 != 0xF609
+[00:09:05][W][jnge_modbus:089]: CRC check failed! 0xA052 != 0x0078
+[00:09:05][W][jnge_modbus:089]: CRC check failed! 0x0020 != 0x0100
+[00:09:05][W][jnge_modbus:089]: CRC check failed! 0xC03C != 0x1100
+[00:09:05][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:09:07][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:09:07][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:09:07][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:09:07][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:09:07][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:09:07][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:09:08][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:09:08][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:09:08][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:09:08][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:09:08][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:09:08][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:09:08][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:09:08][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:09:08][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:09:08][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:09:08][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:09:08][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:09:08][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:09:08][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:09:08][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:09:08][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:09:08][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:09:08][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:09:08][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:09:08][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:09:08][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:09:08][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:09:08][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:09:08][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:09:08][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:09:08][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:09:08][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:09:08][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:09:08][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:09:08][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:09:09][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:09:09][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:09:09][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:09:09][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:09:09][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:09:09][D][jnge_g_series:051]: Status Byte 18-19:   311 (0x0137)
+[00:09:09][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:09:09][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:09:09][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:09:09][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:09:09][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:09:09][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:09:09][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:09:09][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:09:09][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:09:09][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:09:09][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:09:09][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:09:09][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:09:09][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.50000 V with 1 decimals of accuracy
+[00:09:09][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:09:09][I][jnge_g_series:057]: Unknown 14:   53
+[00:09:09][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:09:09][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:09:09][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:09:09][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:09:00:00:00:09:01:13:87:00:01:00:35:00:82:01:37:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:BA:9D
+[00:09:09][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:09:09][W][jnge_modbus:089]: CRC check failed! 0xFC72 != 0xF609
+[00:09:09][W][jnge_modbus:089]: CRC check failed! 0xA052 != 0x0078
+[00:09:09][W][jnge_modbus:089]: CRC check failed! 0x0020 != 0x0100
+[00:09:09][W][jnge_modbus:089]: CRC check failed! 0xC03C != 0x1100
+[00:09:09][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:09:11][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:09:11][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:09:11][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:09:11][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:09:11][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:09:11][D][jnge_g_series:051]: Status Byte 18-19:   311 (0x0137)
+[00:09:11][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:09:11][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:09:11][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:09:11][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:09:11][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:09:11][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:09:11][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:09:11][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:09:11][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:09:11][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:09:11][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:09:11][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:09:11][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:09:11][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.20000 V with 1 decimals of accuracy
+[00:09:11][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:09:11][I][jnge_g_series:057]: Unknown 14:   52
+[00:09:11][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:09:11][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:09:11][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 11.90000 °C with 1 decimals of accuracy
+[00:09:11][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:08:FE:13:87:00:01:00:34:00:82:01:37:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:77:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:95:B2
+[00:09:11][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:09:11][W][jnge_modbus:089]: CRC check failed! 0xC395 != 0x0807
+[00:09:11][W][jnge_modbus:089]: CRC check failed! 0xA052 != 0x0078
+[00:09:11][W][jnge_modbus:089]: CRC check failed! 0x0020 != 0x0100
+[00:09:11][W][jnge_modbus:089]: CRC check failed! 0xC03C != 0x1100
+[00:09:11][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:09:13][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:09:13][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:09:13][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:09:13][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:09:13][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:09:13][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:09:13][D][jnge_g_series:051]: Status Byte 18-19:   311 (0x0137)
+[00:09:13][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:09:13][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:09:13][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:09:13][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:09:13][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:09:13][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:09:13][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:09:13][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:09:13][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:09:13][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:09:13][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:09:13][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:09:13][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:09:13][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:09:14][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:09:14][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:09:14][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:09:14][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:09:14][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:09:14][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:09:14][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:09:14][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:09:14][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:09:14][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:09:14][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:09:14][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:09:14][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:09:14][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.20000 V with 1 decimals of accuracy
+[00:09:14][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:09:14][I][jnge_g_series:057]: Unknown 14:   52
+[00:09:14][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:09:14][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:09:14][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 11.90000 °C with 1 decimals of accuracy
+[00:09:14][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:08:FE:13:87:00:01:00:34:00:82:01:37:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:77:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:95:B2
+[00:09:14][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:09:14][W][jnge_modbus:089]: CRC check failed! 0x605A != 0x0001
+[00:09:14][W][jnge_modbus:089]: CRC check failed! 0xC2A9 != 0xF79F
+[00:09:14][W][jnge_modbus:089]: CRC check failed! 0x92AF != 0x0000
+[00:09:15][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:09:15][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:09:15][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:09:15][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:09:15][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:09:15][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:09:15][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:09:15][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:09:15][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:09:15][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:09:15][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:09:15][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:09:15][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:09:15][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:09:15][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:09:15][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:09:15][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:09:15][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:09:15][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:09:15][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:09:15][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:09:15][I][jnge_g_series:057]: Unknown 14:   54
+[00:09:15][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:09:15][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:09:15][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.40000 °C with 1 decimals of accuracy
+[00:09:15][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:08:FF:13:87:00:01:00:36:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7C:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:11:18
+[00:09:15][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:09:15][W][jnge_modbus:089]: CRC check failed! 0x92AF != 0x0000
+[00:09:15][W][jnge_modbus:089]: CRC check failed! 0xF351 != 0x2C01
+[00:09:15][W][jnge_modbus:089]: CRC check failed! 0x8241 != 0x0000
+[00:09:15][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x1B00
+[00:09:15][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:09:17][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:09:17][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:09:17][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:09:17][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:09:17][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:09:17][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:09:17][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:09:17][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:09:17][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:09:17][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:09:17][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:09:17][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:09:17][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:09:17][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:09:17][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:09:17][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:09:17][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:09:17][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:09:17][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:09:17][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.50000 V with 1 decimals of accuracy
+[00:09:17][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:09:17][I][jnge_g_series:057]: Unknown 14:   53
+[00:09:17][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:09:17][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:09:17][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:09:17][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:09:00:00:00:09:01:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:85:DE
+[00:09:17][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:09:17][I][jnge_g_series:070]: Config frame received (82 bytes)
+[00:09:17][D][jnge_g_series:073]: Config Byte  0- 1:  4352 (0x1100)
+[00:09:17][D][jnge_g_series:073]: Config Byte  2- 3:  6021 (0x1785)
+[00:09:17][D][jnge_g_series:073]: Config Byte  4- 5:   142 (0x008E)
+[00:09:17][D][jnge_g_series:073]: Config Byte  6- 7:   141 (0x008D)
+[00:09:17][D][jnge_g_series:073]: Config Byte  8- 9:   144 (0x0090)
+[00:09:17][D][jnge_g_series:073]: Config Byte 10-11:   141 (0x008D)
+[00:09:17][D][jnge_g_series:073]: Config Byte 12-13:   135 (0x0087)
+[00:09:17][D][jnge_g_series:073]: Config Byte 14-15:   140 (0x008C)
+[00:09:17][D][jnge_g_series:073]: Config Byte 16-17:   104 (0x0068)
+[00:09:17][D][jnge_g_series:073]: Config Byte 18-19:   103 (0x0067)
+[00:09:17][D][jnge_g_series:073]: Config Byte 20-21:   102 (0x0066)
+[00:09:17][D][jnge_g_series:073]: Config Byte 22-23:     1 (0x0001)
+[00:09:17][D][jnge_g_series:073]: Config Byte 24-25:     3 (0x0003)
+[00:09:17][D][jnge_g_series:073]: Config Byte 26-27:     4 (0x0004)
+[00:09:17][D][jnge_g_series:073]: Config Byte 28-29:     3 (0x0003)
+[00:09:17][D][jnge_g_series:073]: Config Byte 30-31:     6 (0x0006)
+[00:09:17][D][jnge_g_series:073]: Config Byte 32-33: 40951 (0x9FF7)
+[00:09:17][D][jnge_g_series:073]: Config Byte 34-35:  1750 (0x06D6)
+[00:09:17][D][jnge_g_series:073]: Config Byte 36-37:  1800 (0x0708)
+[00:09:17][D][jnge_g_series:073]: Config Byte 38-39:  2550 (0x09F6)
+[00:09:17][D][jnge_g_series:073]: Config Byte 40-41:  2450 (0x0992)
+[00:09:17][D][jnge_g_series:073]: Config Byte 42-43:   122 (0x007A)
+[00:09:17][D][jnge_g_series:073]: Config Byte 44-45:   120 (0x0078)
+[00:09:17][D][jnge_g_series:073]: Config Byte 46-47:     1 (0x0001)
+[00:09:17][D][jnge_g_series:073]: Config Byte 48-49:     0 (0x0000)
+[00:09:17][D][jnge_g_series:073]: Config Byte 50-51:     1 (0x0001)
+[00:09:17][D][jnge_g_series:073]: Config Byte 52-53:   500 (0x01F4)
+[00:09:17][D][jnge_g_series:073]: Config Byte 54-55:   300 (0x012C)
+[00:09:17][D][jnge_g_series:073]: Config Byte 56-57:     0 (0x0000)
+[00:09:17][D][jnge_g_series:073]: Config Byte 58-59:  4595 (0x11F3)
+[00:09:17][D][jnge_g_series:073]: Config Byte 60-61:   132 (0x0084)
+[00:09:17][D][jnge_g_series:073]: Config Byte 62-63:     0 (0x0000)
+[00:09:17][D][jnge_g_series:073]: Config Byte 64-65:     0 (0x0000)
+[00:09:17][D][jnge_g_series:073]: Config Byte 66-67:     0 (0x0000)
+[00:09:17][D][jnge_g_series:073]: Config Byte 68-69:     0 (0x0000)
+[00:09:17][D][jnge_g_series:073]: Config Byte 70-71:     0 (0x0000)
+[00:09:17][D][jnge_g_series:073]: Config Byte 72-73:     0 (0x0000)
+[00:09:17][D][jnge_g_series:073]: Config Byte 74-75:     0 (0x0000)
+[00:09:17][D][jnge_g_series:073]: Config Byte 76-77:     0 (0x0000)
+[00:09:17][D][jnge_g_series:073]: Config Byte 78-79:     0 (0x0000)
+[00:09:17][D][jnge_g_series:073]: Config Byte 80-81:     0 (0x0000)
+[00:09:17][W][component:278]: Component jnge_modbus took a long time for an operation (613 ms).
+[00:09:17][W][component:279]: Components should block for at most 30 ms.
+[00:09:17][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:09:17][W][component:278]: Component uart took a long time for an operation (52 ms).
+[00:09:17][W][component:279]: Components should block for at most 30 ms.
+[00:09:19][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:09:19][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:09:19][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:09:19][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:09:19][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:09:19][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:09:19][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:09:19][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:09:19][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:09:19][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:09:19][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:09:19][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:09:19][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:09:19][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:09:19][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:09:19][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:09:19][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:09:19][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:09:19][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:09:19][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.10001 V with 1 decimals of accuracy
+[00:09:19][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:09:19][I][jnge_g_series:057]: Unknown 14:   53
+[00:09:19][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:09:19][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:09:19][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:09:19][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:08:FD:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:09:89
+[00:09:19][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:09:19][W][jnge_modbus:089]: CRC check failed! 0xA052 != 0x0078
+[00:09:19][W][jnge_modbus:089]: CRC check failed! 0x0020 != 0x0100
+[00:09:19][W][jnge_modbus:089]: CRC check failed! 0xC03C != 0x1100
+[00:09:19][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:09:21][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:09:21][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:09:21][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:09:21][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:09:21][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:09:21][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:09:21][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:09:21][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:09:21][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:09:21][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:09:21][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:09:21][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:09:21][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:09:21][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:09:21][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:09:21][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:09:21][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:09:21][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:09:21][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:09:21][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.10001 V with 1 decimals of accuracy
+[00:09:21][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:09:21][I][jnge_g_series:057]: Unknown 14:   53
+[00:09:21][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:09:21][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:09:21][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:09:21][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:08:FD:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:09:89
+[00:09:21][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:09:21][W][jnge_modbus:089]: CRC check failed! 0x6FA8 != 0x0100
+[00:09:21][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x0101
+[00:09:21][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:09:23][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:09:23][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:09:23][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:09:23][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:09:23][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:09:23][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:09:23][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:09:23][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:09:23][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:09:23][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:09:23][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:09:23][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:09:23][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:09:23][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:09:23][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:09:23][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:09:23][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:09:23][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:09:23][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.40001 V with 1 decimals of accuracy
+[00:09:23][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:09:23][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:09:23][I][jnge_g_series:057]: Unknown 14:   53
+[00:09:23][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.00000 V with 1 decimals of accuracy
+[00:09:23][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:09:23][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:09:23][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:09:00:00:00:08:FF:13:87:00:01:00:35:00:82:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:91:F5
+[00:09:23][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:09:23][W][jnge_modbus:089]: CRC check failed! 0x13D3 != 0x09F6
+[00:09:23][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:09:25][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:09:25][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:09:25][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:09:25][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:09:25][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:09:25][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:09:25][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:09:25][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:09:25][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:09:25][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:09:25][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:09:25][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:09:25][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:09:25][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:09:25][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:09:25][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:09:25][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:09:25][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:09:25][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:09:25][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:09:25][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:09:25][I][jnge_g_series:057]: Unknown 14:   53
+[00:09:25][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.10000 V with 1 decimals of accuracy
+[00:09:25][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:09:25][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:09:25][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:08:FF:13:87:00:01:00:35:00:83:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:70:30
+[00:09:25][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:09:25][W][jnge_modbus:089]: CRC check failed! 0x92AF != 0x0000
+[00:09:25][W][jnge_modbus:089]: CRC check failed! 0xF351 != 0x2C01
+[00:09:25][W][jnge_modbus:089]: CRC check failed! 0x8241 != 0x0000
+[00:09:25][W][jnge_modbus:089]: CRC check failed! 0xC071 != 0x1B00
+[00:09:25][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
+[00:09:27][D][uart_debug:114]: >>> 06:12:10:00:00:26:3D:64
+[00:09:27][I][jnge_g_series:044]: Status frame received (76 bytes)
+[00:09:27][D][jnge_g_series:051]: Status Byte  0- 1:  4352 (0x1100)
+[00:09:27][D][jnge_g_series:051]: Status Byte  2- 3:  6021 (0x1785)
+[00:09:27][D][jnge_g_series:051]: Status Byte  6- 7:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 12-13:     1 (0x0001)
+[00:09:27][D][jnge_g_series:051]: Status Byte 18-19:   310 (0x0136)
+[00:09:27][D][jnge_g_series:051]: Status Byte 20-21:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 22-23:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 24-25:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 26-27:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 28-29:     3 (0x0003)
+[00:09:27][D][jnge_g_series:051]: Status Byte 30-31: 40951 (0x9FF7)
+[00:09:27][D][jnge_g_series:051]: Status Byte 34-35:  5035 (0x13AB)
+[00:09:27][D][jnge_g_series:051]: Status Byte 38-39:     4 (0x0004)
+[00:09:27][D][jnge_g_series:051]: Status Byte 40-41:     3 (0x0003)
+[00:09:27][D][jnge_g_series:051]: Status Byte 42-43:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 44-45: 65056 (0xFE20)
+[00:09:27][D][jnge_g_series:051]: Status Byte 46-47:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 48-49:     1 (0x0001)
+[00:09:27][D][jnge_g_series:051]: Status Byte 50-51:  1000 (0x03E8)
+[00:09:27][D][jnge_g_series:051]: Status Byte 52-53:  2300 (0x08FC)
+[00:09:27][D][jnge_g_series:051]: Status Byte 54-55:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 56-57:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 58-59:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 60-61:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 62-63:    34 (0x0022)
+[00:09:27][D][jnge_g_series:051]: Status Byte 64-65:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 66-67:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 68-69:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 70-71:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 72-73:     0 (0x0000)
+[00:09:27][D][jnge_g_series:051]: Status Byte 74-75:     0 (0x0000)
+[00:09:27][D][sensor:098]: 'bde-jnge-g-inv-01 status AC output voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:09:27][D][sensor:098]: 'bde-jnge-g-inv-01 status AC input voltage': Sending state 230.30000 V with 1 decimals of accuracy
+[00:09:27][D][sensor:098]: 'bde-jnge-g-inv-01 status AC frequency': Sending state 49.99000 Hz with 2 decimals of accuracy
+[00:09:27][I][jnge_g_series:057]: Unknown 14:   53
+[00:09:27][D][sensor:098]: 'bde-jnge-g-inv-01 status battery voltage': Sending state 13.10000 V with 1 decimals of accuracy
+[00:09:27][D][sensor:098]: 'bde-jnge-g-inv-01 status total energy': Sending state 503.50000 kWh with 1 decimals of accuracy
+[00:09:27][D][sensor:098]: 'bde-jnge-g-inv-01 status inverter temperature': Sending state 12.20000 °C with 1 decimals of accuracy
+[00:09:27][D][uart_debug:114]: <<< 06:12:4C:11:00:17:85:08:FF:00:00:08:FF:13:87:00:01:00:35:00:83:01:36:00:00:00:00:00:00:00:00:00:03:9F:F7:00:00:13:AB:00:7A:00:04:00:03:00:00:FE:20:00:00:00:01:03:E8:08:FC:00:00:00:00:00:00:00:00:00:22:00:00:00:00:00:00:00:00:00:00:00:00:70:30
+[00:09:27][D][uart_debug:114]: >>> 06:16:10:00:00:29:8C:A0
+[00:09:27][D][uart_debug:114]: <<< 06:16:52:11:00:17:85:00:8E:00:8D:00:90:00:8D:00:87:00:8C:00:68:00:67:00:66:00:01:00:03:00:04:00:03:00:06:9F:F7:06:D6:07:08:09:F6:09:92:00:7A:00:78:00:01:00:00:00:01:01:F4:01:2C:00:00:11:F3:00:84:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:1B:FC
