@@ -25,6 +25,9 @@ class JngeGSeries : public PollingComponent, public jnge_modbus::JngeModbusDevic
   void set_ac_output_load_sensor(sensor::Sensor *ac_output_load_sensor) {
     ac_output_load_sensor_ = ac_output_load_sensor;
   }
+  void set_ac_output_power_sensor(sensor::Sensor *ac_output_power_sensor) {
+    ac_output_power_sensor_ = ac_output_power_sensor;
+  }
 
   void dump_config() override;
 
@@ -43,6 +46,7 @@ class JngeGSeries : public PollingComponent, public jnge_modbus::JngeModbusDevic
   sensor::Sensor *total_energy_sensor_;
   sensor::Sensor *inverter_temperature_sensor_;
   sensor::Sensor *ac_output_load_sensor_;
+  sensor::Sensor *ac_output_power_sensor_;
 
   uint8_t no_response_count_ = 0;
 

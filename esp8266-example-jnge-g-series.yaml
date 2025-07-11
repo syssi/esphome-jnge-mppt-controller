@@ -63,3 +63,5 @@ sensor:
       name: "${status} inverter temperature"
     ac_output_load:
       name: "${status} AC output load"
+    ac_output_power:
+      name: "${status} AC output power"
