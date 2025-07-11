@@ -58,7 +58,7 @@ void JngeGSeries::on_status_data_(const std::vector<uint8_t> &data) {
   this->publish_state_(this->battery_voltage_sensor_, jnge_get_16bit(16) * 0.1f);
   this->publish_state_(this->inverter_temperature_sensor_, jnge_get_16bit(18) * 0.1f);
   this->publish_state_(this->total_energy_sensor_, jnge_get_32bit(32) * 0.1f);
-  ESP_LOGI(TAG, "Unknown 34:   %.1f", jnge_get_16bit(34) * 0.1f);
+  ESP_LOGD(TAG, "Total energy 2:   %.1f", jnge_get_16bit(34) * 0.1f);
   this->publish_state_(this->ac_output_load_sensor_, (float) jnge_get_16bit(36) * 0.1f);
 
   this->no_response_count_ = 0;
