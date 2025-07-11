@@ -17,6 +17,7 @@ from esphome.const import (
     UNIT_CELSIUS,
     UNIT_HERTZ,
     UNIT_KILOWATT_HOURS,
+    UNIT_PERCENT,
     UNIT_VOLT,
 )
 
@@ -33,6 +34,7 @@ CONF_AC_FREQUENCY = "ac_frequency"
 CONF_AC_CURRENT = "ac_current"
 CONF_TOTAL_ENERGY = "total_energy"
 CONF_INVERTER_TEMPERATURE = "inverter_temperature"
+CONF_AC_OUTPUT_LOAD = "ac_output_load"
 
 SENSORS = [
     CONF_BATTERY_VOLTAGE,
@@ -42,6 +44,7 @@ SENSORS = [
     CONF_AC_CURRENT,
     CONF_TOTAL_ENERGY,
     CONF_INVERTER_TEMPERATURE,
+    CONF_AC_OUTPUT_LOAD,
 ]
 
 # pylint: disable=too-many-function-args
@@ -100,6 +103,14 @@ CONFIG_SCHEMA = JNGE_G_SERIES_COMPONENT_SCHEMA.extend(
             icon=ICON_EMPTY,
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_TEMPERATURE,
+            state_class=STATE_CLASS_MEASUREMENT,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
+        ),
+        cv.Optional(CONF_AC_OUTPUT_LOAD): sensor.sensor_schema(
+            unit_of_measurement=UNIT_PERCENT,
+            icon="mdi:gauge",
+            accuracy_decimals=1,
+            device_class="power_factor",
             state_class=STATE_CLASS_MEASUREMENT,
             entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
