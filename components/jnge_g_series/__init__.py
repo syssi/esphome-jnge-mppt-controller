@@ -26,7 +26,8 @@ JNGE_G_SERIES_COMPONENT_SCHEMA = cv.Schema(
     }
 )
 
-CONFIG_SCHEMA = (
+CONFIG_SCHEMA = cv.All(
+    cv.require_esphome_version(2024, 12, 0),
     cv.Schema(
         {
             cv.GenerateID(): cv.declare_id(JngeGSeries),
