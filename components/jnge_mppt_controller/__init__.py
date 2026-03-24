@@ -33,7 +33,8 @@ JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA = cv.Schema(
     }
 )
 
-CONFIG_SCHEMA = (
+CONFIG_SCHEMA = cv.All(
+    cv.require_esphome_version(2025, 11, 0),
     cv.Schema(
         {
             cv.GenerateID(): cv.declare_id(JngeMpptController),
@@ -44,7 +45,7 @@ CONFIG_SCHEMA = (
         }
     )
     .extend(cv.polling_component_schema("5s"))
-    .extend(jnge_modbus.jnge_modbus_device_schema(0x06))
+    .extend(jnge_modbus.jnge_modbus_device_schema(0x06)),
 )
 
 
