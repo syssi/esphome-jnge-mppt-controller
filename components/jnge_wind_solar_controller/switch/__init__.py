@@ -1,7 +1,6 @@
 import esphome.codegen as cg
 from esphome.components import switch
 import esphome.config_validation as cv
-
 from esphome.const import ENTITY_CATEGORY_CONFIG
 
 from .. import (
@@ -34,7 +33,9 @@ JngeSwitch = jnge_wind_solar_controller_ns.class_(
 CONFIG_SCHEMA = JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA.extend(
     {
         cv.Optional(CONF_STREET_LIGHT_MODE): switch.switch_schema(
-            JngeSwitch, icon=ICON_STREET_LIGHT_MODE, entity_category=ENTITY_CATEGORY_CONFIG
+            JngeSwitch,
+            icon=ICON_STREET_LIGHT_MODE,
+            entity_category=ENTITY_CATEGORY_CONFIG,
         ),
         cv.Optional(CONF_CHARGING): switch.switch_schema(
             JngeSwitch, icon=ICON_CHARGING
