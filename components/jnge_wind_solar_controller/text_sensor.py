@@ -1,7 +1,6 @@
 import esphome.codegen as cg
 from esphome.components import text_sensor
 import esphome.config_validation as cv
-from esphome.const import CONF_ID
 
 from . import JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA
 
