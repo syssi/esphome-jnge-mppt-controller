@@ -92,35 +92,35 @@ class JngeWindSolarController : public PollingComponent, public jnge_modbus::Jng
   void write_register(uint16_t address, uint16_t value);
 
  protected:
-  binary_sensor::BinarySensor *load_detected_binary_sensor_;
-  binary_sensor::BinarySensor *load_binary_sensor_;
-  binary_sensor::BinarySensor *charging_binary_sensor_;
+  binary_sensor::BinarySensor *load_detected_binary_sensor_{nullptr};
+  binary_sensor::BinarySensor *load_binary_sensor_{nullptr};
+  binary_sensor::BinarySensor *charging_binary_sensor_{nullptr};
 
   // status
-  sensor::Sensor *firmware_version_sensor_;
-  sensor::Sensor *peak_pv_charging_rating_sensor_;
-  sensor::Sensor *peak_fan_charging_rating_sensor_;
-  sensor::Sensor *pv_voltage_sensor_;
-  sensor::Sensor *fan_voltage_sensor_;
-  sensor::Sensor *battery_voltage_sensor_;
-  sensor::Sensor *pv_charging_current_sensor_;
-  sensor::Sensor *fan_charging_current_sensor_;
-  sensor::Sensor *pv_charging_power_sensor_;
-  sensor::Sensor *fan_charging_power_sensor_;
-  sensor::Sensor *pv_total_energy_sensor_;
-  sensor::Sensor *fan_total_energy_sensor_;
-  sensor::Sensor *operation_mode_id_sensor_;
-  sensor::Sensor *battery_strings_sensor_;
-  sensor::Sensor *battery_voltage_level_sensor_;
-  sensor::Sensor *error_bitmask_sensor_;
+  sensor::Sensor *firmware_version_sensor_{nullptr};
+  sensor::Sensor *peak_pv_charging_rating_sensor_{nullptr};
+  sensor::Sensor *peak_fan_charging_rating_sensor_{nullptr};
+  sensor::Sensor *pv_voltage_sensor_{nullptr};
+  sensor::Sensor *fan_voltage_sensor_{nullptr};
+  sensor::Sensor *battery_voltage_sensor_{nullptr};
+  sensor::Sensor *pv_charging_current_sensor_{nullptr};
+  sensor::Sensor *fan_charging_current_sensor_{nullptr};
+  sensor::Sensor *pv_charging_power_sensor_{nullptr};
+  sensor::Sensor *fan_charging_power_sensor_{nullptr};
+  sensor::Sensor *pv_total_energy_sensor_{nullptr};
+  sensor::Sensor *fan_total_energy_sensor_{nullptr};
+  sensor::Sensor *operation_mode_id_sensor_{nullptr};
+  sensor::Sensor *battery_strings_sensor_{nullptr};
+  sensor::Sensor *battery_voltage_level_sensor_{nullptr};
+  sensor::Sensor *error_bitmask_sensor_{nullptr};
 
-  switch_::Switch *street_light_mode_switch_;
-  switch_::Switch *charging_switch_;
-  switch_::Switch *load_switch_;
+  switch_::Switch *street_light_mode_switch_{nullptr};
+  switch_::Switch *charging_switch_{nullptr};
+  switch_::Switch *load_switch_{nullptr};
 
-  text_sensor::TextSensor *operation_mode_text_sensor_;
-  text_sensor::TextSensor *errors_text_sensor_;
-  text_sensor::TextSensor *battery_type_text_sensor_;
+  text_sensor::TextSensor *operation_mode_text_sensor_{nullptr};
+  text_sensor::TextSensor *errors_text_sensor_{nullptr};
+  text_sensor::TextSensor *battery_type_text_sensor_{nullptr};
 
   bool enable_fake_traffic_;
   uint8_t no_response_count_ = 0;

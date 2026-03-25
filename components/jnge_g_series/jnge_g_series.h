@@ -38,15 +38,15 @@ class JngeGSeries : public PollingComponent, public jnge_modbus::JngeModbusDevic
   void write_register(uint16_t address, uint16_t value);
 
  protected:
-  sensor::Sensor *battery_voltage_sensor_;
-  sensor::Sensor *ac_voltage1_sensor_;
-  sensor::Sensor *ac_voltage2_sensor_;
-  sensor::Sensor *ac_frequency_sensor_;
-  sensor::Sensor *ac_current_sensor_;
-  sensor::Sensor *total_energy_sensor_;
-  sensor::Sensor *inverter_temperature_sensor_;
-  sensor::Sensor *ac_output_load_sensor_;
-  sensor::Sensor *ac_output_power_sensor_;
+  sensor::Sensor *battery_voltage_sensor_{nullptr};
+  sensor::Sensor *ac_voltage1_sensor_{nullptr};
+  sensor::Sensor *ac_voltage2_sensor_{nullptr};
+  sensor::Sensor *ac_frequency_sensor_{nullptr};
+  sensor::Sensor *ac_current_sensor_{nullptr};
+  sensor::Sensor *total_energy_sensor_{nullptr};
+  sensor::Sensor *inverter_temperature_sensor_{nullptr};
+  sensor::Sensor *ac_output_load_sensor_{nullptr};
+  sensor::Sensor *ac_output_power_sensor_{nullptr};
 
   uint8_t no_response_count_ = 0;
 
