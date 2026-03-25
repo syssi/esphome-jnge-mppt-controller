@@ -34,10 +34,10 @@ CONFIG_SCHEMA = JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA.extend(
     {
         cv.Optional(CONF_STREET_LIGHT_MODE): switch.switch_schema(
             JngeSwitch, icon=ICON_STREET_LIGHT_MODE
-        ).extend(cv.COMPONENT_SCHEMA),
+        ),
         cv.Optional(CONF_CHARGING): switch.switch_schema(
             JngeSwitch, icon=ICON_CHARGING
-        ).extend(cv.COMPONENT_SCHEMA),
+        ),
         cv.Optional(CONF_LOAD): switch.switch_schema(JngeSwitch, icon=ICON_LOAD).extend(
             cv.COMPONENT_SCHEMA
         ),

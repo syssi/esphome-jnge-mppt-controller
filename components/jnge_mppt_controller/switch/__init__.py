@@ -35,15 +35,15 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
     {
         cv.Optional(CONF_BUZZER): switch.switch_schema(
             JngeSwitch, icon=ICON_BUZZER, entity_category=ENTITY_CATEGORY_CONFIG
-        ).extend(cv.COMPONENT_SCHEMA),
+        ),
         cv.Optional(CONF_STREET_LIGHT_MODE): switch.switch_schema(
             JngeSwitch,
             icon=ICON_STREET_LIGHT_MODE,
             entity_category=ENTITY_CATEGORY_CONFIG,
-        ).extend(cv.COMPONENT_SCHEMA),
+        ),
         cv.Optional(CONF_CHARGING): switch.switch_schema(
             JngeSwitch, icon=ICON_CHARGING
-        ).extend(cv.COMPONENT_SCHEMA),
+        ),
         cv.Optional(CONF_LOAD): switch.switch_schema(JngeSwitch, icon=ICON_LOAD).extend(
             cv.COMPONENT_SCHEMA
         ),
