@@ -8,7 +8,6 @@ from esphome.const import (
     CONF_STEP,
     CONF_UNIT_OF_MEASUREMENT,
     ENTITY_CATEGORY_CONFIG,
-    ICON_EMPTY,
     UNIT_EMPTY,
     UNIT_VOLT,
 )
@@ -71,7 +70,7 @@ JngeNumber = jnge_mppt_controller_ns.class_("JngeNumber", number.Number, cg.Comp
 JNGENUMBER_SCHEMA = (
     number.number_schema(
         JngeNumber,
-        icon=ICON_EMPTY,
+        icon=None,
         entity_category=ENTITY_CATEGORY_CONFIG,
         unit_of_measurement=UNIT_VOLT,
     )

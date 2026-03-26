@@ -11,7 +11,6 @@ from esphome.const import (
     DEVICE_CLASS_VOLTAGE,
     ENTITY_CATEGORY_DIAGNOSTIC,
     ICON_COUNTER,
-    ICON_EMPTY,
     STATE_CLASS_MEASUREMENT,
     STATE_CLASS_TOTAL_INCREASING,
     UNIT_AMPERE,
@@ -64,7 +63,7 @@ CONFIG_SCHEMA = JNGE_G_SERIES_COMPONENT_SCHEMA.extend(
         ),
         cv.Optional(CONF_AC_VOLTAGE1): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
-            icon=ICON_EMPTY,
+            icon=None,
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
@@ -72,7 +71,7 @@ CONFIG_SCHEMA = JNGE_G_SERIES_COMPONENT_SCHEMA.extend(
         ),
         cv.Optional(CONF_AC_VOLTAGE2): sensor.sensor_schema(
             unit_of_measurement=UNIT_VOLT,
-            icon=ICON_EMPTY,
+            icon=None,
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_VOLTAGE,
             state_class=STATE_CLASS_MEASUREMENT,
@@ -80,7 +79,7 @@ CONFIG_SCHEMA = JNGE_G_SERIES_COMPONENT_SCHEMA.extend(
         ),
         cv.Optional(CONF_AC_FREQUENCY): sensor.sensor_schema(
             unit_of_measurement=UNIT_HERTZ,
-            icon=ICON_EMPTY,
+            icon=None,
             accuracy_decimals=2,
             device_class=DEVICE_CLASS_FREQUENCY,
             state_class=STATE_CLASS_MEASUREMENT,
@@ -88,7 +87,7 @@ CONFIG_SCHEMA = JNGE_G_SERIES_COMPONENT_SCHEMA.extend(
         ),
         cv.Optional(CONF_AC_CURRENT): sensor.sensor_schema(
             unit_of_measurement=UNIT_AMPERE,
-            icon=ICON_EMPTY,
+            icon=None,
             accuracy_decimals=2,
             device_class=DEVICE_CLASS_CURRENT,
             state_class=STATE_CLASS_MEASUREMENT,
@@ -104,7 +103,7 @@ CONFIG_SCHEMA = JNGE_G_SERIES_COMPONENT_SCHEMA.extend(
         ),
         cv.Optional(CONF_INVERTER_TEMPERATURE): sensor.sensor_schema(
             unit_of_measurement=UNIT_CELSIUS,
-            icon=ICON_EMPTY,
+            icon=None,
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_TEMPERATURE,
             state_class=STATE_CLASS_MEASUREMENT,
@@ -120,7 +119,7 @@ CONFIG_SCHEMA = JNGE_G_SERIES_COMPONENT_SCHEMA.extend(
         ),
         cv.Optional(CONF_AC_OUTPUT_POWER): sensor.sensor_schema(
             unit_of_measurement=UNIT_WATT,
-            icon=ICON_EMPTY,
+            icon=None,
             accuracy_decimals=1,
             device_class=DEVICE_CLASS_POWER,
             state_class=STATE_CLASS_MEASUREMENT,
