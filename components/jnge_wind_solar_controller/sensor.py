@@ -8,6 +8,7 @@ from esphome.const import (
     DEVICE_CLASS_ENERGY,
     DEVICE_CLASS_POWER,
     DEVICE_CLASS_VOLTAGE,
+    ENTITY_CATEGORY_DIAGNOSTIC,
     ICON_COUNTER,
     ICON_EMPTY,
     STATE_CLASS_MEASUREMENT,
@@ -185,8 +186,8 @@ CONFIG_SCHEMA = JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA.extend(
             unit_of_measurement=UNIT_EMPTY,
             icon=ICON_ERROR_BITMASK,
             accuracy_decimals=0,
-            device_class=DEVICE_CLASS_EMPTY,
-            state_class=STATE_CLASS_MEASUREMENT,
+            device_class=None,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
     }
 )
