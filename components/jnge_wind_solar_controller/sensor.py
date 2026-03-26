@@ -186,7 +186,7 @@ CONFIG_SCHEMA = JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA.extend(
             unit_of_measurement=UNIT_EMPTY,
             icon=ICON_ERROR_BITMASK,
             accuracy_decimals=0,
-            device_class=None,
+            device_class=DEVICE_CLASS_EMPTY,
             entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
     }
