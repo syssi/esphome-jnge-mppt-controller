@@ -26,17 +26,14 @@ TEXT_SENSORS = [
 CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
     {
         cv.Optional(CONF_OPERATION_MODE): text_sensor.text_sensor_schema(
-            text_sensor.TextSensor,
             icon=ICON_OPERATION_MODE,
             entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_ERRORS): text_sensor.text_sensor_schema(
-            text_sensor.TextSensor,
             icon=ICON_ERRORS,
             entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_BATTERY_TYPE): text_sensor.text_sensor_schema(
-            text_sensor.TextSensor,
             icon=ICON_BATTERY_TYPE,
             entity_category=ENTITY_CATEGORY_CONFIG,
         ),

@@ -1,6 +1,7 @@
 import esphome.codegen as cg
 from esphome.components import text_sensor
 import esphome.config_validation as cv
+from esphome.const import ENTITY_CATEGORY_DIAGNOSTIC
 
 from . import JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA
 
@@ -25,13 +26,14 @@ TEXT_SENSORS = [
 CONFIG_SCHEMA = JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA.extend(
     {
         cv.Optional(CONF_OPERATION_MODE): text_sensor.text_sensor_schema(
-            text_sensor.TextSensor, icon=ICON_OPERATION_MODE
+            icon=ICON_OPERATION_MODE
         ),
         cv.Optional(CONF_ERRORS): text_sensor.text_sensor_schema(
-            text_sensor.TextSensor, icon=ICON_ERRORS
+            icon=ICON_ERRORS,
+            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
         ),
         cv.Optional(CONF_BATTERY_TYPE): text_sensor.text_sensor_schema(
-            text_sensor.TextSensor, icon=ICON_BATTERY_TYPE
+            icon=ICON_BATTERY_TYPE
         ),
     }
 )
