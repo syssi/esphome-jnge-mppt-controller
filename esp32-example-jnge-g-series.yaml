@@ -1,7 +1,7 @@
 substitutions:
   name: jn-g
-  status: "${name} status"
-  config: "${name} config"
+  status: "status"
+  config: "config"
   device_description: "Monitor a JN-G series inverter via RS485 (Modbus)"
   external_components_source: github://syssi/esphome-jnge-mppt-controller@main
   tx_pin: GPIO16
