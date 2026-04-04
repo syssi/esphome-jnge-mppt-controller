@@ -171,8 +171,6 @@ SENSOR_DEFS = {
     },
 }
 
-SENSORS = list(SENSOR_DEFS)
-
 CONFIG_SCHEMA = JNGE_WIND_SOLAR_CONTROLLER_COMPONENT_SCHEMA.extend(
     {
         cv.Optional(key): sensor.sensor_schema(**kwargs)
@@ -185,7 +183,7 @@ async def to_code(config):
     from . import CONF_JNGE_WIND_SOLAR_CONTROLLER_ID
 
     hub = await cg.get_variable(config[CONF_JNGE_WIND_SOLAR_CONTROLLER_ID])
-    for key in SENSORS:
+    for key in SENSOR_DEFS:
         if key in config:
             conf = config[key]
             sens = await sensor.new_sensor(conf)
