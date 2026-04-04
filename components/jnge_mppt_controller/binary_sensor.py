@@ -15,38 +15,36 @@ CONF_FAN_RUNNING = "fan_running"
 # CONF_LOAD = "load"
 CONF_LOAD_DETECTED = "load_detected"
 
-BINARY_SENSORS = [
-    CONF_CHARGING,
-    CONF_FAN_RUNNING,
-    CONF_LOAD,
-    CONF_LOAD_DETECTED,
-]
+BINARY_SENSOR_DEFS = {
+    CONF_CHARGING: {
+        "icon": "mdi:battery-charging-50",
+        "entity_category": ENTITY_CATEGORY_DIAGNOSTIC,
+    },
+    CONF_FAN_RUNNING: {
+        "icon": "mdi:fan",
+        "entity_category": ENTITY_CATEGORY_DIAGNOSTIC,
+    },
+    CONF_LOAD: {
+        "icon": "mdi:lightbulb-on",
+        "entity_category": ENTITY_CATEGORY_DIAGNOSTIC,
+    },
+    CONF_LOAD_DETECTED: {
+        "icon": "mdi:lightbulb-on",
+        "entity_category": ENTITY_CATEGORY_DIAGNOSTIC,
+    },
+}
 
 CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
     {
-        cv.Optional(CONF_CHARGING): binary_sensor.binary_sensor_schema(
-            icon="mdi:battery-charging-50",
-            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
-        ),
-        cv.Optional(CONF_FAN_RUNNING): binary_sensor.binary_sensor_schema(
-            icon="mdi:fan",
-            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
-        ),
-        cv.Optional(CONF_LOAD): binary_sensor.binary_sensor_schema(
-            icon="mdi:lightbulb-on",
-            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
-        ),
-        cv.Optional(CONF_LOAD_DETECTED): binary_sensor.binary_sensor_schema(
-            icon="mdi:lightbulb-on",
-            entity_category=ENTITY_CATEGORY_DIAGNOSTIC,
-        ),
+        cv.Optional(key): binary_sensor.binary_sensor_schema(**kwargs)
+        for key, kwargs in BINARY_SENSOR_DEFS.items()
     }
 )
 
 
 async def to_code(config):
     hub = await cg.get_variable(config[CONF_JNGE_MPPT_CONTROLLER_ID])
-    for key in BINARY_SENSORS:
+    for key in BINARY_SENSOR_DEFS:
         if key in config:
             conf = config[key]
             sens = await binary_sensor.new_binary_sensor(conf)
