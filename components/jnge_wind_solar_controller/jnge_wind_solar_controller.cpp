@@ -11,7 +11,7 @@ static const uint8_t READ_REGISTERS = 0x03;
 static const uint8_t WRITE_SINGLE_REGISTER = 0x06;
 
 static const uint8_t ERRORS_SIZE = 16;
-static const char *const ERRORS[ERRORS_SIZE] = {
+static constexpr const char *const ERRORS[ERRORS_SIZE] = {
     "PV charging overcurrent",          // Byte 0.0, error
     "Short circuit fault",              // Byte 0.1, error
     "",                                 // Byte 0.2, error
@@ -33,7 +33,7 @@ static const char *const ERRORS[ERRORS_SIZE] = {
 };
 
 static const uint8_t OPERATION_MODES_SIZE = 5;
-static const char *const OPERATION_MODES[OPERATION_MODES_SIZE] = {
+static constexpr const char *const OPERATION_MODES[OPERATION_MODES_SIZE] = {
     "Not charging",               // 0x00
     "Constant-current charging",  // 0x01
     "Boost charging",             // 0x02
@@ -41,7 +41,7 @@ static const char *const OPERATION_MODES[OPERATION_MODES_SIZE] = {
 };
 
 static const uint8_t BATTERY_TYPES_SIZE = 5;
-static const char *const BATTERY_TYPES[BATTERY_TYPES_SIZE] = {
+static constexpr const char *const BATTERY_TYPES[BATTERY_TYPES_SIZE] = {
     "Unknown",          // 0x00
     "Lead-Acid",        // 0x01
     "LiFePo4",          // 0x02
