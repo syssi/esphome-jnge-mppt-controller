@@ -2,8 +2,7 @@
 #include "esphome/core/log.h"
 #include "esphome/core/helpers.h"
 
-namespace esphome {
-namespace jnge_wind_solar_controller {
+namespace esphome::jnge_wind_solar_controller {
 
 static const char *const TAG = "jnge_wind_solar_controller";
 
@@ -303,5 +302,4 @@ void JngeWindSolarController::dump_config() {  // NOLINT(google-readability-func
   LOG_TEXT_SENSOR("", "Errors", this->errors_text_sensor_);
 }
 
-}  // namespace jnge_wind_solar_controller
-}  // namespace esphome
+}  // namespace esphome::jnge_wind_solar_controller

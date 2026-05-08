@@ -4,8 +4,7 @@
 #include "esphome/core/component.h"
 #include "esphome/components/switch/switch.h"
 
-namespace esphome {
-namespace jnge_mppt_controller {
+namespace esphome::jnge_mppt_controller {
 
 class JngeMpptController;
 
@@ -23,5 +22,4 @@ class JngeSwitch : public switch_::Switch, public Component {
   uint16_t holding_register_;
 };
 
-}  // namespace jnge_mppt_controller
-}  // namespace esphome
+}  // namespace esphome::jnge_mppt_controller

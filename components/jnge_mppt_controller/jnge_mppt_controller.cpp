@@ -2,8 +2,7 @@
 #include "esphome/core/log.h"
 #include "esphome/core/helpers.h"
 
-namespace esphome {
-namespace jnge_mppt_controller {
+namespace esphome::jnge_mppt_controller {
 
 static const char *const TAG = "jnge_mppt_controller";
 
@@ -613,5 +612,4 @@ void JngeMpptController::dump_config() {  // NOLINT(google-readability-function-
   LOG_BINARY_SENSOR("", "Load Detected", this->load_detected_binary_sensor_);
 }
 
-}  // namespace jnge_mppt_controller
-}  // namespace esphome
+}  // namespace esphome::jnge_mppt_controller

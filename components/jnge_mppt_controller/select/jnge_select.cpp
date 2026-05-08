@@ -1,8 +1,7 @@
 #include "jnge_select.h"
 #include "esphome/core/log.h"
 
-namespace esphome {
-namespace jnge_mppt_controller {
+namespace esphome::jnge_mppt_controller {
 
 static const char *const TAG = "jnge_mppt_controller.select";
 
@@ -43,5 +42,4 @@ void JngeSelect::control(const std::string &value) {
   ESP_LOGW(TAG, "Invalid value %s", value.c_str());
 }
 
-}  // namespace jnge_mppt_controller
-}  // namespace esphome
+}  // namespace esphome::jnge_mppt_controller

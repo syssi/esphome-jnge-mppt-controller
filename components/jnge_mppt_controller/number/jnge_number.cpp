@@ -1,8 +1,7 @@
 #include "jnge_number.h"
 #include "esphome/core/log.h"
 
-namespace esphome {
-namespace jnge_mppt_controller {
+namespace esphome::jnge_mppt_controller {
 
 static const char *const TAG = "jnge_mppt_controller.number";
 
@@ -11,5 +10,4 @@ void JngeNumber::control(float value) {
 }
 void JngeNumber::dump_config() { LOG_NUMBER(TAG, "JngeMpptController Number", this); }
 
-}  // namespace jnge_mppt_controller
-}  // namespace esphome
+}  // namespace esphome::jnge_mppt_controller

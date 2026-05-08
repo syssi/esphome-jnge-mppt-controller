@@ -2,8 +2,7 @@
 #include "esphome/core/log.h"
 #include "esphome/core/helpers.h"
 
-namespace esphome {
-namespace jnge_g_series {
+namespace esphome::jnge_g_series {
 
 static const char *const TAG = "jnge_g_series";
 
@@ -142,5 +141,4 @@ void JngeGSeries::dump_config() {  // NOLINT(google-readability-function-size,re
   LOG_SENSOR("", "AC Output Power", this->ac_output_power_sensor_);
 }
 
-}  // namespace jnge_g_series
-}  // namespace esphome
+}  // namespace esphome::jnge_g_series

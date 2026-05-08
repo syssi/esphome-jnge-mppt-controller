@@ -1,8 +1,7 @@
 #include "jnge_modbus.h"
 #include "esphome/core/log.h"
 
-namespace esphome {
-namespace jnge_modbus {
+namespace esphome::jnge_modbus {
 
 static const char *const TAG = "jnge_modbus";
 
@@ -137,5 +136,4 @@ void JngeModbus::send(uint8_t address, uint8_t function, uint16_t start_address,
     this->flow_control_pin_->digital_write(false);
 }
 
-}  // namespace jnge_modbus
-}  // namespace esphome
+}  // namespace esphome::jnge_modbus

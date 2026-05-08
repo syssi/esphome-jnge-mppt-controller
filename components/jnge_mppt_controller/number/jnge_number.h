@@ -5,8 +5,7 @@
 #include "esphome/components/number/number.h"
 #include "esphome/core/preferences.h"
 
-namespace esphome {
-namespace jnge_mppt_controller {
+namespace esphome::jnge_mppt_controller {
 
 class JngeMpptController;
 
@@ -23,5 +22,4 @@ class JngeNumber : public number::Number, public Component {
   uint16_t holding_register_;
 };
 
-}  // namespace jnge_mppt_controller
-}  // namespace esphome
+}  // namespace esphome::jnge_mppt_controller
