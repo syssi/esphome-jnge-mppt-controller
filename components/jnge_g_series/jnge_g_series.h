@@ -4,8 +4,7 @@
 #include "esphome/components/sensor/sensor.h"
 #include "esphome/components/jnge_modbus/jnge_modbus.h"
 
-namespace esphome {
-namespace jnge_g_series {
+namespace esphome::jnge_g_series {
 
 static const uint8_t NO_RESPONSE_THRESHOLD = 15;
 
@@ -57,5 +56,4 @@ class JngeGSeries : public PollingComponent, public jnge_modbus::JngeModbusDevic
   void publish_device_offline_();
 };
 
-}  // namespace jnge_g_series
-}  // namespace esphome
+}  // namespace esphome::jnge_g_series

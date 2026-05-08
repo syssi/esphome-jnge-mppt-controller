@@ -4,8 +4,7 @@
 #include "esphome/core/component.h"
 #include "esphome/components/switch/switch.h"
 
-namespace esphome {
-namespace jnge_wind_solar_controller {
+namespace esphome::jnge_wind_solar_controller {
 
 class JngeWindSolarController;
 class JngeSwitch : public switch_::Switch, public Component {
@@ -22,5 +21,4 @@ class JngeSwitch : public switch_::Switch, public Component {
   uint16_t holding_register_;
 };
 
-}  // namespace jnge_wind_solar_controller
-}  // namespace esphome
+}  // namespace esphome::jnge_wind_solar_controller

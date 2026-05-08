@@ -7,8 +7,7 @@
 #include "esphome/components/text_sensor/text_sensor.h"
 #include "esphome/components/jnge_modbus/jnge_modbus.h"
 
-namespace esphome {
-namespace jnge_wind_solar_controller {
+namespace esphome::jnge_wind_solar_controller {
 
 static const uint8_t NO_RESPONSE_THRESHOLD = 15;
 
@@ -136,5 +135,4 @@ class JngeWindSolarController : public PollingComponent, public jnge_modbus::Jng
   std::string error_bits_to_string_(uint16_t bitmask);
 };
 
-}  // namespace jnge_wind_solar_controller
-}  // namespace esphome
+}  // namespace esphome::jnge_wind_solar_controller

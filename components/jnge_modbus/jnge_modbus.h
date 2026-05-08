@@ -3,8 +3,7 @@
 #include "esphome/core/component.h"
 #include "esphome/components/uart/uart.h"
 
-namespace esphome {
-namespace jnge_modbus {
+namespace esphome::jnge_modbus {
 
 class JngeModbusDevice;
 
@@ -55,5 +54,4 @@ class JngeModbusDevice {
   uint8_t address_;
 };
 
-}  // namespace jnge_modbus
-}  // namespace esphome
+}  // namespace esphome::jnge_modbus
