@@ -539,7 +539,7 @@ void JngeMpptController::publish_state_(text_sensor::TextSensor *text_sensor, co
 
 std::string JngeMpptController::error_bits_to_string_(const uint16_t mask) {
   bool first = true;
-  std::string errors_list = "";
+  std::string errors_list;
 
   if (mask) {
     for (int i = 0; i < ERRORS_SIZE; i++) {
