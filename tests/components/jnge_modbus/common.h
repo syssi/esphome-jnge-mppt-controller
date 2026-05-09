@@ -33,8 +33,7 @@ class TestableJngeModbus : public JngeModbus {
 
 // Build a valid response frame with CRC.
 // Format: [addr, func, data_len, data..., crc_lo, crc_hi]
-inline std::vector<uint8_t> make_response_frame(uint8_t address, uint8_t function,
-                                                 const std::vector<uint8_t> &data) {
+inline std::vector<uint8_t> make_response_frame(uint8_t address, uint8_t function, const std::vector<uint8_t> &data) {
   std::vector<uint8_t> frame;
   frame.push_back(address);
   frame.push_back(function);
