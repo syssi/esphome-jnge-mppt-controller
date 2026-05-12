@@ -40,7 +40,7 @@ void JngeGSeries::on_status_data_(const std::vector<uint8_t> &data) {
     return (uint32_t(jnge_get_16bit(i + 0)) << 16) | (uint32_t(jnge_get_16bit(i + 2)) << 0);
   };
 
-  ESP_LOGI(TAG, "Status frame received (%d bytes)", data.size());
+  ESP_LOGI(TAG, "Status frame received (%zu bytes)", data.size());
 
   for (size_t i = 0; i < data.size(); i = i + 2) {
     if (i == 4 || i == 8 || i == 10 || i == 14 || i == 16 || i == 32 || i == 36) {
@@ -74,7 +74,7 @@ void JngeGSeries::on_configuration_data_(const std::vector<uint8_t> &data) {
     return (uint16_t(data[i + 0]) << 8) | (uint16_t(data[i + 1]) << 0);
   };
 
-  ESP_LOGI(TAG, "Config frame received (%d bytes)", data.size());
+  ESP_LOGI(TAG, "Config frame received (%zu bytes)", data.size());
 
   for (size_t i = 0; i < data.size(); i = i + 2) {
     ESP_LOGD(TAG, "Config Byte %2d-%2d: %5.0f (0x%04X)", i, i + 1, jnge_get_16bit(i) * 1.0f, jnge_get_16bit(i));
