@@ -47,7 +47,7 @@ void JngeGSeries::on_status_data_(const std::vector<uint8_t> &data) {
       continue;
     }
 
-    ESP_LOGD(TAG, "Status Byte %2d-%2d: %5.0f (0x%04X)", i, i + 1, jnge_get_16bit(i) * 1.0f, jnge_get_16bit(i));
+    ESP_LOGD(TAG, "Status Byte %2zu-%2zu: %5.0f (0x%04X)", i, i + 1, jnge_get_16bit(i) * 1.0f, jnge_get_16bit(i));
   }
 
   float ac_voltage1 = jnge_get_16bit(4) * 0.1f;
@@ -77,7 +77,7 @@ void JngeGSeries::on_configuration_data_(const std::vector<uint8_t> &data) {
   ESP_LOGI(TAG, "Config frame received (%zu bytes)", data.size());
 
   for (size_t i = 0; i < data.size(); i = i + 2) {
-    ESP_LOGD(TAG, "Config Byte %2d-%2d: %5.0f (0x%04X)", i, i + 1, jnge_get_16bit(i) * 1.0f, jnge_get_16bit(i));
+    ESP_LOGD(TAG, "Config Byte %2zu-%2zu: %5.0f (0x%04X)", i, i + 1, jnge_get_16bit(i) * 1.0f, jnge_get_16bit(i));
   }
 }
 
