@@ -50,8 +50,6 @@ ICON_TEMPERATURE_COMPENSATION_COEFFICIENT = "mdi:thermometer-plus"
 ICON_OPERATION_MODE = "mdi:heart-pulse"
 ICON_DISCHARGE_TIMES = "mdi:counter"
 
-UNIT_HOURS = "h"
-UNIT_MILLIVOLT = "mV"
 UNIT_MILLIVOLT_PER_CELSIUS = "mV/°C"
 
 # key: sensor_schema kwargs

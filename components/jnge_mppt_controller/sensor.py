@@ -20,17 +20,15 @@ from esphome.const import (
     UNIT_AMPERE,
     UNIT_CELSIUS,
     UNIT_EMPTY,
+    UNIT_HOUR,
     UNIT_KILOWATT_HOURS,
+    UNIT_MILLIVOLT,
     UNIT_PERCENT,
     UNIT_VOLT,
     UNIT_WATT,
 )
 
-from . import (
-    CONF_JNGE_MPPT_CONTROLLER_ID,
-    JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA,
-    UNIT_HOURS,
-)
+from . import CONF_JNGE_MPPT_CONTROLLER_ID, JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA
 
 DEPENDENCIES = ["jnge_mppt_controller"]
 
@@ -87,7 +85,6 @@ ICON_TEMPERATURE_COMPENSATION_COEFFICIENT = "mdi:thermometer-plus"
 ICON_OPERATION_MODE = "mdi:heart-pulse"
 ICON_DISCHARGE_TIMES = "mdi:counter"
 
-UNIT_MILLIVOLT = "mV"
 UNIT_MILLIVOLT_PER_CELSIUS = "mV/°C"
 
 SENSOR_DEFS = {
@@ -331,14 +328,14 @@ SENSOR_DEFS = {
         "state_class": STATE_CLASS_MEASUREMENT,
     },
     CONF_EQUALIZATION_CHARGING_TIME: {
-        "unit_of_measurement": UNIT_HOURS,
+        "unit_of_measurement": UNIT_HOUR,
         "icon": ICON_TIMELAPSE,
         "accuracy_decimals": 0,
         "device_class": DEVICE_CLASS_EMPTY,
         "state_class": STATE_CLASS_MEASUREMENT,
     },
     CONF_IMPROVE_CHARGING_TIME: {
-        "unit_of_measurement": UNIT_HOURS,
+        "unit_of_measurement": UNIT_HOUR,
         "icon": ICON_TIMELAPSE,
         "accuracy_decimals": 0,
         "device_class": DEVICE_CLASS_EMPTY,
@@ -373,21 +370,21 @@ SENSOR_DEFS = {
         "state_class": STATE_CLASS_MEASUREMENT,
     },
     CONF_LIGHT_CONTROL_ON_PERIOD_1: {
-        "unit_of_measurement": UNIT_HOURS,
+        "unit_of_measurement": UNIT_HOUR,
         "icon": ICON_TIMER,
         "accuracy_decimals": 0,
         "device_class": DEVICE_CLASS_EMPTY,
         "state_class": STATE_CLASS_MEASUREMENT,
     },
     CONF_LIGHT_CONTROL_ON_PERIOD_2: {
-        "unit_of_measurement": UNIT_HOURS,
+        "unit_of_measurement": UNIT_HOUR,
         "icon": ICON_TIMER,
         "accuracy_decimals": 0,
         "device_class": DEVICE_CLASS_EMPTY,
         "state_class": STATE_CLASS_MEASUREMENT,
     },
     CONF_LOAD_TURN_OFF_TIME: {
-        "unit_of_measurement": UNIT_HOURS,
+        "unit_of_measurement": UNIT_HOUR,
         "icon": ICON_TIMER,
         "accuracy_decimals": 0,
         "device_class": DEVICE_CLASS_EMPTY,

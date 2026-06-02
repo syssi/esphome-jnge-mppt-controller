@@ -20,8 +20,6 @@ CONF_JNGE_MPPT_CONTROLLER_ID = "jnge_mppt_controller_id"
 CONF_ENABLE_FAKE_TRAFFIC = "enable_fake_traffic"
 CONF_SUPPRESS_BATTERY_TEMPERATURE_ERRORS = "suppress_battery_temperature_errors"
 
-UNIT_HOURS = "h"
-
 jnge_mppt_controller_ns = cg.esphome_ns.namespace("jnge_mppt_controller")
 JngeMpptController = jnge_mppt_controller_ns.class_(
     "JngeMpptController", cg.PollingComponent, jnge_modbus.JngeModbusDevice
