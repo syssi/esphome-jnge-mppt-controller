@@ -13,8 +13,6 @@ MULTI_CONF = True
 
 CONF_JNGE_G_SERIES_ID = "jnge_g_series_id"
 
-UNIT_HOURS = "h"
-
 jnge_g_series_ns = cg.esphome_ns.namespace("jnge_g_series")
 JngeGSeries = jnge_g_series_ns.class_(
     "JngeGSeries", cg.PollingComponent, jnge_modbus.JngeModbusDevice

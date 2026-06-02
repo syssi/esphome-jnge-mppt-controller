@@ -10,13 +10,13 @@ from esphome.const import (
     ENTITY_CATEGORY_CONFIG,
     ICON_EMPTY,
     UNIT_EMPTY,
+    UNIT_HOUR,
     UNIT_VOLT,
 )
 
 from .. import (
     CONF_JNGE_MPPT_CONTROLLER_ID,
     JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA,
-    UNIT_HOURS,
     jnge_mppt_controller_ns,
 )
 
@@ -154,7 +154,7 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
                 cv.Optional(CONF_MAX_VALUE, default=3): cv.float_,
                 cv.Optional(CONF_STEP, default=1): cv.float_,
                 cv.Optional(
-                    CONF_UNIT_OF_MEASUREMENT, default=UNIT_HOURS
+                    CONF_UNIT_OF_MEASUREMENT, default=UNIT_HOUR
                 ): cv.string_strict,
             }
         ),
@@ -164,7 +164,7 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
                 cv.Optional(CONF_MAX_VALUE, default=3): cv.float_,
                 cv.Optional(CONF_STEP, default=1): cv.float_,
                 cv.Optional(
-                    CONF_UNIT_OF_MEASUREMENT, default=UNIT_HOURS
+                    CONF_UNIT_OF_MEASUREMENT, default=UNIT_HOUR
                 ): cv.string_strict,
             }
         ),
@@ -188,7 +188,7 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
                 cv.Optional(CONF_MAX_VALUE, default=24): cv.float_,
                 cv.Optional(CONF_STEP, default=1): cv.float_,
                 cv.Optional(
-                    CONF_UNIT_OF_MEASUREMENT, default=UNIT_HOURS
+                    CONF_UNIT_OF_MEASUREMENT, default=UNIT_HOUR
                 ): cv.string_strict,
             }
         ),
@@ -198,7 +198,7 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
                 cv.Optional(CONF_MAX_VALUE, default=24): cv.float_,
                 cv.Optional(CONF_STEP, default=1): cv.float_,
                 cv.Optional(
-                    CONF_UNIT_OF_MEASUREMENT, default=UNIT_HOURS
+                    CONF_UNIT_OF_MEASUREMENT, default=UNIT_HOUR
                 ): cv.string_strict,
             }
         ),
@@ -208,7 +208,7 @@ CONFIG_SCHEMA = JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA.extend(
                 cv.Optional(CONF_MAX_VALUE, default=24): cv.float_,
                 cv.Optional(CONF_STEP, default=1): cv.float_,
                 cv.Optional(
-                    CONF_UNIT_OF_MEASUREMENT, default=UNIT_HOURS
+                    CONF_UNIT_OF_MEASUREMENT, default=UNIT_HOUR
                 ): cv.string_strict,
             }
         ),
