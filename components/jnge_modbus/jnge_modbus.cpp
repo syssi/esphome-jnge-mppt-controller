@@ -1,9 +1,14 @@
 #include "jnge_modbus.h"
 #include "esphome/core/log.h"
 
+// Fallback for ESPHome < 2026.10.0
+#ifndef ESPHOME_LOG_TAG
+#define ESPHOME_LOG_TAG(name, tag) static const char *const name = tag
+#endif
+
 namespace esphome::jnge_modbus {
 
-static const char *const TAG = "jnge_modbus";
+ESPHOME_LOG_TAG(TAG, "jnge_modbus");
 
 static const uint8_t WRITE_SINGLE_REGISTER = 0x06;
 

@@ -2,9 +2,14 @@
 #include "esphome/core/log.h"
 #include "esphome/core/helpers.h"
 
+// Fallback for ESPHome < 2026.10.0
+#ifndef ESPHOME_LOG_TAG
+#define ESPHOME_LOG_TAG(name, tag) static const char *const name = tag
+#endif
+
 namespace esphome::jnge_wind_solar_controller {
 
-static const char *const TAG = "jnge_wind_solar_controller";
+ESPHOME_LOG_TAG(TAG, "jnge_wind_solar_controller");
 
 static const uint8_t READ_REGISTERS = 0x03;
 static const uint8_t WRITE_SINGLE_REGISTER = 0x06;
