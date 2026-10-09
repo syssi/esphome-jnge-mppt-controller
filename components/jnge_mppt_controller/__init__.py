@@ -4,6 +4,7 @@ import esphome.config_validation as cv
 from esphome.const import CONF_ID
 
 CODEOWNERS = ["@syssi"]
+DOMAIN = "jnge_mppt_controller"
 
 AUTO_LOAD = [
     "jnge_modbus",

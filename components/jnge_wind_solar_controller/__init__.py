@@ -4,6 +4,7 @@ import esphome.config_validation as cv
 from esphome.const import CONF_ID
 
 CODEOWNERS = ["@syssi"]
+DOMAIN = "jnge_wind_solar_controller"
 
 AUTO_LOAD = ["jnge_modbus", "binary_sensor", "sensor", "switch", "text_sensor"]
 MULTI_CONF = True
