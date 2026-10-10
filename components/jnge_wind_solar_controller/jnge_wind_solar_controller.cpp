@@ -11,6 +11,8 @@ namespace esphome::jnge_wind_solar_controller {
 
 ESPHOME_LOG_TAG(TAG, "jnge_wind_solar_controller");
 
+static constexpr size_t MAX_HEX_DUMP_BYTES = 100;
+
 static const uint8_t READ_REGISTERS = 0x03;
 static const uint8_t WRITE_SINGLE_REGISTER = 0x06;
 
@@ -183,8 +185,8 @@ void JngeWindSolarController::on_read_registers_data_(const std::vector<uint8_t>
 }
 
 void JngeWindSolarController::on_write_single_register_data_(const std::vector<uint8_t> &data) {
-  ESP_LOGI(TAG, "Write register response received: %s",
-           format_hex_pretty(&data.front(), data.size()).c_str());  // NOLINT
+  char hex_buf[format_hex_pretty_size(MAX_HEX_DUMP_BYTES)];
+  ESP_LOGI(TAG, "Write register response received: %s", format_hex_pretty_to(hex_buf, data, '.'));
 }
 
 void JngeWindSolarController::write_register(uint16_t address, uint16_t value) {

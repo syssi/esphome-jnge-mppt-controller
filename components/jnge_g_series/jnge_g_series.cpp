@@ -11,6 +11,8 @@ namespace esphome::jnge_g_series {
 
 ESPHOME_LOG_TAG(TAG, "jnge_g_series");
 
+static constexpr size_t MAX_HEX_DUMP_BYTES = 100;
+
 static const uint8_t READ_HOLDING_REGISTERS = 0x03;
 static const uint8_t READ_INPUT_REGISTERS = 0x04;
 static const uint8_t WRITE_SINGLE_REGISTER = 0x06;
@@ -87,8 +89,8 @@ void JngeGSeries::on_configuration_data_(const std::vector<uint8_t> &data) {
 }
 
 void JngeGSeries::on_write_data_(const std::vector<uint8_t> &data) {
-  ESP_LOGI(TAG, "Write register response received: %s",
-           format_hex_pretty(&data.front(), data.size()).c_str());  // NOLINT
+  char hex_buf[format_hex_pretty_size(MAX_HEX_DUMP_BYTES)];
+  ESP_LOGI(TAG, "Write register response received: %s", format_hex_pretty_to(hex_buf, data, '.'));
 }
 
 void JngeGSeries::write_register(uint16_t address, uint16_t value) {
