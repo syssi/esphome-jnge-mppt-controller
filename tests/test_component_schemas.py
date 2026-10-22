@@ -1,9 +1,9 @@
 """Schema structure tests for jnge ESPHome component modules."""
 
-import os
+from pathlib import Path
 import sys
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 import components.jnge_g_series as hub_g  # noqa: E402
 from components.jnge_g_series import sensor as g_sensor  # noqa: E402
