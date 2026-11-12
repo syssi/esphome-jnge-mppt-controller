@@ -4,12 +4,12 @@ import esphome.config_validation as cv
 from esphome.const import ENTITY_CATEGORY_CONFIG, ENTITY_CATEGORY_DIAGNOSTIC
 
 from . import CONF_JNGE_MPPT_CONTROLLER_ID, JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA
+from .const import CONF_BATTERY_TYPE
 
 DEPENDENCIES = ["jnge_mppt_controller"]
 
 CODEOWNERS = ["@syssi"]
 
-CONF_BATTERY_TYPE = "battery_type"
 CONF_ERRORS = "errors"
 CONF_OPERATION_MODE = "operation_mode"
 
