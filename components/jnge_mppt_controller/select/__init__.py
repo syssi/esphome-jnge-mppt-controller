@@ -8,12 +8,12 @@ from .. import (
     JNGE_MPPT_CONTROLLER_COMPONENT_SCHEMA,
     jnge_mppt_controller_ns,
 )
+from ..const import CONF_BATTERY_TYPE
 
 DEPENDENCIES = ["jnge_mppt_controller"]
 
 CODEOWNERS = ["@syssi"]
 
-CONF_BATTERY_TYPE = "battery_type"
 CONF_OPTIONSMAP = "optionsmap"
 
 JngeSelect = jnge_mppt_controller_ns.class_("JngeSelect", select.Select, cg.Component)
