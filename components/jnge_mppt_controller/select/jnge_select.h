@@ -1,7 +1,6 @@
 #pragma once
 
 #include <utility>
-#include <map>
 
 #include "../jnge_mppt_controller.h"
 #include "esphome/components/select/select.h"
